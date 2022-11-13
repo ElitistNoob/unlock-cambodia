@@ -1,0 +1,233 @@
+const tourData = [
+  {
+    id: 1,
+    title: "Angelina Jolie Tomb Raider Temple Tour",
+    images: [
+      require("./components/assets/angkor-tour-1.jpg"),
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-3.jpg"),
+    ],
+    highlights: [
+      "Angkor Wat",
+      "Bayon",
+      "Angkor Thom",
+      "Terrace of Elephants & the Leper King",
+      "Ta Prohm",
+      "Banteay Kdei",
+    ],
+    tourDetails: [
+      "Depart: 8AM - 3PM (including a lunch break in the Archeological Park)",
+      "Hotel pick up and drop off",
+      "Experienced Temple Guide",
+      "Transportation (Tuk-Tuk or Minivan)",
+      "Passes Excluded ",
+    ],
+    price: 35,
+    minimumPax: 2,
+    warning:
+      "*Please wear suitable clothing and follow the temple dress regulations. If your unsure please ask your guide before leaving",
+    itinerary:
+      "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+  {
+    id: 2,
+    title: "Floating Villages Unlocked - Stilted Village Discovery ",
+    images: [
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-1.jpg"),
+      require("./components/assets/angkor-tour-3.jpg"),
+    ],
+    highlights: [
+      "Floating Villages",
+      "Floating Market",
+      "Local Canoe boat ride through the floating forest",
+      "Lunch at a local restaurant",
+      "Bird wildlife on the water",
+    ],
+    tourDetails: [
+      "Depart: 8AM - 3PM (including a lunch at a local restaurant)",
+      "Hotel pick up and drop off",
+      "Experienced Tour Guide",
+      "Transportation (Tuk-Tuk or Minivan) ",
+    ],
+    price: 25,
+    minimumPax: 2,
+    warning: "",
+    itinerary:
+      "Leaving at 8am you venture towards the unspoiled floating community of Kampong Khleang; known for its stilted-house villages and located on the northern lake-edge about 55km east of Siem Reap town. You then board a boat and begin sailing down the river, arriving at the floating community, where you will experience a truly unique way of life. ",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+  {
+    id: 3,
+    title: "Bike Against the Clock - Unique challenge on two wheels",
+    subtitle: "Unique Siem Reap challenge on two wheels",
+    images: [
+      require("./components/assets/angkor-tour-3.jpg"),
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-1.jpg"),
+    ],
+    highlights: [
+      "5 Exciting Siem Reap Challenges",
+      "Navigate through Siem Reap by bike",
+      "Mini Golf Challenge",
+      "Archery Challenge",
+      "Puzzle Challenge",
+      "Old Market Challenge",
+      "Mental Arithmetic Challenge",
+    ],
+    tourDetails: [
+      "Depart: 9AM - 1PM (including a lunch at a local restaurant)",
+      "Hotel pick up and drop off",
+      "Bike hire and safety helmet",
+      "Challenge pack",
+      "5 challenges",
+      "Experienced Bike Tour Guide",
+      "Tuk-Tuk support vehicle with water",
+    ],
+    price: 60,
+    priceBrackets: {
+      2: 80,
+      3: 75,
+      4: 70,
+      5: 65,
+      6: 60,
+    },
+    minimumPax: 2,
+    warning: "",
+    itinerary:
+      "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+  {
+    id: 4,
+    title: "Bike Against the Clock - Unique challenge on two wheels",
+    subtitle: "Unique Siem Reap challenge on two wheels",
+    images: [
+      require("./components/assets/angkor-tour-3.jpg"),
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-1.jpg"),
+    ],
+    highlights: [
+      "5 Exciting Siem Reap Challenges",
+      "Navigate through Siem Reap by bike",
+      "Mini Golf Challenge",
+      "Archery Challenge",
+      "Puzzle Challenge",
+      "Old Market Challenge",
+      "Mental Arithmetic Challenge",
+    ],
+    tourDetails: [
+      "Depart: 9AM - 1PM (including a lunch at a local restaurant)",
+      "Hotel pick up and drop off",
+      "Bike hire and safety helmet",
+      "Challenge pack",
+      "5 challenges",
+      "Experienced Bike Tour Guide",
+      "Tuk-Tuk support vehicle with water",
+    ],
+    price: 60,
+    priceBrackets: {
+      2: 80,
+      3: 75,
+      4: 70,
+      5: 65,
+      6: 60,
+    },
+    minimumPax: 2,
+    warning: "",
+    itinerary:
+      "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+  {
+    id: 5,
+    title: "Bike Against the Clock - Unique challenge on two wheels",
+    subtitle: "Unique Siem Reap challenge on two wheels",
+    images: [
+      require("./components/assets/angkor-tour-3.jpg"),
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-1.jpg"),
+    ],
+    highlights: [
+      "5 Exciting Siem Reap Challenges",
+      "Navigate through Siem Reap by bike",
+      "Mini Golf Challenge",
+      "Archery Challenge",
+      "Puzzle Challenge",
+      "Old Market Challenge",
+      "Mental Arithmetic Challenge",
+    ],
+    tourDetails: [
+      "Depart: 9AM - 1PM (including a lunch at a local restaurant)",
+      "Hotel pick up and drop off",
+      "Bike hire and safety helmet",
+      "Challenge pack",
+      "5 challenges",
+      "Experienced Bike Tour Guide",
+      "Tuk-Tuk support vehicle with water",
+    ],
+    price: 60,
+    priceBrackets: {
+      2: 80,
+      3: 75,
+      4: 70,
+      5: 65,
+      6: 60,
+    },
+    minimumPax: 2,
+    warning: "",
+    itinerary:
+      "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+  {
+    id: 6,
+    title: "Bike Against the Clock - Unique challenge on two wheels",
+    subtitle: "Unique Siem Reap challenge on two wheels",
+    images: [
+      require("./components/assets/angkor-tour-3.jpg"),
+      require("./components/assets/angkor-tour-2.jpg"),
+      require("./components/assets/angkor-tour-1.jpg"),
+    ],
+    highlights: [
+      "5 Exciting Siem Reap Challenges",
+      "Navigate through Siem Reap by bike",
+      "Mini Golf Challenge",
+      "Archery Challenge",
+      "Puzzle Challenge",
+      "Old Market Challenge",
+      "Mental Arithmetic Challenge",
+    ],
+    tourDetails: [
+      "Depart: 9AM - 1PM (including a lunch at a local restaurant)",
+      "Hotel pick up and drop off",
+      "Bike hire and safety helmet",
+      "Challenge pack",
+      "5 challenges",
+      "Experienced Bike Tour Guide",
+      "Tuk-Tuk support vehicle with water",
+    ],
+    price: 60,
+    priceBrackets: {
+      2: 80,
+      3: 75,
+      4: 70,
+      5: 65,
+      6: 60,
+    },
+    minimumPax: 2,
+    warning: "",
+    itinerary:
+      "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
+    shortDesc:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
+  },
+];
+
+export default tourData;

@@ -1,0 +1,139 @@
+.tourSection {
+  padding: 0 1em;
+  max-width: 1220px;
+  width: 100%;
+  margin: 3em auto;
+  
+  @media (min-width: 720px) {
+    margin: 6em auto;
+    padding: 0 3em;
+  }
+  
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
+}
+
+.toursContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  gap: 2em;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+    // ::-webkit-scrollbar {
+    //   display: none;
+    // }
+}
+
+.titleContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+  margin: 2em 0;
+  
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--clr-primary-light);
+    transition: 150ms linear;
+    opacity: 0.8;
+    margin-bottom: 0.125em;
+    
+      &:hover {
+        letter-spacing: 0.125em;
+      }
+
+      @media (min-width: 720px) {
+          margin-bottom: 0.5em;
+      }
+
+      img {
+        margin-left: 0.5em;
+      }
+  }
+}
+
+// Cards Style
+
+.tourCard {
+  position: relative;
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary-dark);
+  max-width: 654px;
+  padding: 0.625em;
+  border-radius: 8px;
+  text-align: left;
+
+    @media (min-width: 720px) {
+      padding: 1em;
+    }
+
+    img {
+      border-radius: 8px;
+      height: 264px;
+      width: 100%;
+      object-fit: cover;
+      transition: 250ms linear;
+      overflow: hidden;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-block: 0.5em 1.5em;
+      color: var(--clr-primary-dark);
+      font-size: 1rem;
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      gap: 1em;
+      color: var(--clr-primary-dark);
+      font-weight: var(--fw-semi);
+      padding: 1em 0 0;
+      border-top: 1px solid var(--clr-primary-dark);
+      transition: 150ms linear;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+
+        &:hover,
+        &:focus {
+          letter-spacing: 0.125em;
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+    }
+    
+    span {
+      position: absolute;
+      display: block;
+      background-color: var(--clr-accent);
+      color: var(--clr-primary-light);
+      font-weight: var(--fw-bold);
+      font-size: 1.25rem;
+      aspect-ratio: 1;
+      border: 2px solid white;
+      border-radius: 50%;
+      padding: 0.725em 0.5em;
+      margin-top: -42px;
+      width: fit-content;
+      right: 1.25em;
+    }
+}
+
+
+
+
+

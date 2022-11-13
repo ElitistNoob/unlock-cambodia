@@ -1,0 +1,45 @@
+
+  .experienceSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width: 1220px;
+    width: calc(100% - 2rem);
+    z-index: -2;
+    border-radius: 6px;
+    margin: 0 auto 3em;
+    padding: 3em 1em;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("../assets/solo-group-experience-black.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.125;
+        z-index: -1;
+      }
+  
+      @media (min-width: 680px) {
+        padding: 6em 1em;
+      }
+
+      @media (min-width: 720px) {
+        margin-bottom: 150px;
+      }
+  }
+
+  .sectionTitle,
+  .sectionBody {
+    color: var(--clr-primary-dark);
+    z-index: 100;
+    text-align: center;
+    max-width: 640px;
+  }
