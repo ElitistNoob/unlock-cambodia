@@ -161,6 +161,7 @@ export const HeaderStyled = styled.header`
     border: none;
     background-color: transparent;
     cursor: pointer;
+    user-select: none;
   }
 
   @media (min-width: 720px) {

@@ -28,6 +28,7 @@ export default function Review() {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger",
+          start: "top 80%",
         },
       });
 
@@ -44,7 +45,10 @@ export default function Review() {
       });
 
       gsap.from(".title", {
-        scrollTrigger: ".trigger",
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "top 80%",
+        },
         opacity: 0,
         duration: 1,
         y: "1em",

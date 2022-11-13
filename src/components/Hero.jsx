@@ -20,14 +20,14 @@ export default function Hero() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
+      // const tl = gsap.timeline();
       gsap.to(".background", {
         transform: "matrix(-1, 0, 0, 1, 0, 0) scale(1)",
         opacity: 0.6,
         duration: 2,
         ease: "back",
       });
-      tl.from(".imgAnim", {
+      gsap.from(".imgAnim", {
         opacity: 0,
         duration: 1,
         y: "-6em",
@@ -35,17 +35,18 @@ export default function Hero() {
         ease: "power1.ing",
         stagger: 0.2,
       });
-      tl.from(".title", {
+      gsap.from(".title", {
         opacity: 0,
         duration: 1,
         y: "1em",
         ease: "power",
       });
-      tl.to(".span", {
+      gsap.to(".span", {
         clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
         duration: 1,
+        delay: 1,
       });
-      tl.from(".content", {
+      gsap.from(".content", {
         opacity: 0,
         duration: 1,
         y: "1em",
