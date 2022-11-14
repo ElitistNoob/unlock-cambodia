@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.7fc62737.css",
-    "main.js": "/unlock-cambodia/static/js/main.8766c93c.js",
+    "main.css": "/unlock-cambodia/static/css/main.5a41c248.css",
+    "main.js": "/unlock-cambodia/static/js/main.04cf2255.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
     "static/media/solo-group-experience-black.jpg": "/unlock-cambodia/static/media/solo-group-experience-black.c643ac75ffe40345b539.jpg",
@@ -19,15 +19,14 @@
     "static/media/Facebook-icon.svg": "/unlock-cambodia/static/media/Facebook-icon.ae65adaae9ddca22b322fdd2a73c077f.svg",
     "index.html": "/unlock-cambodia/index.html",
     "static/media/arrow-right.svg": "/unlock-cambodia/static/media/arrow-right.1bf86c1350b8ba263665b8d09b280ef7.svg",
-    "static/media/arrow-right-light.svg": "/unlock-cambodia/static/media/arrow-right-light.9fe1a7fa57418dfb019b1d34538b632a.svg",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee69860ccea6004cc4.svg",
     "static/media/speech-bubble.svg": "/unlock-cambodia/static/media/speech-bubble.6f507069097c87b4c641d3b50dc17220.svg",
-    "main.7fc62737.css.map": "/unlock-cambodia/static/css/main.7fc62737.css.map",
-    "main.8766c93c.js.map": "/unlock-cambodia/static/js/main.8766c93c.js.map",
+    "main.5a41c248.css.map": "/unlock-cambodia/static/css/main.5a41c248.css.map",
+    "main.04cf2255.js.map": "/unlock-cambodia/static/js/main.04cf2255.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7fc62737.css",
-    "static/js/main.8766c93c.js"
+    "static/css/main.5a41c248.css",
+    "static/js/main.04cf2255.js"
   ]
 }
