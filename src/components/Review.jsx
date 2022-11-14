@@ -23,40 +23,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Review() {
   const reviewSection = useRef(null);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".trigger",
-          start: "top 80%",
+          start: "top 90%",
         },
       });
-
       tl.to(".svgContainer", {
         display: "block",
-        stagger: 0.1,
       });
-
-      tl.from(".card", {
+      tl.from(".title", {
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         y: "1em",
         ease: "power",
       });
-
-      gsap.from(".title", {
+      gsap.from(".content", {
         scrollTrigger: {
           trigger: ".trigger",
-          start: "top 80%",
+          start: "top 90%",
         },
         opacity: 0,
         duration: 1,
         y: "1em",
         ease: "power",
+        delay: 0.825,
       });
     }, [reviewSection]);
     return () => ctx.revert();
-  });
+  }, []);
 
   const { winWidth } = useContext(Context);
 
@@ -80,8 +78,8 @@ export default function Review() {
   );
 
   return (
-    <section ref={reviewSection}>
-      <div className={`trigger ${styles.reviewSection}`}>
+    <section ref={reviewSection} className={styles.reviewSection}>
+      <div className="trigger">
         {winWidth > 1120 && svgImg()}
         <h2 className={`title ${styles.sectionTitle}`}>
           The <span className="title-highlight">proof</span> is in the pudding{" "}
@@ -91,63 +89,40 @@ export default function Review() {
           speed={800}
           spaceBetween={32}
           modules={[Pagination, A11y, Autoplay]}
-          pagination={{ clickable: true }}
+          // pagination={{ clickable: true }}
           slidesPerView={winWidth > 1220 ? 3 : winWidth > 580 ? 2 : 1}
-          // autoplay
         >
-          <SwiperSlide className={`card ${styles.container}`}>
-            <h2 className={styles.reviewTitle}>A wonderful tour</h2>
-            <p className={styles.reviewBody}>
+          <SwiperSlide className={`content ${styles.card}`}>
+            <h2>A wonderful tour</h2>
+            <p>
               After our day trip, we wanted to see more and they put together a
               fabulous 5 day adventure
             </p>
-            <div className={styles.reviewUser}>
-              <img className={styles.reviewPic} src={review1} alt="person" />
-              <p className={styles.reviewName}>Liam Thomas</p>
+            <div>
+              <img src={review1} alt="person" />
+              <p>Liam Thomas</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className={`card ${styles.container}`}>
-            <h2 className={styles.reviewTitle}>A wonderful tour</h2>
-            <p className={styles.reviewBody}>
+          <SwiperSlide className={`content ${styles.card}`}>
+            <h2>A wonderful tour</h2>
+            <p>
               After our day trip, we wanted to see more and they put together a
               fabulous 5 day adventure
             </p>
-            <div className={styles.reviewUser}>
-              <img className={styles.reviewPic} src={review1} alt="person" />
-              <p className={styles.reviewName}>Liam Thomas</p>
+            <div>
+              <img src={review1} alt="person" />
+              <p>Liam Thomas</p>
             </div>
           </SwiperSlide>
-          <SwiperSlide className={`card ${styles.container}`}>
-            <h2 className={styles.reviewTitle}>A wonderful tour</h2>
-            <p className={styles.reviewBody}>
+          <SwiperSlide className={`content ${styles.card}`}>
+            <h2>A wonderful tour</h2>
+            <p>
               After our day trip, we wanted to see more and they put together a
               fabulous 5 day adventure
             </p>
-            <div className={styles.reviewUser}>
-              <img className={styles.reviewPic} src={review1} alt="person" />
-              <p className={styles.reviewName}>Liam Thomas</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={`card ${styles.container}`}>
-            <h2 className={styles.reviewTitle}>A wonderful tour</h2>
-            <p className={styles.reviewBody}>
-              After our day trip, we wanted to see more and they put together a
-              fabulous 5 day adventure
-            </p>
-            <div className={styles.reviewUser}>
-              <img className={styles.reviewPic} src={review1} alt="person" />
-              <p className={styles.reviewName}>Liam Thomas</p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={`card ${styles.container}`}>
-            <h2 className={styles.reviewTitle}>A wonderful tour</h2>
-            <p className={styles.reviewBody}>
-              After our day trip, we wanted to see more and they put together a
-              fabulous 5 day adventure
-            </p>
-            <div className={styles.reviewUser}>
-              <img className={styles.reviewPic} src={review1} alt="person" />
-              <p className={styles.reviewName}>Liam Thomas</p>
+            <div>
+              <img src={review1} alt="person" />
+              <p>Liam Thomas</p>
             </div>
           </SwiperSlide>
         </Swiper>

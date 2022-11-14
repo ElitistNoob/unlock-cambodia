@@ -1,4 +1,3 @@
-
 .heroSection {
   padding: 0 1em;
   max-width: 1220px;
@@ -6,25 +5,25 @@
   margin: 0 auto;
   display: flex;
 
-    @media (min-width: 720px) {
-      margin: 9em auto 0;
-      padding: 0 3em;
-    }
+  @media (min-width: 720px) {
+    margin: 9em auto 0;
+    padding: 0 3em;
+  }
 
-    @media (min-width: 1440px) {
-      padding: 0;
-    }
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
 }
 
 .content {
   margin-top: 100px;
 
-    @media (min-width: 920px) {
-      display: flex;
-      flex-direction: row-reverse;
-      margin-left: -14em;
-      gap: 50px;
-    }
+  @media (min-width: 920px) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: -14em;
+    gap: 50px;
+  }
 }
 
 .imgGallery {
@@ -43,7 +42,6 @@
       "img1 img2 ."
       ". img3 ."
       "img4 img5 .";
-      
   }
 
   img {
@@ -53,7 +51,6 @@
 
   img:nth-of-type(1) {
     grid-area: img1;
-   
   }
   img:nth-of-type(2) {
     grid-area: img2;
@@ -67,7 +64,6 @@
   img:nth-of-type(5) {
     grid-area: img4;
   }
-
 }
 
 .title {
@@ -80,16 +76,16 @@
     color: var(--clr-accent);
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
     display: inline-flex;
-    flex-direction: column;;
+    flex-direction: column;
 
     .path {
       top: 1.25em;
       left: 0;
       opacity: 0;
-      margin-top: -.5rem;
+      margin-top: -0.5rem;
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
-      animation: trace 1.5s ease-in-out forwards;
+      animation: trace 1s ease-out forwards;
       animation-delay: 1.8s;
       clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
       z-index: 1;
@@ -124,6 +120,7 @@
 .heroBtn {
   display: inline-block;
   margin-bottom: 4em;
+  font-size: var(--fs-btn) !important;
 }
 
 .body {
@@ -144,8 +141,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #141617 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #141617 100%),
-    url("../assets/hero-img.jpg");
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #141617 100%), url("../assets/hero-img.jpg");
   transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.5);
   background-position: center;
   background-size: cover;
@@ -159,11 +155,7 @@
     bottom: 0;
     left: 0;
     right: 70%;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
     animation: moveIn 1000ms linear;
 
@@ -171,7 +163,7 @@
       0% {
         opacity: 0;
         transform: translateX(-100%);
-        }
+      }
       100% {
         opacity: 1;
         transform: translateX(0);

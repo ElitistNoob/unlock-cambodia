@@ -136,7 +136,7 @@ export const GlobalStyle = createGlobalStyle`
     position: relative;
     color: var(--clr-primary-light);
     background-image: var(--gradient);
-    font-size: var(--fs-btn);
+    font-size: 1rem;
     font-weight: var(--fw-semi);
     box-shadow: 8px 8px 13px rgba(0, 0, 0, 0.2);
   }

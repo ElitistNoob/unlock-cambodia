@@ -1,7 +1,7 @@
 const tourData = [
   {
     id: 1,
-    title: "Angelina Jolie Tomb Raider Temple Tour",
+    title: "Tomb Raider Temple Tour",
     images: [
       require("./components/assets/angkor-tour-1.jpg"),
       require("./components/assets/angkor-tour-2.jpg"),
@@ -24,6 +24,7 @@ const tourData = [
     ],
     price: 35,
     minimumPax: 2,
+    length: "Full-day",
     warning:
       "*Please wear suitable clothing and follow the temple dress regulations. If your unsure please ask your guide before leaving",
     itinerary:
@@ -33,7 +34,7 @@ const tourData = [
   },
   {
     id: 2,
-    title: "Floating Villages Unlocked - Stilted Village Discovery ",
+    title: "Floating Villages Unlocked",
     images: [
       require("./components/assets/angkor-tour-2.jpg"),
       require("./components/assets/angkor-tour-1.jpg"),
@@ -54,6 +55,7 @@ const tourData = [
     ],
     price: 25,
     minimumPax: 2,
+    length: "Half-day",
     warning: "",
     itinerary:
       "Leaving at 8am you venture towards the unspoiled floating community of Kampong Khleang; known for its stilted-house villages and located on the northern lake-edge about 55km east of Siem Reap town. You then board a boat and begin sailing down the river, arriving at the floating community, where you will experience a truly unique way of life. ",
@@ -62,7 +64,7 @@ const tourData = [
   },
   {
     id: 3,
-    title: "Bike Against the Clock - Unique challenge on two wheels",
+    title: "Bike Against the Clock",
     subtitle: "Unique Siem Reap challenge on two wheels",
     images: [
       require("./components/assets/angkor-tour-3.jpg"),
@@ -96,6 +98,7 @@ const tourData = [
       6: 60,
     },
     minimumPax: 2,
+    length: "3 hours",
     warning: "",
     itinerary:
       "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
@@ -104,7 +107,7 @@ const tourData = [
   },
   {
     id: 4,
-    title: "Bike Against the Clock - Unique challenge on two wheels",
+    title: "Bike Against the Clock",
     subtitle: "Unique Siem Reap challenge on two wheels",
     images: [
       require("./components/assets/angkor-tour-3.jpg"),
@@ -138,6 +141,7 @@ const tourData = [
       6: 60,
     },
     minimumPax: 2,
+    length: "Half-day",
     warning: "",
     itinerary:
       "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
@@ -146,7 +150,7 @@ const tourData = [
   },
   {
     id: 5,
-    title: "Bike Against the Clock - Unique challenge on two wheels",
+    title: "Bike Against the Clock",
     subtitle: "Unique Siem Reap challenge on two wheels",
     images: [
       require("./components/assets/angkor-tour-3.jpg"),
@@ -180,6 +184,7 @@ const tourData = [
       6: 60,
     },
     minimumPax: 2,
+    length: "Half-day",
     warning: "",
     itinerary:
       "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",
@@ -188,7 +193,7 @@ const tourData = [
   },
   {
     id: 6,
-    title: "Bike Against the Clock - Unique challenge on two wheels",
+    title: "Bike Against the Clock",
     subtitle: "Unique Siem Reap challenge on two wheels",
     images: [
       require("./components/assets/angkor-tour-3.jpg"),
@@ -222,6 +227,7 @@ const tourData = [
       6: 60,
     },
     minimumPax: 2,
+    length: "Half-day",
     warning: "",
     itinerary:
       "‘Bike against the clock’ is a new and unique team building challenge on two wheels. Your team’s mission, if you choose to accept it; is to orient your team around Siem Reap as fast as you can and complete the challenges at each of the check points before racing to the finish line.",

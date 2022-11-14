@@ -9,32 +9,37 @@ export default function Experiences() {
   const experienceSection = useRef(null);
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      let tl = gsap.timeline({
+      // let tl = gsap.timeline({});
+      gsap.from(".trigger", {
         scrollTrigger: {
-          trigger: ".box",
+          trigger: ".trigger",
+          start: "top 90%",
         },
-      });
-      tl.from(".box", {
         opacity: 0,
         duration: 1,
         y: "1em",
         scale: 0.8,
         ease: "back",
       });
-      tl.from(".content", {
+      gsap.from(".content", {
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "top 90%",
+        },
         opacity: 0,
         duration: 1,
         ease: "power",
         y: "1em",
-        stagger: 0.3,
+        stagger: 0.1,
+        delay: 0.5,
       });
     }, [experienceSection]);
     return () => ctx.revert();
-  });
+  }, []);
 
   return (
     <section ref={experienceSection}>
-      <div className={`box ${styles.experienceSection}`}>
+      <div className={`trigger ${styles.experienceSection}`}>
         <h2 className={`content ${styles.sectionTitle}`}>
           Choose between a group or private{" "}
           <span className="title-highlight">Experience</span>

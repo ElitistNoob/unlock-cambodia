@@ -1,28 +1,28 @@
-
 .tourSection {
+  position: relative;
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
   margin: 3em auto;
 
-    @media (min-width: 720px) {
-      margin: 6em auto;
-      padding: 0 3em;
-    }
+  @media (min-width: 720px) {
+    margin: 6em auto;
+    padding: 0 3em;
+  }
 
-    @media (min-width: 1440px) {
-      padding: 0;
-    }
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
 
-    @media (min-width: 980px) {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1.5fr 4fr;
-        grid-template-areas:
-          "images title"
-          "images info";
-        gap: 1em 4em;
-    }
+  @media (min-width: 980px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 4fr;
+    grid-template-areas:
+      "images title"
+      "images info";
+    gap: 1em 4em;
+  }
 }
 
 .sectionTitle {
@@ -30,60 +30,57 @@
   border-bottom: 1px solid rgba(255 255 255 / 0.2);
   text-align: left;
 
-    @media (min-width: 980px) {
-        grid-area: title;
-        align-self: flex-end;
-        margin: 0;
-    }
+  @media (min-width: 980px) {
+    grid-area: title;
+    align-self: flex-end;
+    margin: 0;
+  }
 }
 
 .imgGrid {
   display: grid;
-  grid-template-columns: repeat(3, 100%);
-  gap: 1em;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img3 img2"
+    "img3 img1";
+  gap: 0.725em;
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-    @media (min-width: 720px) {
-      grid-area: images;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "img1 img2 img3";
-    }
+  @media (min-width: 980px) {
+    grid-area: images;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "img1 img2" "img3 img3";
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
 
     @media (min-width: 980px) {
-        grid-area: images;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "img1 img2" "img3 img3";
-  
-          .img {
-            margin-block: 1em;
-            border-radius: 8px;
-            height: 264px;
-            width: 100%;
-            object-fit: cover;
-          
-              @media (min-width: 780px) {
-                  margin-block: 0;
-              }
-          }
-
-          img:nth-of-type(1) {
-            grid-area: img1;
-          }
-      
-          img:nth-of-type(2) {
-            grid-area: img2;
-          }
-      
-          img:nth-of-type(3) {
-            grid-area: img3;
-          }
+      height: 264px;
     }
+
+    &:nth-of-type(1) {
+      grid-area: img1;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: img2;
+    }
+
+    &:nth-of-type(3) {
+      grid-area: img3;
+    }
+  }
 }
 
 @media (min-width: 780px) {
@@ -114,15 +111,19 @@
   border-radius: 8px;
   gap: 1em;
 
-    a {
-      grid-area: btn;
-    }
+  a {
+    grid-area: btn;
 
-    @media (min-width: 720px) {
-        grid-template-columns: max-content min-content max-content max-content;
-        grid-template-areas: "length seperator price btn";
-        padding: 0.5em 0.5em 0.5em 2em;
+    &::after {
+      width: 25px !important;
     }
+  }
+
+  @media (min-width: 720px) {
+    grid-template-columns: max-content min-content max-content max-content;
+    grid-template-areas: "length seperator price btn";
+    padding: 0.5em 0.5em 0.5em 2em;
+  }
 }
 
 .tourLength,

@@ -3,14 +3,18 @@
   max-width: 1220px;
   width: 100%;
   margin: 3em auto;
-  
+
   @media (min-width: 720px) {
     margin: 6em auto;
     padding: 0 3em;
   }
-  
+
   @media (min-width: 1440px) {
     padding: 0;
+  }
+
+  a::after {
+    width: 25px !important;
   }
 }
 
@@ -22,9 +26,9 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 
-    // ::-webkit-scrollbar {
-    //   display: none;
-    // }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .titleContainer {
@@ -32,108 +36,79 @@
   align-items: flex-end;
   gap: 1em;
   margin: 2em 0;
-  
+
   h2 {
     margin: 0;
   }
 
   a {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--clr-primary-light);
-    transition: 150ms linear;
-    opacity: 0.8;
-    margin-bottom: 0.125em;
-    
-      &:hover {
-        letter-spacing: 0.125em;
-      }
+    margin-inline: auto 0;
 
-      @media (min-width: 720px) {
-          margin-bottom: 0.5em;
-      }
-
-      img {
-        margin-left: 0.5em;
-      }
+    @media (min-width: 720px) {
+      margin-bottom: 0.5em;
+    }
   }
 }
 
 // Cards Style
 
 .tourCard {
-  position: relative;
-  background-color: var(--clr-primary-light);
-  color: var(--clr-primary-dark);
-  max-width: 654px;
-  padding: 0.625em;
-  border-radius: 8px;
-  text-align: left;
+  img {
+    border-radius: 6px;
+    height: 264px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
 
-    @media (min-width: 720px) {
-      padding: 1em;
-    }
-
-    img {
-      border-radius: 8px;
-      height: 264px;
-      width: 100%;
-      object-fit: cover;
-      transition: 250ms linear;
-      overflow: hidden;
-    }
-
-    h3 {
-      margin-bottom: 0;
-    }
+  div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content max-content 1fr max-content;
+    grid-template-areas: "pax length . price";
+    justify-content: space-between;
+    gap: 0.725em;
 
     p {
-      margin-block: 0.5em 1.5em;
-      color: var(--clr-primary-dark);
-      font-size: 1rem;
-    }
+      margin: 1em 0 0 0;
+      border-radius: 6px;
+      font-size: 0.9125rem;
+      padding: 0.25em 0.5em;
 
-    a {
-      display: flex;
-      justify-content: space-between;
-      gap: 1em;
-      color: var(--clr-primary-dark);
-      font-weight: var(--fw-semi);
-      padding: 1em 0 0;
-      border-top: 1px solid var(--clr-primary-dark);
-      transition: 150ms linear;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(3) {
+        background-color: #1b1e1f;
+        color: var(--clr-primary-light);
+      }
 
-        &:hover,
-        &:focus {
-          letter-spacing: 0.125em;
-        }
+      &:nth-last-of-type(1) {
+        grid-area: price;
+        background-color: var(--clr-primary-light);
+        color: var(--clr-primary-dark);
+        font-weight: var(--fw-bold);
+      }
 
-        img {
-          width: 25px;
-          height: 25px;
-        }
+      &:nth-last-of-type(2) {
+        grid-area: length;
+      }
+
+      &:nth-last-of-type(3) {
+        grid-area: pax;
+      }
     }
-    
-    span {
-      position: absolute;
-      display: block;
-      background-color: var(--clr-accent);
-      color: var(--clr-primary-light);
-      font-weight: var(--fw-bold);
-      font-size: 1.25rem;
-      aspect-ratio: 1;
-      border: 2px solid white;
-      border-radius: 50%;
-      padding: 0.725em 0.5em;
-      margin-top: -42px;
-      width: fit-content;
-      right: 1.25em;
-    }
+  }
+
+  h3 {
+    margin-bottom: 0;
+    color: var(--clr-primary-light);
+  }
+
+  p {
+    margin-block: 0.5em 1.5em;
+    color: #ffffff99;
+    font-size: 1rem;
+    line-height: 2;
+  }
 }
 
-
-
-
-
+// Links

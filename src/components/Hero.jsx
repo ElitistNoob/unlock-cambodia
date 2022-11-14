@@ -35,12 +35,6 @@ export default function Hero() {
         ease: "power1.ing",
         stagger: 0.2,
       });
-      gsap.from(".title", {
-        opacity: 0,
-        duration: 1,
-        y: "1em",
-        ease: "power",
-      });
       gsap.to(".span", {
         clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
         duration: 1,
@@ -53,7 +47,7 @@ export default function Hero() {
         ease: "power",
         stagger: 0.3,
       });
-    }, heroSection);
+    }, [heroSection]);
     return () => ctx.revert();
   }, []);
 
@@ -61,7 +55,7 @@ export default function Hero() {
     <section ref={heroSection} className={styles.heroSection}>
       <div className={styles.content}>
         <div>
-          <h1 className={`title ${styles.title}`}>
+          <h1 className={`content ${styles.title}`}>
             Discover <span className="span">the</span>{" "}
             <span className="span">
               real
