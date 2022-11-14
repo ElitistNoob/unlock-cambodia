@@ -47,42 +47,30 @@ export default function PopularTour() {
 
   return (
     <section ref={section}>
-      <div className={`popularTour ${styles.tourSection}`}>
-        <h2 className={styles.sectionTitle}>
+      <div className={`popularTour ${styles.container}`}>
+        <h2 className="content">
           Most <span className="title-highlight">Popular</span> Tour
         </h2>
-        <div className={styles.imgGrid}>
-          <img
-            className={`imgAnim ${styles.img}`}
-            src={img1}
-            alt="amazing"
-          ></img>
-          <img
-            className={`imgAnim ${styles.img}`}
-            src={img2}
-            alt="amazing"
-          ></img>
-          <img
-            className={`imgAnim ${styles.img}`}
-            src={img3}
-            alt="amazing"
-          ></img>
+        <div className={styles.col1}>
+          <img className="imgAnim" src={img1} alt="amazing"></img>
+          <img className="imgAnim" src={img2} alt="amazing"></img>
+          <img className="imgAnim" src={img3} alt="amazing"></img>
         </div>
-        <div className={styles.tourContainer}>
-          <h3 className={`content ${styles.tourTitle}`}>Angkor Temple Tour</h3>
-          <p className={`content ${styles.tourBody}`}>
+        <div className={styles.col2}>
+          <h3 className="content">Angkor Temple Tour</h3>
+          <p className="content">
             At Unlock Cambodia we have selected some of the must do day trips
             that should be on everyone’s bucket list when travelling to
             Cambodia. Our handpicked day tours are perfect for all types of
             travelers, that are looking to unlock some of Cambodia’s hidden
             secrets.
           </p>
-          <div className={`content ${styles.tourInfo}`}>
-            <p className={`content ${styles.tourLength}`}>
+          <div className="content">
+            <p className="content">
               <strong>Length</strong>: 3 hours
             </p>
-            <span className={`content ${styles.seperator}`}>|</span>
-            <p className={`content ${styles.tourPrice}`}>
+            <span className="content">|</span>
+            <p className="content">
               <strong>Price</strong>: $20
             </p>
             <Link to="/contact-us" className="content btn primary-btn">
