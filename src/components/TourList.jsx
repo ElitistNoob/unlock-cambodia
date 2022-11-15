@@ -60,7 +60,7 @@ export default function TourList() {
       <div className={styles.tourCard}>
         <img className={`card-${tour.id}`} src={tour.images[0]} alt="yes" />
         <div className={`card-${tour.id}`}>
-          <p>{tour.minimumPax} Pax +</p>
+          <p>{tour.minimumPax}</p>
           <p>{tour.length}</p>
           <p>${tour.price}</p>
         </div>

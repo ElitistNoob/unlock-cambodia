@@ -1,3 +1,10 @@
+@mixin svgIcon($image) {
+  background-image: url($image);
+  background-position: 0.5em center;
+  background-repeat: no-repeat;
+  padding-left: 2.5em;
+}
+
 .tourSection {
   padding: 0 1em;
   max-width: 1220px;
@@ -73,7 +80,7 @@
       margin: 1em 0 0 0;
       border-radius: 6px;
       font-size: 0.9125rem;
-      padding: 0.25em 0.5em;
+      padding: 0.25em 0.75em;
 
       &:nth-last-of-type(2),
       &:nth-last-of-type(3) {
@@ -90,10 +97,12 @@
 
       &:nth-last-of-type(2) {
         grid-area: length;
+        @include svgIcon("../assets/clock.svg");
       }
 
       &:nth-last-of-type(3) {
         grid-area: pax;
+        @include svgIcon("../assets/group.svg");
       }
     }
   }
