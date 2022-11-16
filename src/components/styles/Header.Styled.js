@@ -47,11 +47,7 @@ export const HeaderStyled = styled.header`
     top: 0;
     backdrop-filter: blur(62px);
     -webkit-backdrop-filter: blur(62px);
-    background: linear-gradient(
-      180deg,
-      var(--clr-primary-dark) 50px,
-      #14161799 50px
-    );
+    background: #14161799;
     min-height: 100vh;
     width: 100%;
     transition: 150ms linear;
@@ -156,12 +152,11 @@ export const HeaderStyled = styled.header`
 
   .toggle {
     position: relative;
-    width: 50px;
+    width: 80px;
     aspect-ratio: 1;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    user-select: none;
   }
 
   @media (min-width: 720px) {

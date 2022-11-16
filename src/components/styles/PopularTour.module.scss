@@ -1,3 +1,10 @@
+@mixin svgIcon($image) {
+  background-image: url($image);
+  background-position: 0.5em center;
+  background-repeat: no-repeat;
+  padding-left: 2.5em;
+}
+
 .container {
   position: relative;
   padding: 0 1em;
@@ -65,7 +72,7 @@
       border-radius: 6px;
 
       @media (min-width: 980px) {
-        height: 264px;
+        aspect-ratio: 4/2;
       }
 
       &:nth-of-type(1) {

@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 // Pages
 import Home from "./Pages/Home";
 import Tours from "./Pages/Tours";
@@ -22,12 +23,14 @@ function App() {
         ></meta>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="icon" href="/public/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </Helmet>
 
+      <ScrollToTop />
       <GlobalStyle />
       <Header />
       <Routes>
