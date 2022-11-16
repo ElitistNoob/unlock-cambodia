@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.5b6de5f7.css",
-    "main.js": "/unlock-cambodia/static/js/main.75f3eddf.js",
+    "main.css": "/unlock-cambodia/static/css/main.e5f0f822.css",
+    "main.js": "/unlock-cambodia/static/js/main.d55b5d2b.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
+    "static/media/contact-page-bg-image.jpg": "/unlock-cambodia/static/media/contact-page-bg-image.94d7bb4279485783bec9.jpg",
     "static/media/solo-group-experience-black.jpg": "/unlock-cambodia/static/media/solo-group-experience-black.c643ac75ffe40345b539.jpg",
     "static/media/angkor-tour-3.jpg": "/unlock-cambodia/static/media/angkor-tour-3.cadf0ebe4332a2fae5de.jpg",
     "static/media/angkor-tour-2.jpg": "/unlock-cambodia/static/media/angkor-tour-2.38b23d251c7a476116cc.jpg",
@@ -23,12 +24,12 @@
     "static/media/arrow-right.svg": "/unlock-cambodia/static/media/arrow-right.1bf86c1350b8ba263665b8d09b280ef7.svg",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee69860ccea6004cc4.svg",
     "static/media/speech-bubble.svg": "/unlock-cambodia/static/media/speech-bubble.6f507069097c87b4c641d3b50dc17220.svg",
-    "main.5b6de5f7.css.map": "/unlock-cambodia/static/css/main.5b6de5f7.css.map",
-    "main.75f3eddf.js.map": "/unlock-cambodia/static/js/main.75f3eddf.js.map",
+    "main.e5f0f822.css.map": "/unlock-cambodia/static/css/main.e5f0f822.css.map",
+    "main.d55b5d2b.js.map": "/unlock-cambodia/static/js/main.d55b5d2b.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5b6de5f7.css",
-    "static/js/main.75f3eddf.js"
+    "static/css/main.e5f0f822.css",
+    "static/js/main.d55b5d2b.js"
   ]
 }
