@@ -1,0 +1,43 @@
+@mixin backgroundImg($image) {
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #141617 100%),
+      linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #141617 100%), url($image);
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.5);
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    z-index: -1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 70%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+      z-index: 1;
+      animation: moveIn 1000ms linear;
+
+      @keyframes moveIn {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    @media (min-width: 980px) {
+      margin-left: 30%;
+    }
+  }
+}
