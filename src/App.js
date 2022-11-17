@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 // Pages
 import Home from "./Pages/Home";
 import Tours from "./Pages/Tours";
+import TourDetails from "./Pages/TourDetails";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
 
@@ -34,10 +35,11 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path="/Unlock-Cambodia" element={<Home />}></Route>
+        <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />}></Route>
-        <Route path="/about-us" element={<AboutUs />}></Route>
-        <Route path="/contact-us" element={<ContactUs />}></Route>
+        <Route path="/tours/:tourTitle" element={<TourDetails />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
       <Footer />
     </>

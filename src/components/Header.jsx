@@ -135,7 +135,7 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, home: false }))
                 }
                 className="nav-link"
-                to="/Unlock-Cambodia"
+                to="/"
                 id="home"
                 style={{
                   color: scrollStyle(

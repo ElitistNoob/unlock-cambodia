@@ -8,11 +8,11 @@ import TourList from "../components/TourList";
 export default function Home() {
   return (
     <main>
-      <Hero/>
-      <Review/>
+      <Hero />
+      <Review />
       <Experiences />
       <PopularTour />
-      <TourList/>
+      <TourList />
     </main>
   );
 }

@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 
 import styles from "../components/styles/ContactForm.module.scss";
 
-export default function AboutUs() {
+export default function ContactUs() {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,19 +33,31 @@ export default function AboutUs() {
       gsap.to(".span", {
         clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
         duration: 1,
-        delay: 2,
+        delay: 1,
+      });
+      gsap.from(".form", {
+        opacity: 0,
+        duration: 1,
+        ease: "power",
+        delay: 1,
+      });
+      tl.from(".title", {
+        opacity: 0,
+        duration: 1,
+        y: "1em",
+        ease: "power",
       });
       tl.from(".form > *", {
         opacity: 0,
         duration: 1,
         y: "1em",
         ease: "power",
-        stagger: 0.1,
       });
-      tl.from(".content", {
+      gsap.from(".content > *", {
         opacity: 0,
         duration: 1,
         y: "1em",
+        delay: 1,
         ease: "power",
       });
     }, [ref]);
@@ -55,7 +67,7 @@ export default function AboutUs() {
   return (
     <main ref={ref}>
       <section className={styles.container}>
-        <h1 className="content">
+        <h1 className="title">
           Contact <span className="span">Us</span>
         </h1>
         <div className={styles.flexContainer}>

@@ -1,0 +1,129 @@
+form {
+  display: grid;
+  grid-template-areas:
+    "price pax"
+    "first last"
+    "date date"
+    "hotel hotel"
+    "total total"
+    "notice notice"
+    "btn btn";
+  background-color: var(--clr-primary-light);
+  padding: 2em;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  gap: 0 1em;
+
+  p {
+    position: relative;
+    grid-area: "price";
+    color: var(--clr-primary-dark);
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+    margin-bottom: 0;
+
+    span {
+      font-size: 1rem;
+    }
+
+    span:nth-of-type(1) {
+      top: -10px;
+      position: absolute;
+      display: block;
+      color: var(--clr-accent);
+    }
+
+    span:nth-of-type(2) {
+      font-weight: var(--fw-normal);
+    }
+  }
+
+  div:nth-of-type(1) {
+    grid-area: pax;
+  }
+  div:nth-of-type(2) {
+    grid-area: first;
+  }
+  div:nth-of-type(3) {
+    grid-area: last;
+  }
+  div:nth-of-type(4) {
+    grid-area: date;
+  }
+  div:nth-of-type(5) {
+    grid-area: hotel;
+    margin-bottom: 1em;
+  }
+  div:nth-of-type(6) {
+    grid-area: total;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    P {
+      margin-top: 0;
+    }
+
+    p:nth-of-type(1) {
+      font-weight: var(--fw-normal);
+      font-size: 1.5rem;
+    }
+  }
+
+  .formBtn {
+    grid-area: btn;
+    margin-top: 1em;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 1em;
+
+    &:hover {
+      background-color: var(--clr-primary-dark);
+      color: var(--clr-primary-light);
+    }
+  }
+
+  .notice {
+    grid-area: notice;
+    font-size: 0.75rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 0;
+    color: red;
+    opacity: 0.8;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: var(--clr-primary-dark);
+      font-weight: var(--fw-bold);
+      font-size: 1.125rem;
+      margin-left: 1rem;
+      transform: translateY(50%);
+      background: linear-gradient(180deg, #fff 50%, #f5f5f5 50%);
+      width: fit-content;
+      padding: 0 6px;
+    }
+
+    input {
+      font-size: 1rem;
+      color: #414547;
+      background-color: #f5f5f5;
+      border: 1px solid var(--clr-primary-dark);
+      border-radius: 6px;
+      height: 3.5rem;
+      outline: none;
+      padding: 0.25em 0.75em;
+      width: 100%;
+    }
+
+    input:focus {
+      border: 2px solid var(--clr-accent);
+    }
+  }
+}
