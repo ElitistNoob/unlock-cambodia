@@ -65,7 +65,7 @@ export default function TourList() {
           <p>${tour.price}</p>
         </div>
         <h3 className={`card-${tour.id}`}>{tour.title}</h3>
-        <p className={`card-${tour.id}`}>{tour.shortDesc}</p>
+        <p className={`card-${tour.id}`}>{tour.fullDesc}</p>
         <Link
           className={`card-${tour.id} btn primary-btn`}
           to={`/tours/${tour.title}`}

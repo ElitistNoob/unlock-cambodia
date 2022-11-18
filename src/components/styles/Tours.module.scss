@@ -1,3 +1,5 @@
+@import "./background.module.scss";
+
 @mixin svgIcon($image) {
   background-image: url($image);
   background-position: 0.5em center;
@@ -21,14 +23,13 @@
     padding: 0;
   }
 
-  a::after {
-    width: 25px !important;
+  span {
+    color: vaR(--clr-accent);
   }
 }
-
 .toursContainer {
   display: grid;
-  grid-template-columns: repeat(3, 100%);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2em;
   overflow-x: scroll;
   scrollbar-width: none;
@@ -39,28 +40,11 @@
   }
 }
 
-.titleContainer {
-  display: flex;
-  align-items: flex-end;
-  gap: 1em;
-  margin: 2em 0;
-
-  h2 {
-    margin: 0;
-  }
-
-  a {
-    margin-inline: auto 0;
-
-    @media (min-width: 720px) {
-      margin-bottom: 0.5em;
-    }
-  }
-}
-
 // Cards Style
 
 .tourCard {
+  margin-bottom: 2em;
+
   img {
     border-radius: 6px;
     height: 264px;
@@ -123,4 +107,10 @@
     font-size: 1rem;
     line-height: 2;
   }
+
+  a::after {
+    width: 25px !important;
+  }
 }
+
+@include backgroundImg("../assets/contact-page-bg-image.jpg");

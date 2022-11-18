@@ -74,9 +74,8 @@ export default function ContactUs() {
           <div className={styles.col1}>
             <form
               className="form"
-              action="mailto:sales@seeasiadifferently.com"
-              // method="POST"
-              // encType="multipart/form-data"
+              action="https://formsubmit.co/sales@seeasiadifferently.com"
+              method="POST"
             >
               <div>
                 <label htmlFor="firstName">First</label>
@@ -123,6 +122,27 @@ export default function ContactUs() {
                 />
               </div>
               <button className="btn primary-btn">Submit</button>
+              {/* formsubmit.co */}
+              {/* Hidden field that if filled by bot, form will be ignored */}
+              <input
+                type="text"
+                name="_honey"
+                style={{ display: "none" }}
+              ></input>
+              {/* Custom Subject Field */}
+              <input
+                type="hidden"
+                name="_subject"
+                value={`New Message from ${formData.firstName}`}
+              ></input>
+              {/* Sends an automated response to sender*/}
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value={`Hi ${formData.firstName}, Thank you for getting in touch with us, we will get back you shortly.`}
+              ></input>
+              <input type="hidden" name="_template" value="table"></input>
+              {/* formsubmit.co */}
             </form>
           </div>
           <div className={`content {styles.col2}`}>

@@ -1,42 +1,50 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./styles/bookingForm.module.scss";
 
 export default function BookingForm({ thisTour }) {
   const [tourForm, setTourForm] = useState({
     tour: `${thisTour.title}`,
-    pax: "1",
+    pax: 2,
     first: "",
     last: "",
+    email: "",
     date: "",
     hotel: "",
-    price: 35,
+    price: "",
   });
 
   const minDate = new Date().toLocaleDateString("en-ca");
-  const totalPrice = tourForm.pax * thisTour.price;
+
+  useEffect(() => {
+    setTourForm(prevData => ({
+      ...prevData,
+      price: tourForm.pax * thisTour.price,
+    }));
+    console.log(tourForm);
+  }, [tourForm.pax]);
 
   const onChange = event => {
     event.preventDefault();
     const { value, name } = event.target;
-    console.log(tourForm);
-    name === "pax"
-      ? setTourForm(prevData => ({
-          ...prevData,
-          [name]: value,
-          price: totalPrice,
-        }))
-      : setTourForm(prevData => ({
-          ...prevData,
-          [name]: value,
-        }));
+    setTourForm(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   return (
-    <form>
+    <form
+      className={styles.bookingForm}
+      action="https://formsubmit.co/6923cca6c2285b24310ce0a6f63bad0a"
+      method="POST"
+    >
       <p>
         <span>From</span>${thisTour.price}
         <span> Per Person</span>
       </p>
+      {/* Hidden values */}
+      <input type="hidden" name="tour" value={tourForm.tour} />
+      {/* Hidden values */}
       <div>
         <label htmlFor="pax">No. of Pax</label>
         <input
@@ -45,7 +53,7 @@ export default function BookingForm({ thisTour }) {
           name="pax"
           value={tourForm.pax}
           type="number"
-          // min="1"
+          min="2"
           max="100"
           required
         />
@@ -58,6 +66,7 @@ export default function BookingForm({ thisTour }) {
           name="first"
           value={tourForm.first}
           type="text"
+          placeholder="First Name"
           required
         />
       </div>
@@ -69,6 +78,19 @@ export default function BookingForm({ thisTour }) {
           name="last"
           value={tourForm.last}
           type="text"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="email">Email</label>
+        <input
+          onChange={onChange}
+          id="email"
+          name="email"
+          value={tourForm.email}
+          type="email"
+          placeholder="Email Address"
           required
         />
       </div>
@@ -96,6 +118,26 @@ export default function BookingForm({ thisTour }) {
           required
         />
       </div>
+      {/* formsubmit.co */}
+      {/* Hidden field that if filled by bot, form will be ignored */}
+      <input type="text" name="_honey" style={{ display: "none" }}></input>
+      {/* Custom Subject Field */}
+      <input
+        type="hidden"
+        name="_subject"
+        value={`New submission for ${tourForm.tour}`}
+      ></input>
+      {/* Sends an automated response to sender*/}
+      <input
+        type="hidden"
+        name="_autoresponse"
+        value={`Hi ${tourForm.first}, Thank you for your ${tourForm.tour} submission. We look forward to seeing you on the ${tourForm.date}. We will be picking you up from the ${tourForm.hotel} 30 minutes before the start of your tour.`}
+      ></input>
+      <input type="hidden" name="_template" value="table"></input>
+      {/* formsubmit.co */}
+      {/* Hidden values */}
+      <input type="hidden" name="total" value={`USD $${tourForm.price}`} />
+      {/* Hidden values */}
       <div className={styles.priceContainer}>
         <p>Total: </p>
         <p id="price" name="price">
@@ -105,7 +147,9 @@ export default function BookingForm({ thisTour }) {
       <p className={styles.notice}>
         *To be paid to your guide on the morning of the tour.
       </p>
-      <button className={`btn primary-btn ${styles.formBtn}`}>Book Tour</button>
+      <button type="submit" className={`btn primary-btn ${styles.formBtn}`}>
+        Book Tour
+      </button>
     </form>
   );
 }

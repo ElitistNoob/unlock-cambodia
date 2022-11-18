@@ -1,8 +1,9 @@
-form {
+.bookingForm {
   display: grid;
   grid-template-areas:
     "price pax"
     "first last"
+    "email email"
     "date date"
     "hotel hotel"
     "total total"
@@ -48,13 +49,16 @@ form {
     grid-area: last;
   }
   div:nth-of-type(4) {
-    grid-area: date;
+    grid-area: email;
   }
   div:nth-of-type(5) {
+    grid-area: date;
+  }
+  div:nth-of-type(6) {
     grid-area: hotel;
     margin-bottom: 1em;
   }
-  div:nth-of-type(6) {
+  div:nth-of-type(7) {
     grid-area: total;
     display: flex;
     flex-direction: row;

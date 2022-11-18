@@ -2,7 +2,7 @@
 import Hero from "../components/Hero";
 import Experiences from "../components/Experiences";
 import Review from "../components/Review";
-import PopularTour from "../components/PopularTour";
+// import PopularTour from "../components/PopularTour";
 import TourList from "../components/TourList";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Review />
       <Experiences />
-      <PopularTour />
+      {/* <PopularTour /> */}
       <TourList />
     </main>
   );

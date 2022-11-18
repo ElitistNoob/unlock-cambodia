@@ -1,7 +1,3 @@
-// const titleSpan = word => {
-//   return <span>word</span>;
-// };
-
 const tourData = [
   {
     id: 1,
@@ -34,8 +30,6 @@ const tourData = [
     length: "8am - 3pm",
     warning:
       "*Please wear suitable clothing and follow the temple dress regulations. If your unsure please ask your guide before leaving",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "Unlock one of the 8 man made wonders of the world on our incredible Angelina Jolie ‘Tomb Raider’ temple tour. On this tour you will see all the main sights of Bayon, Angkor Thom, Banteay Kdei and the magnificent sight of Angkor Wat; by far the most famous of them all, often compared to sites such as Machu Picchu (Peru) and Petra (Jordan) it’s definitely a bucket list tour.",
   },
@@ -69,8 +63,6 @@ const tourData = [
     warning: "",
     itinerary:
       "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "Spend an enjoyable day on water by Unlocking the fascinating unspoiled floating community of Kampong Khleang. Discover a completely different side of Siem Reap and experience a truly unique way of life on water. Marvel at the Tonle Sap, the largest freshwater lake in SE Asia and explore the flooded forest and floating community by canoe. This tour is perfect for explorers, photographers and those that love their bird life.",
   },
@@ -104,8 +96,6 @@ const tourData = [
       "We recommend getting the 3-day pass, as this can be used to visit the main temple sites on other days",
     itinerary:
       "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "Marvel at the fascinating gibbons swinging effortlessly through the trees above your head. This morning tour is incredible rewarding and perfect for all you animal lovers out there. There will be opportunities to not only see the gibbons but also bird life and other wildlife along the shade trail before becoming a real ‘Indiana Jones’ by discovering a hidden remote temple seldom visited by tourists. Unlock your wild side on this truly mesmerizing adventure experience.",
   },
@@ -135,8 +125,6 @@ const tourData = [
       "We recommend getting the 3-day pass, as this can be used to visit the main temple sites on other days",
     itinerary:
       "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "Love your temples then you will love the opportunity to Unlock the mythical Beng Mealea temple; a slumbering giant lost for centuries in the forest of Cambodia. It is the most accessible of Angkor’s lost temples and is a mirror image of Angkor Wat itself; but it is utterly consumed by the voracious appetite of nature, which makes the temple absolutely fascinating to explore. ",
   },
@@ -164,8 +152,6 @@ const tourData = [
       "Bring a change of clothes if you have chosen the full covering experience.",
     itinerary:
       "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "A water blessing is meant to bring you good luck and is a sacred ritual performed in Pagodas all across Cambodia. For the blessing you can choose between a light sprinkling or a full complete covering experience, with the cleansing ceremony performed by a monk in the grounds of an active pagoda. This is experience is a wonderful way to connect with the local customs and allows you to reflect on your time in Cambodia.",
   },
@@ -195,8 +181,6 @@ const tourData = [
       "Additional bottles of wine can be pre ordered at $20 per bottle (Red and White available)",
     itinerary:
       "Departing at 8am you journey to the enigmatic and enchanting temple of Bayon. Beginning our tour here we can avoid the crowds and see the temple at its quietest. Its 54 towers are each topped off with the four faces of Avalokiteshvara (Buddha of Compassion), which bears more than a passing resemblance to the king himself.",
-    shortDesc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu eros ante. Maecenas malesuada vitae risus finibus pellentesque. Duis faucibus. ",
     fullDesc:
       "Unlock the romance of Cambodia’s sunsets and immerse yourselves in the beautiful Cambodian countryside, watch the sun go down and toast yourselves with a chilled glass of wine accompanied with some delicious Cambodian treats. Unlock one of two beautiful locations; either a hilltop that boasts spectacular view across rice fields with the Tonle Sap Lake as a backdrop or a stunning rural rice field location. Whichever location you chose you will enjoy an incredible private and romantic experience with the one you love.",
   },

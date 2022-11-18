@@ -39,12 +39,17 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavBar);
+    return () => window.removeEventListener("scroll", changeNavBar);
   }, []);
 
   //  Scroll Progress Bar
   useEffect(() => {
     window.addEventListener("scroll", progressBar);
   }, []);
+
+  useEffect(() => {
+    console.log(isScroll);
+  }, [isScroll]);
 
   const progressBar = () => {
     const scrollTotal = document.documentElement.scrollTop;
@@ -71,9 +76,8 @@ export default function Header() {
   const scrollStyle = (value1, value2) => {
     if (isOpen || !isScroll) {
       return value1;
-    } else {
-      return value2;
     }
+    return value2;
   };
 
   const logoMargin = () => {
@@ -126,7 +130,7 @@ export default function Header() {
           style={{ transform: `translateX(${isOpen ? 0 : -100}%)` }}
         >
           <ul className="nav-menu">
-            <li onClick={toggleMenu}>
+            <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
                   setIsHovered(prev => ({ ...prev, home: true }))
@@ -148,7 +152,7 @@ export default function Header() {
                 {isHovered.home && winWidth > 720 ? selectionSvg() : " "}
               </Link>
             </li>
-            <li onClick={toggleMenu}>
+            <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
                   setIsHovered(prev => ({ ...prev, tours: true }))
@@ -170,7 +174,7 @@ export default function Header() {
                 {isHovered.tours && winWidth > 720 ? selectionSvg() : " "}
               </Link>
             </li>
-            <li onClick={toggleMenu}>
+            <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
                   setIsHovered(prev => ({ ...prev, about: true }))
@@ -192,7 +196,7 @@ export default function Header() {
                 {winWidth > 720 && isHovered.about ? selectionSvg() : " "}
               </Link>
             </li>
-            <li onClick={toggleMenu}>
+            <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
                   setIsHovered(prev => ({ ...prev, contact: true }))

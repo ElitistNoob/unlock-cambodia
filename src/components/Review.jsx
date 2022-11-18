@@ -6,7 +6,6 @@ import { Context } from "./Context/winWidth";
 import styles from "./styles/Review.module.scss";
 // assets
 import review1 from "../components/assets/review-photo.jpg";
-import speechBubble from "./assets/speech-bubble.svg";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay } from "swiper";
@@ -83,7 +82,6 @@ export default function Review() {
         {winWidth > 1120 && svgImg()}
         <h2 className={`title ${styles.sectionTitle}`}>
           The <span className="title-highlight">proof</span> is in the pudding{" "}
-          <img src={speechBubble} alt="" />
         </h2>
         <Swiper
           speed={800}
