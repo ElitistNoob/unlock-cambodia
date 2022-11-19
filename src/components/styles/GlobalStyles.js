@@ -19,7 +19,6 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
       /* Font Sizes */
-
       --fs-h1: 2.375rem; //38px
       --fs-h2: 1.5rem; // 24px
       --fs-h3: 1.25rem;

@@ -1,26 +1,26 @@
 // Hooks
-import { useLayoutEffect, useRef } from "react";
+// import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 // Styles
 import styles from "../components/styles/Tours.module.scss";
 // Data
 import tourData from "../toursData";
-// Gsap
-import { gsap } from "gsap";
+// // Gsap
+// import { gsap } from "gsap";
 
 export default function Tours(props) {
-  const ref = useRef(null);
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(".background", {
-        transform: "matrix(-1, 0, 0, 1, 0, 0) scale(1)",
-        opacity: 0.6,
-        duration: 2,
-        ease: "back",
-      });
-    }, [ref]);
-    return () => ctx.revert();
-  }, []);
+  //   const ref = useRef(null);
+  //   useLayoutEffect(() => {
+  //     const ctx = gsap.context(() => {
+  //       gsap.to(".background", {
+  //         transform: "matrix(-1, 0, 0, 1, 0, 0) scale(1)",
+  //         opacity: 0.6,
+  //         duration: 2,
+  //         ease: "back",
+  //       });
+  //     }, [ref]);
+  //     return () => ctx.revert();
+  //   }, []);
   const renderTourCards = tourData.map(tour => (
     <div key={tour.id} className={styles.tourCard}>
       <img className={`card-${tour.id}`} src={tour.images[0]} alt="yes" />
@@ -40,7 +40,7 @@ export default function Tours(props) {
     </div>
   ));
   return (
-    <section ref={ref}>
+    <section>
       <div className={styles.tourSection}>
         <h1>
           All <span>Tours</span>

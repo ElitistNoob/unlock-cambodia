@@ -87,6 +87,10 @@
       background-color: var(--clr-primary-dark);
       color: var(--clr-primary-light);
     }
+
+    &:hover::after {
+      display: none;
+    }
   }
 
   .notice {

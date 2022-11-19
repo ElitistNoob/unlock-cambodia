@@ -80,7 +80,7 @@ export default function TourList() {
     <section ref={section} className={styles.tourSection}>
       <div className={`trigger ${styles.titleContainer}`}>
         <h2 className="title">
-          <span className="title-highlight">More</span> tours
+          <span className="title-highlight">Unlock</span> Cambodia tours
         </h2>
         <Link className="title btn primary-btn" to="/tours">
           View all tours

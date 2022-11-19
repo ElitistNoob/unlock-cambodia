@@ -1,20 +1,14 @@
 // Hooks
 import { Link } from "react-router-dom";
-import { Context } from "./Context/winWidth";
+// import { Context } from "./Context/winWidth";
 import { useContext, useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Hero.module.scss";
-//  Images
-import img1 from "./assets/hero-grid-img1.jpg";
-import img2 from "./assets/hero-grid-img2.jpg";
-import img3 from "./assets/hero-grid-img3.jpg";
-import img4 from "./assets/hero-grid-img4.jpg";
-import abstractSquare from "./assets/abstract-square.svg";
 
 import { gsap } from "gsap";
 
 export default function Hero() {
-  const { winWidth } = useContext(Context);
+  // const { winWidth } = useContext(Context);
 
   const heroSection = useRef(null);
 
@@ -25,14 +19,6 @@ export default function Hero() {
         opacity: 0.6,
         duration: 2,
         ease: "back",
-      });
-      gsap.from(".imgAnim", {
-        opacity: 0,
-        duration: 1,
-        y: "-6em",
-        scale: 0.6,
-        ease: "power1.ing",
-        stagger: 0.2,
       });
       gsap.to(".span", {
         clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
@@ -58,8 +44,6 @@ export default function Hero() {
           <span className="span">
             real
             <svg
-              width="246"
-              height="31"
               viewBox="0 0 259 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -83,17 +67,6 @@ export default function Hero() {
         <Link to="/contact-us" className="btn primary-btn">
           Get Started
         </Link>
-        <div className={styles.imgGallery}>
-          <img className="imgAnim" src={img1} alt="" />
-          <img className="imgAnim" src={img2} alt="" />
-          <img className="imgAnim" src={img3} alt="" />
-          <img className="imgAnim" src={img4} alt="" />
-          <img
-            className="imgAnim"
-            src={winWidth > 920 ? abstractSquare : img3}
-            alt=""
-          />
-        </div>
       </div>
       <div className={`background ${styles.backgroundImage}`}></div>
     </section>

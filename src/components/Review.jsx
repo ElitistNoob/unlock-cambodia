@@ -31,9 +31,9 @@ export default function Review() {
           start: "top 90%",
         },
       });
-      tl.to(".svgContainer", {
-        display: "block",
-      });
+      // tl.to(".svgContainer", {
+      //   display: "block",
+      // });
       tl.from(".title", {
         opacity: 0,
         duration: 0.5,
@@ -79,7 +79,7 @@ export default function Review() {
   return (
     <section ref={reviewSection} className={styles.reviewSection}>
       <div className="trigger">
-        {winWidth > 1120 && svgImg()}
+        {/* {winWidth > 1120 && svgImg()} */}
         <h2 className={`title ${styles.sectionTitle}`}>
           The <span className="title-highlight">proof</span> is in the pudding{" "}
         </h2>

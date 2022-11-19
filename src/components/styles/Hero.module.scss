@@ -8,7 +8,7 @@
   display: flex;
 
   @media (min-width: 720px) {
-    margin: 9em auto 0;
+    margin: 12em auto 0;
     padding: 0 3em;
   }
 
@@ -30,16 +30,33 @@
         "imgGrid title"
         "imgGrid body"
         "imgGrid btn";
-      margin-left: -14em;
+      margin-left: -3.5em;
       gap: 0 3.125em;
     }
 
     h1 {
+      position: relative;
       grid-area: title;
       max-width: 850px;
       margin-bottom: 1.5rem;
       margin-top: 0;
       transform: translateY(0);
+
+      @media (min-width: 720px) {
+        &::before {
+          position: absolute;
+          content: "";
+          background-image: url("../assets/dot-grid-vertical.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          left: -40px;
+          top: -60px;
+          width: 99.68px;
+          height: 205.06px;
+          z-index: -1;
+          opacity: 0.1;
+        }
+      }
 
       span {
         color: var(--clr-accent);
@@ -51,7 +68,6 @@
           top: 1.25em;
           left: 0;
           opacity: 0;
-          margin-top: -0.5rem;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
           animation: trace 1s ease-out forwards;
@@ -74,19 +90,12 @@
           }
         }
       }
-      @media (min-width: 1440px) {
-        margin-bottom: 3rem;
-      }
     }
 
     p {
       grid-area: body;
-      margin-block: 0 2em;
-      max-width: 720px;
-
-      @media (min-width: 980px) {
-        margin-bottom: 3em;
-      }
+      margin-block: 0 3em;
+      max-width: 785px;
     }
 
     a {
@@ -96,47 +105,6 @@
 
       @media (min-width: 980px) {
         margin-bottom: 4em;
-      }
-    }
-
-    div {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas:
-        "img1 img2 img3"
-        ". img5 img4";
-      gap: 0.75em;
-      width: fit-content;
-      margin-bottom: 1.5rem;
-      grid-area: imgGrid;
-
-      @media (min-width: 980px) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-          "img1 img2 ."
-          ". img3 ."
-          "img4 img5 .";
-      }
-
-      img {
-        object-fit: cover;
-        border-radius: 6px;
-      }
-
-      img:nth-of-type(1) {
-        grid-area: img1;
-      }
-      img:nth-of-type(2) {
-        grid-area: img2;
-      }
-      img:nth-of-type(3) {
-        grid-area: img3;
-      }
-      img:nth-of-type(4) {
-        grid-area: img5;
-      }
-      img:nth-of-type(5) {
-        grid-area: img4;
       }
     }
   }

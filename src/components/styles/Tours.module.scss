@@ -26,6 +26,10 @@
   span {
     color: vaR(--clr-accent);
   }
+
+  h1 {
+    font-size: var(--fs-h2);
+  }
 }
 .toursContainer {
   display: grid;
@@ -60,9 +64,11 @@
     grid-template-areas: "pax length . price";
     justify-content: space-between;
     gap: 0.725em;
+    padding-inline: 0.5em;
+    margin-top: -3.5em;
 
     p {
-      margin: 1em 0 0 0;
+      margin: 0;
       border-radius: 6px;
       font-size: 0.9125rem;
       padding: 0.25em 0.75em;
@@ -95,6 +101,7 @@
   h3 {
     margin-bottom: 0;
     color: var(--clr-primary-light);
+    margin-top: 2em;
   }
 
   p {
@@ -102,15 +109,11 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    margin-block: 0.5em 1.5em;
+    margin-block: 0.5em 3em;
     color: #ffffff99;
     font-size: 1rem;
     line-height: 2;
   }
-
-  a::after {
-    width: 25px !important;
-  }
 }
 
-@include backgroundImg("../assets/contact-page-bg-image.jpg");
+// @include backgroundImg("../assets/contact-page-bg-image.jpg");

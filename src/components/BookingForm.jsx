@@ -136,7 +136,11 @@ export default function BookingForm({ thisTour }) {
       <input type="hidden" name="_template" value="table"></input>
       {/* formsubmit.co */}
       {/* Hidden values */}
-      <input type="hidden" name="total" value={`USD $${tourForm.price}`} />
+      <input
+        type="hidden"
+        name="total"
+        value={`USD $${tourForm.price} - Payable to your guide on the morning of your tour.`}
+      />
       {/* Hidden values */}
       <div className={styles.priceContainer}>
         <p>Total: </p>
