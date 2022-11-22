@@ -1,0 +1,24 @@
+@import "./background.module.scss";
+
+.aboutUs {
+  position: relative;
+  padding: 0 1em;
+  max-width: 1220px;
+  width: 100%;
+  margin: 6em auto;
+
+  @media (min-width: 720px) {
+    margin: 11em auto;
+    padding: 0 3em;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0;
+  }
+
+  p {
+    max-width: 814px;
+  }
+}
+
+@include backgroundImg("../assets/unlockCambodia-team.jpg");
