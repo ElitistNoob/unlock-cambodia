@@ -44,6 +44,7 @@ export const GlobalStyle = createGlobalStyle`
 
       @media (min-width: 1440px) {
         :root {
+          /* --fs-h1: 4rem; // 98px  */
           --fs-h1: 6.125rem; // 98px 
         } 
       }
@@ -90,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h3,
     h4 {
-      font-size: var(--fs-h3);
+      font-size: var(--fs-h4);
       font-weight: var(--fw-semi);
     }
 
