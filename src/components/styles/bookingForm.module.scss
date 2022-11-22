@@ -10,32 +10,50 @@
     "notice notice"
     "btn btn";
   background-color: var(--clr-primary-light);
-  padding: 2em;
+  padding: 0 1em 1em;
   border-radius: 6px;
   margin-bottom: 2em;
   gap: 0 1em;
 
+  @media (max-width: 380px) {
+    grid-template-areas:
+      "price price"
+      "pax pax"
+      "first last"
+      "email email"
+      "date date"
+      "hotel hotel"
+      "total total"
+      "notice notice"
+      "btn btn";
+  }
+
+  @media (min-width: 980px) {
+    padding: 1em 2em 2em;
+  }
+
   p {
     position: relative;
-    grid-area: "price";
+    grid-area: price;
     color: var(--clr-primary-dark);
     font-weight: var(--fw-bold);
     font-size: 2rem;
     margin-bottom: 0;
+    width: 100%;
 
     span {
       font-size: 1rem;
-    }
 
-    span:nth-of-type(1) {
-      top: -10px;
-      position: absolute;
-      display: block;
-      color: var(--clr-accent);
-    }
+      &:nth-of-type(1) {
+        top: -10px;
+        position: absolute;
+        display: block;
+        color: var(--clr-accent);
+      }
 
-    span:nth-of-type(2) {
-      font-weight: var(--fw-normal);
+      &:nth-of-type(2) {
+        font-weight: var(--fw-normal);
+      }
     }
   }
 
@@ -67,11 +85,15 @@
 
     P {
       margin-top: 0;
-    }
 
-    p:nth-of-type(1) {
-      font-weight: var(--fw-normal);
-      font-size: 1.5rem;
+      &:nth-of-type(1) {
+        font-weight: var(--fw-normal);
+        font-size: 1.5rem;
+      }
+
+      &:nth-of-type(2) {
+        text-align: right;
+      }
     }
   }
 
@@ -128,10 +150,10 @@
       outline: none;
       padding: 0.25em 0.75em;
       width: 100%;
-    }
 
-    input:focus {
-      border: 2px solid var(--clr-accent);
+      &:focus {
+        border: 2px solid var(--clr-accent);
+      }
     }
   }
 }

@@ -59,11 +59,15 @@
       "email email"
       "comment comment"
       "button button";
-    gap: 1em;
+    gap: 0 1em;
     background-color: var(--clr-primary-light);
-    padding: 2em;
+    padding: 0 1em 1em;
     border-radius: 6px;
     margin-bottom: 2em;
+
+    @media (min-width: 980px) {
+      padding: 1em 2em 2em;
+    }
 
     div:nth-of-type(1) {
       grid-area: first;
