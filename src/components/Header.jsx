@@ -47,10 +47,6 @@ export default function Header() {
     window.addEventListener("scroll", progressBar);
   }, []);
 
-  useEffect(() => {
-    console.log(isScroll);
-  }, [isScroll]);
-
   const progressBar = () => {
     const scrollTotal = document.documentElement.scrollTop;
     const winHeight =

@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Assets
 import img1 from "./assets/solo-group-experience.jpg";
 import img2 from "./assets/grouptype-img2.jpg";
-import dotGrid from "./assets/dot-grid-vertical.svg";
 import arrowTop from "./assets/curved-drawn-arrow.svg";
 import arrowDown from "./assets/curved-drawn-arrow.svg";
 
@@ -44,10 +43,6 @@ export default function Experiences() {
         stagger: 0.1,
         delay: 0.5,
       });
-      tl.from(".dot", {
-        opacity: 0,
-        marginTop: "-3em",
-      });
       tl.from(".image", {
         opacity: 0,
         marginTop: "-3em",
@@ -82,7 +77,6 @@ export default function Experiences() {
         <img className="image" src={img2} alt="Cambodia private tour" />
         <img className="svg" src={arrowTop} alt="" />
         <img className="svg" src={arrowDown} alt="" />
-        <img className="dot" src={dotGrid} alt="" />
       </div>
     </section>
   );

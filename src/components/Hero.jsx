@@ -1,7 +1,7 @@
 // Hooks
 import { Link } from "react-router-dom";
 // import { Context } from "./Context/winWidth";
-import { useContext, useLayoutEffect, useRef } from "react";
+import {useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Hero.module.scss";
 
@@ -51,8 +51,8 @@ export default function Hero() {
               <path
                 d="M46 2.5C97 2.49984 325.881 7.55601 235.381 7.55587C150.365 7.55575 41.0815 14.0503 9.91086 15.3686M9.91086 15.3686C7.9001 15.4536 6.2144 15.5171 4.88123 15.556C1.05145 15.6675 3.23707 15.5373 9.91086 15.3686ZM9.91086 15.3686C41.5743 14.568 174.265 12.8989 244.881 32.0559"
                 stroke="#F28E34"
-                stroke-width="5"
-                stroke-linecap="round"
+                strokeWidth="5"
+                strokeLinecap="round"
               />
             </svg>
           </span>{" "}
