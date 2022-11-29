@@ -6,7 +6,7 @@ export const HeaderStyled = styled.header`
   top: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 2;
 
   .container {
     position: relative;
@@ -21,7 +21,6 @@ export const HeaderStyled = styled.header`
   @media (min-width: 720px) {
     .container {
       padding: 1em 2rem;
-      /* transform: translateY(-100%); */
     }
   }
 
@@ -45,10 +44,8 @@ export const HeaderStyled = styled.header`
   .nav {
     position: fixed;
     top: 0;
-
     width: 100%;
     transition: 150ms linear;
-    z-index: -1;
   }
 
   @media (min-width: 720px) {
@@ -87,6 +84,7 @@ export const HeaderStyled = styled.header`
       margin: 0;
       box-shadow: unset;
       background: unset;
+      opacity: unset;
     }
 
     .nav-menu:first-child {
@@ -108,6 +106,7 @@ export const HeaderStyled = styled.header`
     padding: 0.5em 1em;
     margin-left: -1em;
     width: calc(100% + 1.75em);
+    color: var(--clr-primary-light);
   }
 
   @media (min-width: 720px) {
@@ -178,6 +177,7 @@ export const HeaderStyled = styled.header`
     height: 4px;
     border-radius: 50px;
     transition: 150ms linear;
+    background-color: white;
   }
 
   .hamburger::before,

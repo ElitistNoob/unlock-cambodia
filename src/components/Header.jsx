@@ -11,7 +11,6 @@ import { HeaderStyled } from "./styles/Header.Styled";
 import { ContainerStyled } from "./styles/Container.Styled";
 // Assets
 import logoWhite from "./assets/logo-light.png";
-import logoBlack from "./assets/logo-dark.png";
 // Pages
 import { Link } from "react-router-dom";
 import { Context } from "./Context/winWidth";
@@ -68,13 +67,8 @@ export default function Header() {
         backgroundColor: "transparent",
       };
     } else if (isScroll) {
-      if (isOpen) {
-        return {
-          backgroundColor: "#141617",
-        };
-      }
       return {
-        backgroundColor: "#fff",
+        backgroundColor: "#141617",
       };
     }
   };
@@ -129,7 +123,7 @@ export default function Header() {
           <img
             className="logo"
             style={logoMargin()}
-            src={scrollStyle(logoWhite, logoBlack)}
+            src={scrollStyle(logoWhite, logoWhite)}
             alt="logo"
           />
         </Link>
@@ -149,12 +143,6 @@ export default function Header() {
                 className="nav-link"
                 to="/"
                 id="home"
-                style={{
-                  color: scrollStyle(
-                    "var(--clr-primary-light)",
-                    "var(--clr-primary-dark)"
-                  ),
-                }}
               >
                 Home
                 {isHovered.home && winWidth > 720 ? selectionSvg() : " "}
@@ -171,12 +159,6 @@ export default function Header() {
                 id="tours"
                 className="nav-link"
                 to="/tours"
-                style={{
-                  color: scrollStyle(
-                    "var(--clr-primary-light)",
-                    "var(--clr-primary-dark)"
-                  ),
-                }}
               >
                 Tours
                 {isHovered.tours && winWidth > 720 ? selectionSvg() : " "}
@@ -193,12 +175,6 @@ export default function Header() {
                 id="about"
                 className="nav-link"
                 to="/about-us"
-                style={{
-                  color: scrollStyle(
-                    "var(--clr-primary-light)",
-                    "var(--clr-primary-dark)"
-                  ),
-                }}
               >
                 About Us
                 {winWidth > 720 && isHovered.about ? selectionSvg() : " "}
@@ -215,12 +191,6 @@ export default function Header() {
                 id="contact"
                 className="nav-link"
                 to="/contact-us"
-                style={{
-                  color: scrollStyle(
-                    "var(--clr-primary-light)",
-                    "var(--clr-primary-dark)"
-                  ),
-                }}
               >
                 Contact Us
                 {isHovered.contact && winWidth > 720 ? selectionSvg() : " "}
@@ -230,15 +200,7 @@ export default function Header() {
         </nav>
 
         <button className="toggle" onClick={toggleMenu}>
-          <span
-            className="hamburger"
-            style={{
-              backgroundColor: scrollStyle(
-                "var(--clr-primary-light)",
-                "var(--clr-primary-dark)"
-              ),
-            }}
-          ></span>
+          <span className="hamburger"></span>
         </button>
       </ContainerStyled>
       {isScroll && !isOpen && (
