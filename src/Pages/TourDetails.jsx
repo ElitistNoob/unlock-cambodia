@@ -13,7 +13,6 @@ import { gsap } from "gsap";
 
 export default function TourDetails(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const { tourTitle } = useParams();
   const ref = useRef(null);
   const thisTour = toursData.find(tour => tour.title === tourTitle);
@@ -56,9 +55,8 @@ export default function TourDetails(props) {
   };
 
   const closeModal = event => {
-    console.log(event.target);
     event.preventDefault();
-    return event.target.id !== "form" && !isHovered && isModalOpen
+    return (event.target.id === "formModal") & isModalOpen
       ? setIsModalOpen(false)
       : "";
   };
@@ -68,9 +66,6 @@ export default function TourDetails(props) {
   } else {
     document.body.style.overflowY = "scroll";
   }
-
-  const onMouseEnter = () => setIsHovered(true);
-  const onMouseLeave = () => setIsHovered(false);
 
   return (
     <main ref={ref} className={styles.tour} onClick={closeModal}>
@@ -95,13 +90,8 @@ export default function TourDetails(props) {
           </div>
         </div>
         {isModalOpen && (
-          <div id={styles.formModal}>
-            <BookingForm
-              id={"form"}
-              thisTour={thisTour}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            />
+          <div id="formModal" className={styles.formModal}>
+            <BookingForm thisTour={thisTour} />
           </div>
         )}
       </section>
