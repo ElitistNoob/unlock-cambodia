@@ -12,8 +12,11 @@
   background-color: var(--clr-primary-light);
   padding: 0 1em 1em;
   border-radius: 6px;
-  margin-bottom: 2em;
   gap: 0 1em;
+  max-width: 469px;
+  width: calc(100% - 1rem);
+  margin-inline: auto;
+  box-shadow: 0 0 100px rgba(0 0 0 / 0.2);
 
   @media (max-width: 380px) {
     grid-template-areas:

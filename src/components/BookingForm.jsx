@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import styles from "./styles/bookingForm.module.scss";
 
-export default function BookingForm({ thisTour }) {
+export default function BookingForm({
+  thisTour,
+  id,
+  onMouseEnter,
+  onMouseLeave,
+}) {
   const [tourForm, setTourForm] = useState({
     tour: `${thisTour.title}`,
     pax: 2,
@@ -20,7 +25,6 @@ export default function BookingForm({ thisTour }) {
       ...prevData,
       price: tourForm.pax * thisTour.price,
     }));
-    console.log(tourForm);
   }, [tourForm.pax]);
 
   const onChange = event => {
@@ -34,6 +38,9 @@ export default function BookingForm({ thisTour }) {
 
   return (
     <form
+      id={id}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       className={styles.bookingForm}
       action="https://formsubmit.co/6923cca6c2285b24310ce0a6f63bad0a"
       method="POST"
