@@ -184,4 +184,13 @@ export const GlobalStyle = createGlobalStyle`
     transition: 250ms;
   }
 
+  .swiper-button-next,
+.swiper-button-prev {
+  color: var(--clr-accent)!important;
+  margin: 0 2em;
+  background-color: #ffffff10;
+  padding: 2.5em;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
 `;

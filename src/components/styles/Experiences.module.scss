@@ -8,13 +8,13 @@
   width: calc(100% - 2rem);
   z-index: -2;
   border-radius: 6px;
-  margin: 3em auto;
+  margin: 0 auto 6em;
 
   @media (min-width: 680px) {
-    margin: 7em auto;
+    margin-bottom: 12em;
   }
 
-  @media (min-width: 980px) {
+  @media (min-width: 1180px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -40,11 +40,16 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 2em;
 
     @media (min-width: 540px) {
       grid-template-columns: 2fr 1fr 3fr 0.5fr;
       grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr;
       margin-right: -1em;
+    }
+
+    @media (min-width: 980px) {
+      margin-bottom: 0;
     }
 
     @media (min-width: 1180px) {

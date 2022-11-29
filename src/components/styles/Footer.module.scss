@@ -2,10 +2,9 @@
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
-  margin: 3em auto 2em;
+  margin: 0 auto 2em;
 
   @media (min-width: 720px) {
-    margin: 6em auto 2em;
     padding: 0 3em;
   }
 
@@ -16,7 +15,7 @@
   .formContainer {
     background-color: #1b1e1f;
     padding: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 6em;
     border-radius: 6px;
 
     @media (min-width: 980px) {

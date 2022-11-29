@@ -21,7 +21,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function TourList() {
+export default function TourList({ thisTour }) {
   const { winWidth } = useContext(Context);
 
   const section = useRef(null);
@@ -55,7 +55,9 @@ export default function TourList() {
     return () => ctx.revert();
   }, []);
 
-  const renderTourCards = tourData.map(tour => (
+  const filteredData = tourData.filter(tour => tour.title !== thisTour);
+
+  const renderTourCards = filteredData.map(tour => (
     <SwiperSlide key={tour.id}>
       <div className={styles.tourCard}>
         <img className={`card-${tour.id}`} src={tour.images[0]} alt="yes" />

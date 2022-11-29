@@ -114,6 +114,15 @@
     font-size: 1rem;
     line-height: 2;
   }
+
+  @media (min-width: 980px) {
+    a {
+      display: inline-block;
+    }
+    a:hover::after {
+      width: 25px;
+    }
+  }
 }
 
 // @include backgroundImg("../assets/contact-page-bg-image.jpg");

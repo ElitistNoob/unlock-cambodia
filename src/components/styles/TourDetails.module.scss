@@ -14,7 +14,7 @@
   margin: 6em auto;
 
   @media (min-width: 720px) {
-    margin: 11em auto 0;
+    margin: 12em auto 0;
     padding: 0 3em;
   }
 
@@ -39,17 +39,19 @@
       color: var(--clr-primary-light);
     }
   }
-  section {
-    @media (min-width: 980px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6em;
-    }
 
-    @media (min-width: 1220px) {
-      grid-template-columns: 3fr 2fr;
-    }
+  .col1 {
+    .tourInfo {
+      @media (min-width: 980px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6em;
+      }
 
+      @media (min-width: 1220px) {
+        grid-template-columns: 3fr 2fr;
+      }
+    }
     .infoContainer {
       max-width: 750px;
       display: flex;
@@ -77,10 +79,49 @@
         }
       }
     }
+    button {
+      position: relative;
+      border: none;
+      padding: 0.5em 1.25em;
+      background-color: var(--clr-accent);
+      border-radius: 6px 0 0 6px;
+      font-size: 1rem;
+      height: 36px;
+      font-weight: var(--fw-semi);
+      color: var(--clr-primary-light);
+      cursor: pointer;
+      align-self: flex-end;
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: -40px;
+        top: 0;
+        background-color: #1b1e1f;
+        width: 40px;
+        height: 36px;
+        border: 2px solid var(--clr-accent);
+        background-image: url("../assets/book-icon.svg");
+        background-size: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 0 6px 6px 0;
+      }
+
+      &:hover::before {
+        background-size: 26px;
+      }
+    }
   }
 }
 
 .inclusions {
+  margin-bottom: 3em;
+
+  @media (min-width: 720px) {
+    margin-bottom: 6em;
+  }
+
   h3 {
     font-size: 1.25rem;
   }
@@ -156,4 +197,48 @@
       }
     }
   }
+}
+
+.tourHighlights {
+  margin-bottom: 3em;
+
+  @media (min-width: 720px) {
+    margin-bottom: 6em;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5em;
+    margin-bottom: 1em;
+
+    div {
+      img {
+        border-radius: 6px 6px 0 0;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1;
+        border-radius: 0 0 6px 6px;
+        margin-top: -8px;
+        background-color: #1b1e1f;
+        padding: 1em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#formModal {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  background-color: #14161799;
+  backdrop-filter: blur(2px);
 }

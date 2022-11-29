@@ -13,27 +13,31 @@ export default function Review() {
   return (
     <section className={styles.EasySection}>
       <h2>
-        It's as <span className="title-highlight">Easy</span> as 1 - 2 - 3
+        <span className="title-highlight">Why</span> Unlock Cambodia?
       </h2>
       <div className={styles.container}>
         <div>
           <img src={select} alt="" />
-          <h3>Select a Tour</h3>
-          <p>Browse through our tours and select one that interest you.</p>
+          <h3>Inside Knowledge</h3>
+          <p>
+            We've lived in Cambodia for 20 years. We know the Kingdom of
+            Wonders' ins and outs.
+          </p>
         </div>
         <hr />
         <div>
           <img src={send} alt="" />
-          <h3>Send us your Details</h3>
+          <h3>Best Guides</h3>
           <p>
-            Let us know the date you want to go and where you will be staying.
+            Knowledgeable and charismatic, our guides are the bests in the
+            business.
           </p>
         </div>
         <hr />
         <div>
           <img src={location} alt="" />
           <h3>Pay on Location</h3>
-          <p>Book now and pay nothing until the very morning of your tour.</p>
+          <p>No Payment required until the very morning of your tour.</p>
         </div>
       </div>
     </section>

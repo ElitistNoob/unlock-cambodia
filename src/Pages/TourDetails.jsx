@@ -1,16 +1,19 @@
 // Hooks
 import { useParams } from "react-router-dom";
-import { useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef } from "react";
 // Data
 import toursData from "../toursData";
 // styles
 import styles from "../components/styles/TourDetails.module.scss";
 // components
 import BookingForm from "../components/BookingForm";
+import TourList from "../components/TourList";
 // Gsap
 import { gsap } from "gsap";
 
 export default function TourDetails(props) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { tourTitle } = useParams();
   const ref = useRef(null);
   const thisTour = toursData.find(tour => tour.title === tourTitle);
@@ -36,18 +39,52 @@ export default function TourDetails(props) {
     return exclusion.map(item => <p key={exclusion.indexOf(item)}>{item}</p>);
   };
 
+  const highlights = thisTour.highlights
+    .map(highlight => {
+      return (
+        <div key={thisTour.highlights.indexOf(highlight)}>
+          <img src={highlight.img} alt="" />
+          <p>{highlight.title}</p>
+          {/* <p>{highlight.description}</p> */}
+        </div>
+      );
+    })
+    .splice(0, 4);
+
+  const clickHandler = () => {
+    setIsModalOpen(prevState => !prevState);
+  };
+
+  const closeModal = event => {
+    console.log(event.target);
+    event.preventDefault();
+    return event.target.id !== "form" && !isHovered && isModalOpen
+      ? setIsModalOpen(false)
+      : "";
+  };
+
+  if (isModalOpen) {
+    document.body.style.overflowY = "hidden";
+  } else {
+    document.body.style.overflowY = "scroll";
+  }
+
+  const onMouseEnter = () => setIsHovered(true);
+  const onMouseLeave = () => setIsHovered(false);
+
   return (
-    <main ref={ref} className={styles.tour}>
+    <main ref={ref} className={styles.tour} onClick={closeModal}>
       <div className={styles.titleContainer}>
         <h1>{thisTour.title}</h1>
         <p>{thisTour.tagline}</p>
       </div>
-      <section>
+      <section className={styles.tourInfo}>
         <div className={styles.col1}>
           <div className={styles.infoContainer}>
             <p>{thisTour.length}</p>
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
+            <button onClick={clickHandler}>Book Tour</button>
             <p>{thisTour.fullDesc}</p>
           </div>
           <div className={styles.inclusions}>
@@ -57,8 +94,24 @@ export default function TourDetails(props) {
             <div>{exclusions()}</div>
           </div>
         </div>
-        <BookingForm thisTour={thisTour} />
+        {isModalOpen && (
+          <div id={styles.formModal}>
+            <BookingForm
+              id={"form"}
+              thisTour={thisTour}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            />
+          </div>
+        )}
       </section>
+      <section className={styles.tourHighlights}>
+        <h2>
+          Tour <span className="title-highlight">Highlights</span>
+        </h2>
+        <div className={styles.container}>{highlights}</div>
+      </section>
+      <TourList thisTour={thisTour.title} />
       <div className={`background ${styles.tourBgImage}`}>
         <img src={thisTour.images[0]} alt="" />
       </div>

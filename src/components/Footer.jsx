@@ -45,7 +45,10 @@ export default function Footer() {
         </div>
         <div className={styles.info}>
           <div className={styles.col1}>
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="" />
+            </Link>
+
             <p>
               Salakamreuk Road, Siem Reap, Cambodia <br /> 016 565 496 |
               info@UnlockCambodia.com
