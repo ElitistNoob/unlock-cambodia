@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.852eab4f.css",
-    "main.js": "/unlock-cambodia/static/js/main.40c252f9.js",
+    "main.css": "/unlock-cambodia/static/css/main.7aaea0bd.css",
+    "main.js": "/unlock-cambodia/static/js/main.751a78ca.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
     "static/media/angkor-temple-tour.jpg": "/unlock-cambodia/static/media/angkor-temple-tour.fa6176606e2a211b7c2b.jpg",
@@ -28,12 +28,12 @@
     "static/media/Facebook-icon.svg": "/unlock-cambodia/static/media/Facebook-icon.1f8907a1eeb6b7619c7da6c0dd843a23.svg",
     "index.html": "/unlock-cambodia/index.html",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee69860ccea6004cc4.svg",
-    "main.852eab4f.css.map": "/unlock-cambodia/static/css/main.852eab4f.css.map",
-    "main.40c252f9.js.map": "/unlock-cambodia/static/js/main.40c252f9.js.map",
+    "main.7aaea0bd.css.map": "/unlock-cambodia/static/css/main.7aaea0bd.css.map",
+    "main.751a78ca.js.map": "/unlock-cambodia/static/js/main.751a78ca.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.852eab4f.css",
-    "static/js/main.40c252f9.js"
+    "static/css/main.7aaea0bd.css",
+    "static/js/main.751a78ca.js"
   ]
 }
