@@ -59,10 +59,20 @@ export default function Header() {
   // Inline Styles
   const headerStyle = () => {
     if (!isScroll) {
+      if (isOpen) {
+        return {
+          backgroundColor: "#141617",
+        };
+      }
       return {
         backgroundColor: "transparent",
       };
-    } else {
+    } else if (isScroll) {
+      if (isOpen) {
+        return {
+          backgroundColor: "#141617",
+        };
+      }
       return {
         backgroundColor: "#fff",
       };
@@ -115,15 +125,17 @@ export default function Header() {
   return (
     <HeaderStyled ref={element} isOpen={isOpen} style={headerStyle()}>
       <ContainerStyled className="container">
-        <img
-          className="logo"
-          style={logoMargin()}
-          src={scrollStyle(logoWhite, logoBlack)}
-          alt="logo"
-        />
+        <Link to="/">
+          <img
+            className="logo"
+            style={logoMargin()}
+            src={scrollStyle(logoWhite, logoBlack)}
+            alt="logo"
+          />
+        </Link>
         <nav
           className="nav"
-          style={{ transform: `translateX(${isOpen ? 0 : -100}%)` }}
+          style={{ transform: `translateY(${isOpen ? 80 : -200}px)` }}
         >
           <ul className="nav-menu">
             <li onClick={() => setIsOpen(false)}>
