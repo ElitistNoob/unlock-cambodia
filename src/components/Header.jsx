@@ -189,7 +189,7 @@ export default function Header() {
         </nav>
 
         <button className={styles.toggle} onClick={toggleMenu}>
-          <Hamburger size={32} color="white" rounded />
+          <Hamburger toggled={isOpen} size={32} color="white" rounded />
         </button>
       </div>
       {isScroll && !isOpen && (
