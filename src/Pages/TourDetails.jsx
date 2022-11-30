@@ -79,7 +79,7 @@ export default function TourDetails(props) {
             <p>{thisTour.length}</p>
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
-            <button onClick={clickHandler}>Book Tour</button>
+            <button onClick={clickHandler}>Book Now</button>
             <p>{thisTour.fullDesc}</p>
           </div>
           <div className={styles.inclusions}>
