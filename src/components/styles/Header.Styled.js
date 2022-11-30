@@ -206,7 +206,7 @@ export const HeaderStyled = styled.header`
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 5px;
+    height: 3px;
     background: var(--gradient);
     border-radius: 0 50px 50px 0;
   }
