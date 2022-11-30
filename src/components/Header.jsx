@@ -123,7 +123,7 @@ export default function Header() {
           <img
             className="logo"
             style={logoMargin()}
-            src={scrollStyle(logoWhite, logoWhite)}
+            src={logoWhite}
             alt="logo"
           />
         </Link>
