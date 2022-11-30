@@ -8,13 +8,17 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
+    position: relative;
     font-family: "Poppins", sans-serif;
     color: var(--clr-primary-light);
     background-color: var(--clr-primary-dark);
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
   }
 
   :root {
