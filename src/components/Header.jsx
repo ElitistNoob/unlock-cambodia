@@ -7,14 +7,13 @@ import {
   useRef,
 } from "react";
 // Styles
-import { HeaderStyled } from "./styles/Header.Styled";
-import { ContainerStyled } from "./styles/Container.Styled";
+import styles from "./styles/Header.module.scss";
 // Assets
 import logoWhite from "./assets/logo-light.png";
 // Pages
 import { Link } from "react-router-dom";
 import { Context } from "./Context/winWidth";
-// Gsap
+// Dependencies
 import { gsap } from "gsap";
 import { Sling as Hamburger } from "hamburger-react";
 
@@ -90,13 +89,13 @@ export default function Header() {
   const selectionSvg = () => {
     return (
       <svg
-        className="path-container"
+        className={styles.pathContainer}
         viewBox="0 0 340 141"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          className="path"
+          className={styles.path}
           d="M325.755 30.584C267.422 5.58399 123.055 -24.116 12.2554 57.084C1.75543 74.584 -5.34457 112.584 50.2554 124.584C119.755 139.584 270.255 152.584 330.255 86.584C337.255 78.4173 342.155 58.584 305.755 44.584C269.355 30.584 229.255 24.4173 213.755 23.084"
           stroke="#F28E34"
           strokeWidth="8"
@@ -107,21 +106,21 @@ export default function Header() {
   };
 
   return (
-    <HeaderStyled ref={element} isOpen={isOpen} style={headerStyle()}>
-      <ContainerStyled className="container">
+    <header ref={element} isOpen={isOpen} style={headerStyle()}>
+      <div className={styles.container}>
         <Link to="/">
           <img
-            className="logo"
+            className={styles.logo}
             style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
             src={logoWhite}
             alt="logo"
           />
         </Link>
         <nav
-          className="nav"
+          className={styles.nav}
           style={{ transform: `translateY(${isOpen ? 80 : -200}px)` }}
         >
-          <ul className="nav-menu">
+          <ul className={styles.navMenu}>
             <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
@@ -130,7 +129,7 @@ export default function Header() {
                 onMouseLeave={() =>
                   setIsHovered(prev => ({ ...prev, home: false }))
                 }
-                className="nav-link"
+                className={styles.navLink}
                 to="/"
                 id="home"
               >
@@ -147,7 +146,7 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, tours: false }))
                 }
                 id="tours"
-                className="nav-link"
+                className={styles.navLink}
                 to="/tours"
               >
                 Tours
@@ -163,7 +162,7 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, about: false }))
                 }
                 id="about"
-                className="nav-link"
+                className={styles.navLink}
                 to="/about-us"
               >
                 About Us
@@ -179,7 +178,7 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, contact: false }))
                 }
                 id="contact"
-                className="nav-link"
+                className={styles.navLink}
                 to="/contact-us"
               >
                 Contact Us
@@ -189,13 +188,16 @@ export default function Header() {
           </ul>
         </nav>
 
-        <button className="toggle" onClick={toggleMenu}>
+        <button className={styles.toggle} onClick={toggleMenu}>
           <Hamburger size={32} color="white" rounded />
         </button>
-      </ContainerStyled>
+      </div>
       {isScroll && !isOpen && (
-        <div className="pageScrollBar" style={{ width: scrollBarWidth }}></div>
+        <div
+          className={styles.pageScrollBar}
+          style={{ width: scrollBarWidth }}
+        ></div>
       )}
-    </HeaderStyled>
+    </header>
   );
 }

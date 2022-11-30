@@ -1,7 +1,4 @@
-import styled from "styled-components";
-import selection from "../assets/selection.svg";
-
-export const HeaderStyled = styled.header`
+header {
   position: fixed;
   top: 0;
   right: 0;
@@ -30,10 +27,10 @@ export const HeaderStyled = styled.header`
     }
   }
 
-  .nav-scroll {
-    background-color: #fff;
-    width: 100vw;
-  }
+  // .nav-scroll {
+  //   background-color: #fff;
+  //   width: 100vw;
+  // }
 
   .logo {
     max-width: 170px;
@@ -57,13 +54,11 @@ export const HeaderStyled = styled.header`
       background: unset;
       width: unset;
       align-items: center;
-      transform: translateX(
-        0
-      ) !important; // TEMP: Need to change with window.innerWidth
+      transform: translateX(0) !important; // TEMP: Need to change with window.innerWidth
     }
   }
 
-  .nav-menu {
+  .navMenu {
     text-align: left;
     padding: 1em;
     margin-top: 0;
@@ -72,13 +67,13 @@ export const HeaderStyled = styled.header`
     background: #1b1e1f;
   }
 
-  .nav-menu:first-child {
+  .navMenu:first-child {
     border-top: 1px solid rgba(255 255 255 / 0.2);
     border-bottom: 1px solid rgba(255 255 255 / 0.2);
   }
 
   @media (min-width: 720px) {
-    .nav-menu {
+    .navMenu {
       display: flex;
       gap: 2.25em;
       margin: 0;
@@ -87,19 +82,19 @@ export const HeaderStyled = styled.header`
       opacity: unset;
     }
 
-    .nav-menu:first-child {
+    .navMenu:first-child {
       border-top: unset;
       border-bottom: unset;
     }
   }
 
   @media (min-width: 1230px) {
-    .nav-menu {
+    .navMenu {
       padding: 0;
     }
   }
 
-  .nav-link {
+  .navLink {
     position: relative;
     display: block;
     font-size: 1rem;
@@ -110,7 +105,7 @@ export const HeaderStyled = styled.header`
   }
 
   @media (min-width: 720px) {
-    .nav-link {
+    .navLink {
       width: unset;
       margin-left: unset;
       padding: unset;
@@ -123,7 +118,7 @@ export const HeaderStyled = styled.header`
     }
   }
 
-  .path-container {
+  .pathContainer {
     position: absolute;
     top: 50%;
     bottom: 0;
@@ -133,7 +128,7 @@ export const HeaderStyled = styled.header`
   }
 
   .path {
-    background-image: url(${selection});
+    background-image: url("../assets/selection.svg");
     background-size: cover;
     z-index: 1;
     stroke-dasharray: 1000;
@@ -153,8 +148,8 @@ export const HeaderStyled = styled.header`
   /* Mobile Toggle */
 
   .toggle {
-    width: 80px;
-    aspect-ratio: 1;
+    width: fit-content;
+    height: 80px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -174,4 +169,4 @@ export const HeaderStyled = styled.header`
     background: var(--gradient);
     border-radius: 0 50px 50px 0;
   }
-`;
+}
