@@ -163,7 +163,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @media (min-width: 980px) {
     .primary-btn:hover::after {
-        width: 40px;
+        width: 30px;
       } 
     }
 
