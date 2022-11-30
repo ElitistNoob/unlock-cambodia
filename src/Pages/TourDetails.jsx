@@ -44,7 +44,6 @@ export default function TourDetails(props) {
         <div key={thisTour.highlights.indexOf(highlight)}>
           <img src={highlight.img} alt="" />
           <p>{highlight.title}</p>
-          {/* <p>{highlight.description}</p> */}
         </div>
       );
     })
@@ -54,13 +53,11 @@ export default function TourDetails(props) {
     setIsModalOpen(prevState => !prevState);
   };
 
-  const closeModal = event => {
-    event.preventDefault();
-    return (event.target.id === "formModal") & isModalOpen
-      ? setIsModalOpen(false)
-      : "";
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
+  // Blocks scrolling when modal is open
   if (isModalOpen) {
     document.body.style.overflowY = "hidden";
   } else {
@@ -92,9 +89,7 @@ export default function TourDetails(props) {
           </div>
         </div>
         {isModalOpen && (
-          <div id="formModal" className={styles.formModal} onClick={closeModal}>
-            <BookingForm thisTour={thisTour} />
-          </div>
+          <BookingForm thisTour={thisTour} closeModal={closeModal} />
         )}
       </section>
       <section className={styles.tourHighlights}>
