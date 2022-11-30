@@ -1,7 +1,7 @@
 // Hooks
 import { Link } from "react-router-dom";
 // import { Context } from "./Context/winWidth";
-import {useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Hero.module.scss";
 
@@ -64,9 +64,14 @@ export default function Hero() {
           handpicked day tours are perfect for all types of travelers, that are
           looking to unlock some of Cambodia’s hidden secrets.
         </p>
-        <Link to="/contact-us" className="btn primary-btn">
-          Get Started
-        </Link>
+        <div>
+          <Link to="/tours" className="btn primary-btn">
+            Find a Tour
+          </Link>
+          <Link to="/contact-us" className="btn">
+            Need Help?
+          </Link>
+        </div>
       </div>
       <div className={`background ${styles.backgroundImage}`}></div>
     </section>
