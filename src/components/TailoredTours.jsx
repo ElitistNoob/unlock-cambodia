@@ -59,6 +59,7 @@ export default function Experiences() {
     <section ref={experienceSection} className={styles.section}>
       <div className={`trigger ${styles.col2}`}>
         <img className="image" src={img1} alt="Cambodia joined group tour" />
+        <img className="image" src={img1} alt="Cambodia joined group tour" />
       </div>
       <div className={`trigger ${styles.col1}`}>
         <h2 className="content">
