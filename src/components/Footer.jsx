@@ -28,7 +28,18 @@ export default function Footer() {
               the such and such.
             </p>
           </div>
-          <form>
+          <form
+            action="https://formsubmit.co/6923cca6c2285b24310ce0a6f63bad0a"
+            method="POST"
+          >
+            {/* formsubmit.co */}
+            {/* Hidden field that if filled by bot, form will be ignored */}
+            <input
+              type="text"
+              name="_honey"
+              style={{ display: "none" }}
+            ></input>
+            {/* formsubmit.co */}
             <div>
               <label htmlFor="email">Email</label>
               <input
