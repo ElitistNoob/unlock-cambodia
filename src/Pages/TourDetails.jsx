@@ -68,7 +68,7 @@ export default function TourDetails(props) {
   }
 
   return (
-    <main ref={ref} className={styles.tour} onClick={closeModal}>
+    <main ref={ref} className={styles.tour}>
       <div className={styles.titleContainer}>
         <h1>{thisTour.title}</h1>
         <p>{thisTour.tagline}</p>
@@ -79,7 +79,9 @@ export default function TourDetails(props) {
             <p>{thisTour.length}</p>
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
-            <button onClick={clickHandler}>Book Now</button>
+            <button className="btn primary-btn" onClick={clickHandler}>
+              Book Now
+            </button>
             <p>{thisTour.fullDesc}</p>
           </div>
           <div className={styles.inclusions}>
@@ -90,7 +92,7 @@ export default function TourDetails(props) {
           </div>
         </div>
         {isModalOpen && (
-          <div id="formModal" className={styles.formModal}>
+          <div id="formModal" className={styles.formModal} onClick={closeModal}>
             <BookingForm thisTour={thisTour} />
           </div>
         )}
