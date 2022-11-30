@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { Context } from "./Context/winWidth";
 // Gsap
 import { gsap } from "gsap";
+import { Sling as Hamburger } from "hamburger-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,19 @@ export default function Header() {
   const { winWidth } = useContext(Context);
 
   // Changes NavBar on scroll
-  const toggleMenu = () => setIsOpen(prevState => !prevState);
+  const toggleMenu = () => {
+    document.querySelector(".hamburger").style.transform =
+      "translateX(50%) rotate(45deg)";
+    window.getComputedStyle(
+      document.querySelector(".hamburger"),
+      "::before"
+    ).style.transform = "rotate(90deg) translate(30%)";
+    window.getComputedStyle(
+      document.querySelector(".hamburger"),
+      "::after"
+    ).style.opacity = 0;
+    setIsOpen(prevState => !prevState);
+  };
 
   const changeNavBar = () =>
     window.scrollY >= 70 ? setIsScroll(true) : setIsScroll(false);
@@ -189,7 +202,7 @@ export default function Header() {
         </nav>
 
         <button className="toggle" onClick={toggleMenu}>
-          <span className="hamburger"></span>
+          <Hamburger size={32} color="white" rounded />
         </button>
       </ContainerStyled>
       {isScroll && !isOpen && (

@@ -153,7 +153,6 @@ export const HeaderStyled = styled.header`
   /* Mobile Toggle */
 
   .toggle {
-    position: relative;
     width: 80px;
     aspect-ratio: 1;
     border: none;
@@ -165,41 +164,6 @@ export const HeaderStyled = styled.header`
     .toggle {
       display: none;
     }
-  }
-
-  .hamburger {
-    position: absolute;
-    bottom: 50%;
-    right: 50%;
-    transform: ${props =>
-      props.isOpen ? "translateX(50%) rotate(45deg)" : "translateX(50%)"};
-    width: 32px;
-    height: 4px;
-    border-radius: 50px;
-    transition: 150ms linear;
-    background-color: white;
-  }
-
-  .hamburger::before,
-  .hamburger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: inherit;
-    height: inherit;
-    background-color: inherit;
-    border-radius: inherit;
-  }
-
-  .hamburger::before {
-    top: -10px;
-    transform: ${props =>
-      props.isOpen ? " rotate(90deg) translate(30%)" : ""};
-  }
-
-  .hamburger::after {
-    top: 10px;
-    opacity: ${props => (props.isOpen ? 0 : "")};
   }
 
   .pageScrollBar {
