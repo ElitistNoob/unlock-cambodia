@@ -132,8 +132,13 @@
   left: 0;
   right: 0;
   opacity: 0;
+  height: 600px;
   transform: matrix(-1, 0, 0, 1, 0, 0) scale(0.5);
   z-index: -1;
+
+  @media (min-width: 720px) {
+    min-height: 100vh;
+  }
 
   @media (min-width: 980px) {
     margin-left: 30%;
