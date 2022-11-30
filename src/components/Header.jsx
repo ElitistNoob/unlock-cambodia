@@ -66,22 +66,11 @@ export default function Header() {
       return {
         backgroundColor: "transparent",
       };
-    } else if (isScroll) {
+    } else {
       return {
         backgroundColor: "#141617",
       };
     }
-  };
-
-  const scrollStyle = (value1, value2) => {
-    if (isOpen || !isScroll) {
-      return value1;
-    }
-    return value2;
-  };
-
-  const logoMargin = () => {
-    return { marginLeft: winWidth >= 1230 ? "0" : "1em" };
   };
 
   const element = useRef(null);
@@ -122,7 +111,7 @@ export default function Header() {
         <Link to="/">
           <img
             className="logo"
-            style={logoMargin()}
+            style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
             src={logoWhite}
             alt="logo"
           />
