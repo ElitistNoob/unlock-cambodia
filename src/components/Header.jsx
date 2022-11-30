@@ -32,19 +32,7 @@ export default function Header() {
   const { winWidth } = useContext(Context);
 
   // Changes NavBar on scroll
-  const toggleMenu = () => {
-    document.querySelector(".hamburger").style.transform =
-      "translateX(50%) rotate(45deg)";
-    window.getComputedStyle(
-      document.querySelector(".hamburger"),
-      "::before"
-    ).style.transform = "rotate(90deg) translate(30%)";
-    window.getComputedStyle(
-      document.querySelector(".hamburger"),
-      "::after"
-    ).style.opacity = 0;
-    setIsOpen(prevState => !prevState);
-  };
+  const toggleMenu = () => setIsOpen(prevState => !prevState);
 
   const changeNavBar = () =>
     window.scrollY >= 70 ? setIsScroll(true) : setIsScroll(false);
