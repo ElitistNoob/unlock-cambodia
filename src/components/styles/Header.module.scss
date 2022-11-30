@@ -8,16 +8,18 @@ header {
   .container {
     position: relative;
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
     max-width: 1220px;
     margin: 0 auto;
+    height: 80px;
     padding: 0;
   }
 
   @media (min-width: 720px) {
     .container {
       padding: 1em 2rem;
+      justify-content: space-between;
     }
   }
 
@@ -148,8 +150,9 @@ header {
   /* Mobile Toggle */
 
   .toggle {
-    width: fit-content;
-    height: 80px;
+    position: absolute;
+    right: 0.825em;
+    padding: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;

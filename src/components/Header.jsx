@@ -106,7 +106,7 @@ export default function Header() {
   };
 
   return (
-    <header ref={element} isOpen={isOpen} style={headerStyle()}>
+    <header ref={element} style={headerStyle()}>
       <div className={styles.container}>
         <Link to="/">
           <img
