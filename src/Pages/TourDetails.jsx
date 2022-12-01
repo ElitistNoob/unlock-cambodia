@@ -10,7 +10,6 @@ import BookingForm from "../components/BookingForm";
 import TourList from "../components/TourList";
 // Gsap
 import { gsap } from "gsap";
-import { useEffect } from "react";
 
 export default function TourDetails(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
