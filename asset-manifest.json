@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.ad0e634d.css",
+    "main.css": "/unlock-cambodia/static/css/main.bbc60bcd.css",
     "main.js": "/unlock-cambodia/static/js/main.c0dda112.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
@@ -28,12 +28,12 @@
     "index.html": "/unlock-cambodia/index.html",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee6986.svg",
     "static/media/close-modal.svg": "/unlock-cambodia/static/media/close-modal.be90126df1466b6072fd.svg",
-    "main.ad0e634d.css.map": "/unlock-cambodia/static/css/main.ad0e634d.css.map",
+    "main.bbc60bcd.css.map": "/unlock-cambodia/static/css/main.bbc60bcd.css.map",
     "main.c0dda112.js.map": "/unlock-cambodia/static/js/main.c0dda112.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad0e634d.css",
+    "static/css/main.bbc60bcd.css",
     "static/js/main.c0dda112.js"
   ]
 }
