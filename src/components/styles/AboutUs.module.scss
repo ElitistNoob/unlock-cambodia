@@ -1,8 +1,7 @@
 @import "./background.module.scss";
 
-.aboutUs {
-  position: relative;
-  padding: 0 1em;
+.main {
+  display: grid;
   max-width: 1220px;
   width: 100%;
   margin: 6em auto;
@@ -12,13 +11,55 @@
     padding: 0 3em;
   }
 
+  @media (min-width: 980px) {
+    grid-template-columns: 2fr 1fr;
+    gap: 4em;
+  }
+
   @media (min-width: 1440px) {
     padding: 0;
   }
 
-  p {
-    max-width: 814px;
+  .aboutUs {
+    grid-row: 2;
+    position: relative;
+    padding: 0 1em;
+
+    @media (min-width: 980px) {
+      grid-row: unset;
+    }
+
+    h1 {
+      @media (min-width: 980px) {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      max-width: 814px;
+    }
   }
+
+  img {
+    grid-row: 1;
+    width: calc(100% - 2em);
+    margin-inline: auto;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 0 300px rgba(0 0 0 / 1);
+    // transform: matrix(-1, 0, 0, 1, 0, 0);
+
+    @media (min-width: 980px) {
+      grid-row: unset;
+      width: 100%;
+      margin-inline: unset;
+    }
+  }
+
+  // .backgroundImage {
+  //   filter: blur(40px);
+  // }
 }
 
-@include backgroundImg("../assets/unlockCambodia-team.jpg");
+// @include backgroundImg("../assets/unlockCambodia-team.jpg");

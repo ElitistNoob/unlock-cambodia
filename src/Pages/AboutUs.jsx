@@ -2,6 +2,8 @@
 import { useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "../components/styles/AboutUs.module.scss";
+// Assets
+import teamPhoto from "../components/assets/unlockCambodia-team.jpg";
 // Gsap
 import { gsap } from "gsap";
 
@@ -15,15 +17,18 @@ export default function AboutUs() {
         opacity: 0.6,
         duration: 2,
         ease: "back",
+        backgroundBlendMode: "",
       });
     }, [ref]);
     return () => ctx.revert();
   }, []);
 
   return (
-    <main ref={ref}>
+    <main className={styles.main} ref={ref}>
       <div className={styles.aboutUs}>
-        <h1>Our Story</h1>
+        <h1>
+          Our <span className="title-highlight">Story</span>
+        </h1>
         <p>
           Unlock Cambodia has been arranging trips, tours and adventures since
           2010. The starting point in all of this was when English and Czech
@@ -39,7 +44,8 @@ export default function AboutUs() {
           about the country’s secrets and hidden gems.
         </p>
       </div>
-      <div className={`background ${styles.backgroundImage}`}></div>
+      {/* <div className={`background ${styles.backgroundImage}`}></div> */}
+      <img src={teamPhoto} alt="Unlock Cambodia Team" />
     </main>
   );
 }
