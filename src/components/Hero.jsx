@@ -64,7 +64,7 @@ export default function Hero() {
           handpicked day tours are perfect for all types of travelers, that are
           looking to unlock some of Cambodia’s hidden secrets.
         </p>
-        <div>
+        <div className="content">
           <Link to="/tours" className="btn primary-btn">
             Find a Tour
           </Link>
