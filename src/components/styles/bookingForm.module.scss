@@ -24,11 +24,13 @@
       "notice notice"
       "btn btn";
     background-color: var(--clr-primary-light);
-    padding: 0 1em 1em;
+    padding: 0 2em 1em;
+    width: 100%;
     border-radius: 6px;
     gap: 0 1em;
-    width: calc(100% - 4rem);
-    margin-inline: auto;
+    grid-template-rows: repeat(8, min-content);
+    height: 100%;
+    padding-top: 4em;
     box-shadow: 0 0 100px rgba(0 0 0 / 0.2);
 
     @media (max-width: 405px) {
@@ -42,6 +44,13 @@
         "total total"
         "notice notice"
         "btn btn";
+    }
+
+    @media (min-width: 520px) {
+      height: unset;
+      grid-template-rows: unset;
+      margin-inline: auto;
+      padding-top: unset;
     }
 
     @media (min-width: 980px) {
@@ -59,10 +68,15 @@
       background-size: contain;
       width: 40px;
       height: 40px;
-      top: -16px;
-      right: -16px;
+      right: 1em;
+      top: 1em;
       cursor: pointer;
       border: 2px solid white;
+
+      @media (min-width: 520px) {
+        top: -16px;
+        right: -16px;
+      }
     }
 
     p {
