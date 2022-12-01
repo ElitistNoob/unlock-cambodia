@@ -19,7 +19,7 @@ export default function FormSubmit() {
 
   setTimeout(() => {
     redirect();
-  }, 8000);
+  }, 10000);
 
   return (
     <main className={styles.submitContainer}>
