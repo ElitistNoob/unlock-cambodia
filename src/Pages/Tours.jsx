@@ -19,6 +19,10 @@ export default function Tours(props) {
         y: "1em",
         ease: "power",
       });
+      gsap.to(".span", {
+        clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
+        duration: 1,
+      });
       tourData.forEach(tour => {
         return gsap.from(`.card-${tour.id}`, {
           opacity: 0,
@@ -51,7 +55,7 @@ export default function Tours(props) {
     <section ref={ref}>
       <div className={styles.tourSection}>
         <h1 className="title">
-          All <span>Tours</span>
+          All <span className="span">Tours</span>
         </h1>
         <div className={styles.toursContainer}>{renderTourCards}</div>
       </div>

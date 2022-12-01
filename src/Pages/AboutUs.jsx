@@ -12,12 +12,15 @@ export default function AboutUs() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.to(".background", {
-        transform: "matrix(-1, 0, 0, 1, 0, 0) scale(1)",
-        opacity: 0.6,
-        duration: 2,
-        ease: "back",
-        backgroundBlendMode: "",
+      gsap.from(".content", {
+        opacity: 0,
+        duration: 1,
+        y: "1em",
+        ease: "power",
+      });
+      gsap.to(".span", {
+        clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
+        duration: 1,
       });
     }, [ref]);
     return () => ctx.revert();
@@ -25,9 +28,9 @@ export default function AboutUs() {
 
   return (
     <main className={styles.main} ref={ref}>
-      <div className={styles.aboutUs}>
+      <div className={`content ${styles.aboutUs}`}>
         <h1>
-          Our <span className="title-highlight">Story</span>
+          Our <span className="span title-highlight">Story</span>
         </h1>
         <p>
           Unlock Cambodia has been arranging trips, tours and adventures since
@@ -44,8 +47,7 @@ export default function AboutUs() {
           about the country’s secrets and hidden gems.
         </p>
       </div>
-      {/* <div className={`background ${styles.backgroundImage}`}></div> */}
-      <img src={teamPhoto} alt="Unlock Cambodia Team" />
+      <img className="content" src={teamPhoto} alt="Unlock Cambodia Team" />
     </main>
   );
 }

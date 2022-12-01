@@ -29,7 +29,11 @@
 
     h1 {
       max-width: 750px;
-      font-size: 4rem;
+      font-size: 3rem;
+
+      @media (min-width: 580px) {
+        font-size: 4em;
+      }
     }
 
     p {

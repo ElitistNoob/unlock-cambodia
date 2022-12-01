@@ -23,7 +23,6 @@ export default function ContactUs() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
       gsap.to(".background", {
         transform: "matrix(-1, 0, 0, 1, 0, 0) scale(1)",
         opacity: 0.6,
@@ -33,26 +32,11 @@ export default function ContactUs() {
       gsap.to(".span", {
         clipPath: "polygon(0 100%, 0 0, 100% 0, 100% 100%)",
         duration: 1,
-        delay: 1,
       });
-      gsap.from(".form", {
+      gsap.from(".content", {
         opacity: 0,
         duration: 1,
         y: "1em",
-        ease: "power",
-        delay: 1,
-      });
-      tl.from(".title", {
-        opacity: 0,
-        duration: 1,
-        y: "1em",
-        ease: "power",
-      });
-      gsap.from(".content > *", {
-        opacity: 0,
-        duration: 1,
-        y: "1em",
-        delay: 1,
         ease: "power",
       });
     }, [ref]);
@@ -61,14 +45,13 @@ export default function ContactUs() {
 
   return (
     <main ref={ref}>
-      <section className={styles.container}>
-        <h1 className="title">
+      <section className={`content ${styles.container}`}>
+        <h1>
           Contact <span className="span">Us</span>
         </h1>
         <div className={styles.flexContainer}>
           <div className={styles.col1}>
             <form
-              className="form"
               action="https://formsubmit.co/sales@seeasiadifferently.com"
               method="POST"
             >
@@ -140,7 +123,7 @@ export default function ContactUs() {
               {/* formsubmit.co */}
             </form>
           </div>
-          <div className={`content {styles.col2}`}>
+          <div className={styles.col2}>
             <h3>Unlock Cambodia's Office</h3>
             <p>Salakamreuk Road, Siem Reap, Cambodia</p>
             <h3>Direct Contact</h3>

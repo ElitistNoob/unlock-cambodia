@@ -18,16 +18,11 @@
 
   h1 {
     max-width: 850px;
-    margin-bottom: 1.5rem;
     margin-top: 0;
 
     span {
       color: var(--clr-accent);
       clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
-    }
-
-    @media (min-width: 1440px) {
-      margin-bottom: 3rem;
     }
   }
 
