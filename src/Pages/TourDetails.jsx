@@ -25,6 +25,22 @@ export default function TourDetails(props) {
         duration: 2,
         ease: "back",
       });
+      gsap.from(".content", {
+        opacity: 0,
+        duration: 1,
+        y: "1em",
+        ease: "power",
+      });
+      gsap.from(".highlights", {
+        scrollTrigger: {
+          trigger: ".trigger",
+          start: "top 90%",
+        },
+        opacity: 0,
+        duration: 1,
+        y: "1em",
+        ease: "power",
+      });
     }, [ref]);
     return () => ctx.revert();
   }, []);
@@ -66,13 +82,13 @@ export default function TourDetails(props) {
 
   return (
     <main ref={ref} className={styles.tour}>
-      <div className={styles.titleContainer}>
+      <div className={`content ${styles.titleContainer}`}>
         <h1>{thisTour.title}</h1>
         <p>{thisTour.tagline}</p>
       </div>
       <section className={styles.tourInfo}>
         <div className={styles.col1}>
-          <div className={styles.infoContainer}>
+          <div className={`content ${styles.infoContainer}`}>
             <p>{thisTour.length}</p>
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
@@ -81,7 +97,7 @@ export default function TourDetails(props) {
             </button>
             <p>{thisTour.fullDesc}</p>
           </div>
-          <div className={styles.inclusions}>
+          <div className={`content ${styles.inclusions}`}>
             <h3>Inclusion</h3>
             <div>{inclusions()}</div>
             <h3>Exclusion</h3>
@@ -92,7 +108,7 @@ export default function TourDetails(props) {
           <BookingForm thisTour={thisTour} closeModal={closeModal} />
         )}
       </section>
-      <section className={styles.tourHighlights}>
+      <section className={`trigger highlights ${styles.tourHighlights}`}>
         <h2>
           Tour <span className="title-highlight">Highlights</span>
         </h2>

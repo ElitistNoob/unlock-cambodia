@@ -38,16 +38,11 @@ export default function ContactUs() {
       gsap.from(".form", {
         opacity: 0,
         duration: 1,
+        y: "1em",
         ease: "power",
         delay: 1,
       });
       tl.from(".title", {
-        opacity: 0,
-        duration: 1,
-        y: "1em",
-        ease: "power",
-      });
-      tl.from(".form > *", {
         opacity: 0,
         duration: 1,
         y: "1em",
