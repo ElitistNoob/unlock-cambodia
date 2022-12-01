@@ -61,7 +61,11 @@ export default function Review() {
         </h2>
         <Swiper
           className="content"
-          style={{ backgroundColor: "#1b1e1f", padding: "6em 2em" }}
+          style={{
+            backgroundColor: "#1b1e1f",
+            padding: "6em 2em",
+            borderRadius: "6px",
+          }}
           speed={800}
           spaceBetween={32}
           modules={[Pagination, A11y, Autoplay, Navigation]}

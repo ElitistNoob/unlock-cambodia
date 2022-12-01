@@ -63,7 +63,7 @@
       background-color: var(--clr-primary-dark);
       border: none;
       border-radius: 50%;
-      background: url("../assets/close-modal.svg"), #141617;
+      background: url("../assets/close-modal.svg"), var(--clr-primary-dark);
       background-repeat: no-repeat;
       background-size: contain;
       width: 40px;
@@ -72,6 +72,12 @@
       top: 1em;
       cursor: pointer;
       border: 2px solid white;
+
+      &:hover {
+        background: url("../assets/close-modal.svg"), #1b1e1f;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
 
       @media (min-width: 520px) {
         top: -16px;
