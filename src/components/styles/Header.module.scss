@@ -8,12 +8,12 @@ header {
   .container {
     position: relative;
     display: flex;
-
     align-items: center;
     max-width: 1220px;
     margin: 0 auto;
     height: 80px;
     padding: 0;
+    transform: translateY(-80px);
   }
 
   @media (min-width: 720px) {

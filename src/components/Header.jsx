@@ -107,7 +107,7 @@ export default function Header() {
 
   return (
     <header ref={element} style={headerStyle()}>
-      <div className={styles.container}>
+      <div className={`container ${styles.container}`}>
         <Link to="/">
           <img
             className={styles.logo}
