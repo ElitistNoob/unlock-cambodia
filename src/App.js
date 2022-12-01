@@ -12,6 +12,7 @@ import Tours from "./Pages/Tours";
 import TourDetails from "./Pages/TourDetails";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUs";
+import FormSubmit from "./Pages/FormSubmit";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/tours/:tourTitle" element={<TourDetails />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/form-submit" element={<FormSubmit />} />
       </Routes>
       <Footer />
     </>

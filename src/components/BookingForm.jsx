@@ -128,6 +128,12 @@ export default function BookingForm({ thisTour, closeModal }) {
           name="_subject"
           value={`New submission for ${tourForm.tour}`}
         ></input>
+        {/* Redirect to custom page */}
+        <input
+          type="hidden"
+          name="_next"
+          value="http://localhost:3000/form-submit"
+        ></input>
         {/* Sends an automated response to sender*/}
         <input
           type="hidden"
