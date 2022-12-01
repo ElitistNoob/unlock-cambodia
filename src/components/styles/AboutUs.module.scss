@@ -53,7 +53,6 @@
     object-fit: cover;
     border-radius: 6px;
     box-shadow: 0 0 300px rgba(0 0 0 / 1);
-    // transform: matrix(-1, 0, 0, 1, 0, 0);
 
     @media (min-width: 980px) {
       grid-row: unset;
@@ -61,10 +60,4 @@
       margin-inline: unset;
     }
   }
-
-  // .backgroundImage {
-  //   filter: blur(40px);
-  // }
 }
-
-// @include backgroundImg("../assets/unlockCambodia-team.jpg");
