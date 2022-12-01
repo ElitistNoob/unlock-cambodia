@@ -1,0 +1,57 @@
+.submitContainer {
+  max-width: 1220px;
+  width: calc(100% - 2em);
+  margin: 6em auto;
+  background-color: #101213;
+  height: 600px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-inline: 2em;
+ 
+  @media (min-width: 720px) {
+    margin: 11em auto;
+    padding: 0 3em;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  p {
+    max-width: 380px;
+    text-align: center;
+
+    &:nth-of-type(2) {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--clr-accent);
+      padding: 0.5em 1.25em;
+      border-radius: 6px;
+      background-color: var(--clr-primary-dark);
+    }
+
+    &:nth-of-type(3) {
+      font-size: 0.9rem;
+      opacity: 0.7;
+
+      a {
+        color: var(--clr-accent);
+        font-weight: 700;
+      }
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+  }
+}
