@@ -10,6 +10,7 @@ import BookingForm from "../components/BookingForm";
 import TourList from "../components/TourList";
 // Gsap
 import { gsap } from "gsap";
+import { useEffect } from "react";
 
 export default function TourDetails(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -66,19 +67,12 @@ export default function TourDetails(props) {
     .splice(0, 4);
 
   const clickHandler = () => {
-    setIsModalOpen(prevState => !prevState);
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  // Blocks scrolling when modal is open
-  if (isModalOpen) {
-    document.body.style.overflowY = "hidden";
-  } else {
-    document.body.style.overflowY = "scroll";
-  }
 
   return (
     <main ref={ref} className={styles.tour}>
