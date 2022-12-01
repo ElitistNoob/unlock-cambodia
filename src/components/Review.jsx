@@ -1,7 +1,5 @@
 // Hooks
-import { useContext, useLayoutEffect, useRef } from "react";
-// Context
-import { Context } from "./Context/winWidth";
+import { useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Review.module.scss";
 // assets
@@ -43,7 +41,7 @@ export default function Review() {
       gsap.from(".content", {
         scrollTrigger: {
           trigger: ".trigger",
-          start: "top 90%",
+          start: "top 98%",
         },
         opacity: 0,
         duration: 1,
@@ -55,40 +53,18 @@ export default function Review() {
     return () => ctx.revert();
   }, []);
 
-  const { winWidth } = useContext(Context);
-
-  // const svgImg = () => (
-  //   <svg
-  //     className={`svgContainer ${styles.arrowContainer}`}
-  //     width="150"
-  //     height="auto"
-  //     viewBox="0 0 75 84"
-  //     fill="none"
-  //     xmlns="http://www.w3.org/2000/svg"
-  //   >
-  //     <path
-  //       className={styles.arrow}
-  //       d="M72.8255 2C64.6588 19.5 39.8255 56.2 5.82547 63M5.82547 63C3.82547 63.6667 0.425467 63.9 2.82547 59.5C9.49212 52.3333 22.3254 35.2 20.3254 24M5.82547 63C14.1588 65.8333 31.7254 73.6 35.3254 82"
-  //       stroke="#F28E34"
-  //       strokeWidth="2"
-  //       strokeLinecap="round"
-  //     />
-  //   </svg>
-  // );
-
   return (
     <section ref={reviewSection} className={styles.reviewSection}>
       <div className="trigger">
-        {/* {winWidth > 1120 && svgImg()} */}
         <h2 className={`title ${styles.sectionTitle}`}>
           The <span className="title-highlight">proof</span> is in the pudding{" "}
         </h2>
         <Swiper
+          className="content"
           style={{ backgroundColor: "#1b1e1f", padding: "6em 2em" }}
           speed={800}
           spaceBetween={32}
           modules={[Pagination, A11y, Autoplay, Navigation]}
-          // slidesPerView={winWidth > 1220 ? 3 : winWidth > 580 ? 2 : 1}
           navigation
           slidesPerView={1}
         >

@@ -34,7 +34,7 @@ export default function Experiences() {
       gsap.from(".content", {
         scrollTrigger: {
           trigger: ".trigger",
-          start: "top 90%",
+          start: "top 98%",
         },
         opacity: 0,
         duration: 1,
