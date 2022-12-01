@@ -132,7 +132,7 @@ export default function BookingForm({ thisTour, closeModal }) {
         <input
           type="hidden"
           name="_next"
-          value="https://elitistnoob.github.io/form-submit"
+          value="https://elitistnoob.github.io/unlock-cambodia/form-submit"
         ></input>
         {/* Sends an automated response to sender*/}
         <input
