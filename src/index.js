@@ -1,5 +1,6 @@
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./styles.css";
 // Hooks
 import React from "react";
 import { BrowserRouter } from "react-router-dom";

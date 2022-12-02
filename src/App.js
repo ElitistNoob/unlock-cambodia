@@ -1,5 +1,5 @@
 //  Hooks
-import { GlobalStyle } from "./components/styles/GlobalStyles";
+// import { GlobalStyle } from "./components/styles/GlobalStyles";
 import { Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
 // Components
@@ -33,7 +33,6 @@ function App() {
       </Helmet>
 
       <ScrollToTop />
-      <GlobalStyle />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
