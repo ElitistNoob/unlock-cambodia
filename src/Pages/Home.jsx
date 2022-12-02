@@ -11,9 +11,9 @@ export default function Home() {
     <main>
       <Hero />
       <EasyAs />
+      <Review />
       <Experiences />
       <Tailored />
-      <Review />
       <TourList />
     </main>
   );

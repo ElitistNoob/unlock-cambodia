@@ -31,10 +31,6 @@ export default function Review() {
         stagger: 0.1,
         delay: 0.5,
       });
-      tl.from(".hr:after", {
-        y: "1em",
-        ease: "bounce",
-      });
     }, [ref]);
     return () => ctx.revert();
   }, []);
@@ -54,7 +50,7 @@ export default function Review() {
               Wonders' ins and outs.
             </p>
           </div>
-          <hr className="hr" />
+          <hr />
           <div>
             <img src={send} alt="" />
             <h3>Best Guides</h3>

@@ -3,7 +3,8 @@ import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Assets
-import img1 from "./assets/solo-group-experience.jpg";
+import img1 from "./assets/tailored-tour-img1.jpg";
+import img2 from "./assets/Cambodia-Sen-Monorom.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,8 +59,16 @@ export default function Experiences() {
   return (
     <section ref={experienceSection} className={styles.section}>
       <div className={`trigger ${styles.col2}`}>
-        <img className="image" src={img1} alt="Cambodia joined group tour" />
-        <img className="image" src={img1} alt="Cambodia joined group tour" />
+        <img
+          className="image"
+          src={img2}
+          alt="Men swimming in jungle waterfall"
+        />
+        <img
+          className="image"
+          src={img1}
+          alt="Man riding motorbike in front of independence monument"
+        />
       </div>
       <div className={`trigger ${styles.col1}`}>
         <h2 className="content">

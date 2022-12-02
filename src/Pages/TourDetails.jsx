@@ -109,7 +109,7 @@ export default function TourDetails(props) {
       </section>
       <TourList thisTour={thisTour.title} />
       <div className={`background ${styles.tourBgImage}`}>
-        <img src={thisTour.images[0]} alt="" />
+        <img src={thisTour.image} alt="" />
       </div>
     </main>
   );

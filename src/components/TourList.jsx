@@ -60,7 +60,7 @@ export default function TourList({ thisTour }) {
   const renderTourCards = filteredData.map(tour => (
     <SwiperSlide key={tour.id}>
       <div className={`card-${tour.id} ${styles.tourCard}`}>
-        <img src={tour.images[0]} alt="yes" />
+        <img src={tour.featured} alt={tour.featuredAlt} />
         <div>
           <p>{tour.minimumPax}</p>
           <p>{tour.length}</p>

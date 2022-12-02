@@ -50,7 +50,7 @@
       bottom: 0;
       left: 50%;
       right: 0;
-      width: 60%;
+      width: 50%;
       height: 80%;
       transform: translate(-50%, -50%);
       border-radius: 6px;
@@ -71,12 +71,12 @@
       object-fit: cover;
 
       &:nth-last-of-type(1) {
-        grid-row: 1 / 4;
+        grid-row: 1 / 3;
         grid-column: 1 / 2;
       }
 
       &:nth-last-of-type(2) {
-        grid-row: 2 / 3;
+        grid-row: 2 / 4;
         grid-column: 2 / 3;
       }
     }

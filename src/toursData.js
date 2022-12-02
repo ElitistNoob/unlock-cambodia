@@ -3,36 +3,29 @@ const tourData = [
     id: 1,
     title: "Angkor Temple Tour",
     tagline: "Explore the remnants of the Khmer Empire",
-    images: [
-      require("./components/assets/angkor-temple-tour.jpg"),
-      require("./components/assets/angkor-tour-1.jpg"),
-      require("./components/assets/angkor-tour-2.jpg"),
-      require("./components/assets/angkor-tour-3.jpg"),
-    ],
+    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
+    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Angkor Wat",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Angkor-Temple-Tour/angkor-wat-highlight.jpg"),
+        alt: "Walkway to Angkor Wat",
       },
       {
         title: "Bayon",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Angkor-Temple-Tour/bayon-temple-highlight.jpg"),
+        alt: "The many faces of Bayon Temple",
       },
       {
         title: "Angkor Thom",
-        img: require("./components/assets/angkor-tour-3.jpg"),
-      },
-      {
-        title: "Terrace of Elephants",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Angkor-Temple-Tour/angkor-thom-highlight.jpg"),
+        alt: "Angkor Thom Temple from the inside",
       },
       {
         title: "Ta Prohm",
-        img: require("./components/assets/angkor-tour-3.jpg"),
-      },
-      {
-        title: "Banteay Kdei",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Angkor-Temple-Tour/ta-prohm-highlight.jpg"),
+        alt: "ta prohm as seen in the 'tomb raider' movie",
       },
     ],
     inclusion: [
@@ -55,23 +48,30 @@ const tourData = [
     id: 2,
     title: "Floating Villages Unlocked",
     tagline: "Explore the remnants of the Khmer Empire",
-    images: [require("./components/assets/angkor-temple-tour.jpg")],
+    image: require("./components/assets/Floating-Village/floating-village-unlock.jpg"),
+    featured: require("./components/assets/Floating-Village/floating-village-unlock-featured.jpg"),
+    featuredAlt:
+      "Floating village featured images of man on boat through flooded forest",
     highlights: [
       {
         title: "Floating Villages",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Floating-Village/floating-villages-highlight.jpg"),
+        alt: "Cambodia floating village tour",
       },
       {
         title: "Floating Market",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Floating-Village/floating-market-highlight.jpg"),
+        alt: "Floating villages market",
       },
       {
         title: "boat ride through floating forest",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Floating-Village/flooded-forest-highlight.jpg"),
+        alt: "Flooded forest boat ride",
       },
       {
         title: "Bird life on the water",
         img: require("./components/assets/angkor-tour-3.jpg"),
+        alt: "Bird life watching at the floating villages Cambodia",
       },
     ],
     inclusion: [
@@ -94,7 +94,9 @@ const tourData = [
     id: 3,
     title: "Wildlife Temple Gibbon Adventure",
     tagline: "Explore the remnants of the Khmer Empire",
-    images: [require("./components/assets/angkor-temple-tour.jpg")],
+    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
+    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Gibbons Sighting",
@@ -131,7 +133,9 @@ const tourData = [
     id: 4,
     title: "Beng Mealea Tour",
     tagline: "Explore the Unexplored",
-    images: [require("./components/assets/angkor-temple-tour.jpg")],
+    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
+    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Beng Mealea Temple",
@@ -160,15 +164,19 @@ const tourData = [
     id: 5,
     title: "Monk Water Blessing",
     tagline: "Experience this tradional Khmer ceremony",
-    images: [require("./components/assets/angkor-temple-tour.jpg")],
+    image: require("./components/assets/Water-blessing/water-blessing-tour.jpg"),
+    featured: require("./components/assets/Water-blessing/water-blessing-featured.jpg"),
+    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Traditional Cambodia Pagoda",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Water-blessing/traditional-pagoda-highlight.jpg"),
+        alt: "Arial view of one of Phnom Penh's pagoda",
       },
       {
         title: "Private Monks Blessing",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/Water-blessing/water-blessing-highlight.jpg"),
+        alt: "Cambodian monk performing a water blessing",
       },
     ],
     inclusion: [
@@ -191,7 +199,9 @@ const tourData = [
     id: 6,
     title: "Romantic Sunset Drinks",
     tagline: "Experience this tradional Khmer ceremony",
-    images: [require("./components/assets/angkor-temple-tour.jpg")],
+    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
+    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Romantic Sunset spot",

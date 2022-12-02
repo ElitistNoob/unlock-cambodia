@@ -38,7 +38,7 @@ export default function Tours(props) {
 
   const renderTourCards = tourData.map(tour => (
     <div key={tour.id} className={`card-${tour.id} ${styles.tourCard}`}>
-      <img src={tour.images[0]} alt="yes" />
+      <img src={tour.featured} alt={tour.featuredAlt} />
       <div>
         <p>{tour.minimumPax}</p>
         <p>{tour.length}</p>
