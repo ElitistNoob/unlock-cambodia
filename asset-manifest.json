@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.f1357053.css",
-    "main.js": "/unlock-cambodia/static/js/main.4dad46aa.js",
+    "main.css": "/unlock-cambodia/static/css/main.6e1af856.css",
+    "main.js": "/unlock-cambodia/static/js/main.12bdc724.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
     "static/media/floating-village-unlock.jpg": "/unlock-cambodia/static/media/floating-village-unlock.112831de24abe8e96720.jpg",
@@ -33,7 +33,6 @@
     "static/media/group.svg": "/unlock-cambodia/static/media/group.18c24c35cf0fb2cebc8f.svg",
     "static/media/select-icon.svg": "/unlock-cambodia/static/media/select-icon.a6d82d2f50fdf45cae1f9538e857b37b.svg",
     "static/media/clock.svg": "/unlock-cambodia/static/media/clock.a89769acad366650795c.svg",
-    "static/media/spark.svg": "/unlock-cambodia/static/media/spark.d424e9c1fde148bb74e25e09f46c0ebd.svg",
     "static/media/curved-drawn-arrow.svg": "/unlock-cambodia/static/media/curved-drawn-arrow.eb612bd683a1570bd5280dcc4eaff59e.svg",
     "static/media/send-icon.svg": "/unlock-cambodia/static/media/send-icon.cb76fe68d1306a5fd8bfbe593090362b.svg",
     "static/media/schedule.svg": "/unlock-cambodia/static/media/schedule.c09b6a6b981290f5c666.svg",
@@ -42,12 +41,12 @@
     "index.html": "/unlock-cambodia/index.html",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee6986.svg",
     "static/media/close-modal.svg": "/unlock-cambodia/static/media/close-modal.be90126df1466b6072fd.svg",
-    "main.f1357053.css.map": "/unlock-cambodia/static/css/main.f1357053.css.map",
-    "main.4dad46aa.js.map": "/unlock-cambodia/static/js/main.4dad46aa.js.map",
+    "main.6e1af856.css.map": "/unlock-cambodia/static/css/main.6e1af856.css.map",
+    "main.12bdc724.js.map": "/unlock-cambodia/static/js/main.12bdc724.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1357053.css",
-    "static/js/main.4dad46aa.js"
+    "static/css/main.6e1af856.css",
+    "static/js/main.12bdc724.js"
   ]
 }
