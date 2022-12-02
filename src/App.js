@@ -1,6 +1,7 @@
 //  Hooks
 import { Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { useEffect, useState } from "react";
 // Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -14,6 +15,13 @@ import ContactUs from "./Pages/ContactUs";
 import FormSubmit from "./Pages/FormSubmit";
 
 function App() {
+  const [clicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setClicked(false);
+  }, [clicked]);
+
   return (
     <>
       <Helmet>
@@ -41,6 +49,10 @@ function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/form-submit" element={<FormSubmit />} />
       </Routes>
+      <button
+        onClick={() => setClicked(true)}
+        className="backToTopBtn"
+      ></button>
       <Footer />
     </>
   );
