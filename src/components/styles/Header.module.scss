@@ -15,7 +15,7 @@ header {
     padding: 0;
     transform: translateY(-80px);
 
-    @media (min-width: 720px) {
+    @media (min-width: 820px) {
       padding: 1em 2rem;
       justify-content: space-between;
     }
@@ -36,7 +36,7 @@ header {
       width: 100%;
       transition: 150ms linear;
 
-      @media (min-width: 720px) {
+      @media (min-width: 820px) {
         position: unset;
         min-height: unset;
         backdrop-filter: unset;
@@ -60,7 +60,7 @@ header {
           border-bottom: 1px solid rgba(255 255 255 / 0.2);
         }
 
-        @media (min-width: 720px) {
+        @media (min-width: 820px) {
           display: flex;
           gap: 2.25em;
           margin: 0;
@@ -88,7 +88,7 @@ header {
             width: calc(100% + 1.75em);
             color: var(--clr-primary-light);
 
-            @media (min-width: 720px) {
+            @media (min-width: 820px) {
               width: unset;
               margin-left: unset;
               padding: unset;
@@ -111,7 +111,7 @@ header {
       background-color: transparent;
       cursor: pointer;
 
-      @media (min-width: 720px) {
+      @media (min-width: 820px) {
         display: none;
       }
     }
