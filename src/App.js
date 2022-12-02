@@ -1,5 +1,4 @@
 //  Hooks
-// import { GlobalStyle } from "./components/styles/GlobalStyles";
 import { Route, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
 // Components
