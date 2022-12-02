@@ -110,17 +110,13 @@ export default function Header() {
       <div className={`container ${styles.container}`}>
         <Link to="/">
           <img
-            className={styles.logo}
             style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
             src={logoWhite}
             alt="logo"
           />
         </Link>
-        <nav
-          className={styles.nav}
-          style={{ transform: `translateY(${isOpen ? 80 : -200}px)` }}
-        >
-          <ul className={styles.navMenu}>
+        <nav style={{ transform: `translateY(${isOpen ? 80 : -200}px)` }}>
+          <ul>
             <li onClick={() => setIsOpen(false)}>
               <Link
                 onMouseEnter={() =>
@@ -129,7 +125,6 @@ export default function Header() {
                 onMouseLeave={() =>
                   setIsHovered(prev => ({ ...prev, home: false }))
                 }
-                className={styles.navLink}
                 to="/"
                 id="home"
               >
@@ -146,7 +141,6 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, tours: false }))
                 }
                 id="tours"
-                className={styles.navLink}
                 to="/tours"
               >
                 Tours
@@ -162,7 +156,6 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, about: false }))
                 }
                 id="about"
-                className={styles.navLink}
                 to="/about-us"
               >
                 About Us
@@ -178,7 +171,6 @@ export default function Header() {
                   setIsHovered(prev => ({ ...prev, contact: false }))
                 }
                 id="contact"
-                className={styles.navLink}
                 to="/contact-us"
               >
                 Contact Us
@@ -188,7 +180,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <button className={styles.toggle} onClick={toggleMenu}>
+        <button onClick={toggleMenu}>
           <Hamburger toggled={isOpen} size={32} color="white" rounded />
         </button>
       </div>
