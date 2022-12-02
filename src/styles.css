@@ -164,6 +164,7 @@ a {
   backdrop-filter: blur(4px);
   --webkit--backdrop-filter: blur(4px);
   cursor: pointer;
+  z-index: 100;
 }
 
 /* Swiper */
