@@ -1,6 +1,12 @@
 // Hooks
 import { Link } from "react-router-dom";
-import { useContext, useLayoutEffect, useRef } from "react";
+import {
+  useContext,
+  useLayoutEffect,
+  useRef,
+  useEffect,
+  useState,
+} from "react";
 // Context
 import { Context } from "./Context/winWidth";
 // Styles
@@ -76,7 +82,7 @@ export default function TourList({ thisTour }) {
   ));
 
   return (
-    <section ref={section} className={styles.tourSection}>
+    <section ref={section} id="tourSelection" className={styles.tourSection}>
       <div className={`trigger ${styles.titleContainer}`}>
         <h2 className="title">
           <span className="title-highlight">Unlock</span> Cambodia tours
@@ -91,9 +97,6 @@ export default function TourList({ thisTour }) {
         modules={[Pagination, A11y, Autoplay]}
         pagination={{ clickable: true }}
         slidesPerView={winWidth > 1220 ? 3 : winWidth > 620 ? 2 : 1}
-        // autoplay={{
-        //   pauseOnMouseEnter: true,
-        // }}
       >
         <div className={styles.toursContainer}>{renderTourCards}</div>
       </Swiper>

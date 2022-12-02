@@ -36,19 +36,28 @@
 
 .titleContainer {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   gap: 1em;
   margin: 2em 0;
+
+  @media (min-width: 580px) {
+    align-items: flex-end;
+    flex-direction: unset;
+  }
 
   h2 {
     margin: 0;
   }
 
   a {
-    margin-inline: auto 0;
+    margin-inline: 0 auto;
     background: none;
     box-shadow: none;
     border: 2px dashed rgba(255, 255, 255, 0.062);
+
+    @media (min-width: 580px) {
+      margin-inline: auto 0;
+    }
 
     @media (min-width: 720px) {
       margin-bottom: 0.5em;

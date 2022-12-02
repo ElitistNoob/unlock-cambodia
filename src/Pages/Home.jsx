@@ -14,7 +14,9 @@ export default function Home() {
       <Review />
       <Experiences />
       <Tailored />
-      <TourList />
+      <div style={{ padding: "0 1em" }}>
+        <TourList />
+      </div>
     </main>
   );
 }
