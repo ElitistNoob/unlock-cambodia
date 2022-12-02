@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unlock-cambodia/static/css/main.45da3828.css",
-    "main.js": "/unlock-cambodia/static/js/main.28c3afc5.js",
+    "main.css": "/unlock-cambodia/static/css/main.1eb41ea7.css",
+    "main.js": "/unlock-cambodia/static/js/main.5a92c42b.js",
     "static/js/787.b3a72a8c.chunk.js": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js",
     "static/media/hero-img.jpg": "/unlock-cambodia/static/media/hero-img.4e546003a2838b6cd880.jpg",
     "static/media/floating-village-unlock.jpg": "/unlock-cambodia/static/media/floating-village-unlock.112831de24abe8e96720.jpg",
@@ -39,14 +39,15 @@
     "static/media/location-icon.svg": "/unlock-cambodia/static/media/location-icon.afb50db0b1e3e7c53e92d018248cf254.svg",
     "static/media/Facebook-icon.svg": "/unlock-cambodia/static/media/Facebook-icon.1f8907a1eeb6b7619c7da6c0dd843a23.svg",
     "index.html": "/unlock-cambodia/index.html",
+    "static/media/arrow-up.svg": "/unlock-cambodia/static/media/arrow-up.f8b96e3158a5e739339b.svg",
     "static/media/selection.svg": "/unlock-cambodia/static/media/selection.b65e9634d80e54ee6986.svg",
     "static/media/close-modal.svg": "/unlock-cambodia/static/media/close-modal.be90126df1466b6072fd.svg",
-    "main.45da3828.css.map": "/unlock-cambodia/static/css/main.45da3828.css.map",
-    "main.28c3afc5.js.map": "/unlock-cambodia/static/js/main.28c3afc5.js.map",
+    "main.1eb41ea7.css.map": "/unlock-cambodia/static/css/main.1eb41ea7.css.map",
+    "main.5a92c42b.js.map": "/unlock-cambodia/static/js/main.5a92c42b.js.map",
     "787.b3a72a8c.chunk.js.map": "/unlock-cambodia/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.45da3828.css",
-    "static/js/main.28c3afc5.js"
+    "static/css/main.1eb41ea7.css",
+    "static/js/main.5a92c42b.js"
   ]
 }
