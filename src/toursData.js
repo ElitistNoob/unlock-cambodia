@@ -2,6 +2,7 @@ const tourData = [
   {
     id: 1,
     title: "Angkor Temple Tour",
+    url: "angkor-temple-tour",
     tagline: "Explore the remnants of the Khmer Empire",
     image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
     featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
@@ -47,6 +48,7 @@ const tourData = [
   {
     id: 2,
     title: "Floating Villages Unlocked",
+    url: "floating-villages-unlocked",
     tagline: "Explore the remnants of the Khmer Empire",
     image: require("./components/assets/Floating-Village/floating-village-unlock.jpg"),
     featured: require("./components/assets/Floating-Village/floating-village-unlock-featured.jpg"),
@@ -93,6 +95,7 @@ const tourData = [
   {
     id: 3,
     title: "Wildlife Temple Gibbon Adventure",
+    url: "wildlife-temple-gibbon-adventure",
     tagline: "Explore the remnants of the Khmer Empire",
     image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
     featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
@@ -132,6 +135,7 @@ const tourData = [
   {
     id: 4,
     title: "Beng Mealea Tour",
+    url: "beng-mealea-tour",
     tagline: "Explore the Unexplored",
     image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
     featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
@@ -163,6 +167,7 @@ const tourData = [
   {
     id: 5,
     title: "Monk Water Blessing",
+    url: "monk-water-blessing",
     tagline: "Experience this tradional Khmer ceremony",
     image: require("./components/assets/Water-blessing/water-blessing-tour.jpg"),
     featured: require("./components/assets/Water-blessing/water-blessing-featured.jpg"),
@@ -198,6 +203,7 @@ const tourData = [
   {
     id: 6,
     title: "Romantic Sunset Drinks",
+    url: "romantic-sunset-drinks",
     tagline: "Experience this tradional Khmer ceremony",
     image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
     featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),

@@ -46,7 +46,7 @@ export default function Tours(props) {
       </div>
       <h3>{tour.title}</h3>
       <p>{tour.fullDesc}</p>
-      <Link className="btn primary-btn" to={`/tours/${tour.title}`}>
+      <Link className="btn primary-btn" to={`/tours/${tour.url}`}>
         View Tour
       </Link>
     </div>

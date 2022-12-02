@@ -57,23 +57,25 @@ export default function TourList({ thisTour }) {
 
   const filteredData = tourData.filter(tour => tour.title !== thisTour);
 
-  const renderTourCards = filteredData.map(tour => (
-    <SwiperSlide key={tour.id}>
-      <div className={`card-${tour.id} ${styles.tourCard}`}>
-        <img src={tour.featured} alt={tour.featuredAlt} />
-        <div>
-          <p>{tour.minimumPax}</p>
-          <p>{tour.length}</p>
-          <p>${tour.price}</p>
+  const renderTourCards = filteredData.map(tour => {
+    return (
+      <SwiperSlide key={tour.id}>
+        <div className={`card-${tour.id} ${styles.tourCard}`}>
+          <img src={tour.featured} alt={tour.featuredAlt} />
+          <div>
+            <p>{tour.minimumPax}</p>
+            <p>{tour.length}</p>
+            <p>${tour.price}</p>
+          </div>
+          <h3>{tour.title}</h3>
+          <p>{tour.fullDesc}</p>
+          <Link className="btn primary-btn" to={`/tours/${tour.url}`}>
+            View Tour
+          </Link>
         </div>
-        <h3>{tour.title}</h3>
-        <p>{tour.fullDesc}</p>
-        <Link className="btn primary-btn" to={`/tours/${tour.title}`}>
-          View Tour
-        </Link>
-      </div>
-    </SwiperSlide>
-  ));
+      </SwiperSlide>
+    );
+  });
 
   return (
     <section ref={section} id="tourSelection" className={styles.tourSection}>

@@ -15,7 +15,7 @@ export default function TourDetails(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { tourTitle } = useParams();
   const ref = useRef(null);
-  const thisTour = toursData.find(tour => tour.title === tourTitle);
+  const thisTour = toursData.find(tour => tour.url === tourTitle);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
