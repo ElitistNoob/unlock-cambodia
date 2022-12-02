@@ -8,7 +8,6 @@ import styles from "./styles/Hero.module.scss";
 import { gsap } from "gsap";
 
 export default function Hero() {
-  // const { winWidth } = useContext(Context);
 
   const heroSection = useRef(null);
 

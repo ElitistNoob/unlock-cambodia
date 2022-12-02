@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import styles from "../components/styles/FormSubmit.module.scss";
 
 export default function FormSubmit() {
-  const [count, setCount] = useState(5);
+  const [count, setCount] = useState(10);
 
   useEffect(() => {
     const intervalTimer = setInterval(() => {
