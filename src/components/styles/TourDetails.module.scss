@@ -87,15 +87,6 @@
       border: none;
       margin-top: 1.125em;
       padding: 0.5em 0.725em;
-
-      &:hover::after {
-        clip-path: circle(100% at 50% 50%);
-        opacity: 1;
-
-        @media (min-width: 980px) {
-          width: 25px;
-        }
-      }
     }
   }
 }
