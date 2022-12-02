@@ -1,12 +1,6 @@
 // Hooks
 import { Link } from "react-router-dom";
-import {
-  useContext,
-  useLayoutEffect,
-  useRef,
-  useEffect,
-  useState,
-} from "react";
+import { useContext, useLayoutEffect, useRef } from "react";
 // Context
 import { Context } from "./Context/winWidth";
 // Styles
