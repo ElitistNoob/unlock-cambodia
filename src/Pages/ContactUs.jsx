@@ -1,5 +1,6 @@
 // Hooks
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 
 import styles from "../components/styles/ContactForm.module.scss";
@@ -11,6 +12,16 @@ export default function ContactUs() {
     email: "",
     comment: "",
   });
+
+  const currentLocation = useLocation().pathname;
+
+  const [currentPage, setCurrentPage] = useState(currentLocation);
+
+  useEffect(() => {
+    setCurrentPage(currentLocation);
+    sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
+    console.log(currentPage);
+  }, [currentLocation]);
 
   const ref = useRef(null);
 
@@ -66,6 +77,13 @@ export default function ContactUs() {
                   required
                 />
               </div>
+              {/* Redirect to custom page */}
+              <input
+                type="hidden"
+                name="_next"
+                value={`http://localhost:3000/form-submit`}
+                // value={`${window.location.origin}/form-submit`}
+              ></input>
               <div>
                 <label htmlFor="lastName">Last</label>
                 <input
