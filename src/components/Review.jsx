@@ -3,7 +3,9 @@ import { useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Review.module.scss";
 // assets
-import review1 from "../components/assets/review-photo.jpg";
+import sam from "../components/assets/reviews/sam-photo.jpg";
+import liam from "../components/assets/reviews/liam-photo.jpg";
+import donna from "../components/assets/reviews/donna-photo.jpg";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay, Navigation } from "swiper";
@@ -74,7 +76,7 @@ export default function Review() {
         >
           <SwiperSlide>
             <div className={styles.card}>
-              <img src={review1} alt="person" />
+              <img src={donna} alt="person" />
               <p>
                 A great experience from beginning to end. From the first contact
                 to the last good bye everything was simple and easy.
@@ -84,7 +86,7 @@ export default function Review() {
           </SwiperSlide>
           <SwiperSlide>
             <div className={styles.card}>
-              <img src={review1} alt="person" />
+              <img src={sam} alt="person" />
               <p>
                 The Perfect way to see Siem Reap. Our Guide and driver were
                 amazing and the tour was beyond what we were expecting.
@@ -94,7 +96,7 @@ export default function Review() {
           </SwiperSlide>
           <SwiperSlide>
             <div className={styles.card}>
-              <img src={review1} alt="person" />
+              <img src={liam} alt="person" />
               <p>
                 After booking a day trip, we wanted to see more and the Unlock
                 Cambodia team put together a fabulous 5 day adventure.

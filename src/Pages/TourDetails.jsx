@@ -58,7 +58,7 @@ export default function TourDetails(props) {
     .map(highlight => {
       return (
         <div key={thisTour.highlights.indexOf(highlight)}>
-          <img src={highlight.img} alt="" />
+          <img src={highlight.img} alt={highlight.alt} />
           <p>{highlight.title}</p>
         </div>
       );

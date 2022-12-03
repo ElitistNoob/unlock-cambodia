@@ -50,8 +50,8 @@ const tourData = [
     title: "Floating Villages Unlocked",
     url: "floating-villages-unlocked",
     tagline: "Explore the remnants of the Khmer Empire",
-    image: require("./components/assets/Floating-Village/floating-village-unlock.jpg"),
-    featured: require("./components/assets/Floating-Village/floating-village-unlock-featured.jpg"),
+    image: require("./components/assets/Floating-Village/floating-village-tour.jpg"),
+    featured: require("./components/assets/Floating-Village/floating-village-featured.jpg"),
     featuredAlt:
       "Floating village featured images of man on boat through flooded forest",
     highlights: [
@@ -67,7 +67,7 @@ const tourData = [
       },
       {
         title: "boat ride through floating forest",
-        img: require("./components/assets/Floating-Village/flooded-forest-highlight.jpg"),
+        img: require("./components/assets/Floating-Village/flooded-forest-highlight1.jpg"),
         alt: "Flooded forest boat ride",
       },
       {
@@ -97,21 +97,24 @@ const tourData = [
     title: "Wildlife Temple Gibbon Adventure",
     url: "wildlife-temple-gibbon-adventure",
     tagline: "Explore the remnants of the Khmer Empire",
-    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
-    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    image: require("./components/assets/wildlife-temple-tour/wildlife-gibbon-tour.jpg"),
+    featured: require("./components/assets/wildlife-temple-tour/wildlife-gibbon-featured.jpg"),
     featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Gibbons Sighting",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/wildlife-temple-tour/gibbon-sighting-highlight.jpg"),
+        alt: "gibbons hanging in trees surrounding angkor",
       },
       {
         title: "Hidden Temple Exploration",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/wildlife-temple-tour/hidden-temple-highlight.jpg"),
+        alt: "Arial view of hidden Cambodia temple",
       },
       {
         title: "Incredible wildlife photography",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/wildlife-temple-tour/wildlife-photography-highlight.jpg"),
+        alt: "group gibbon watching",
       },
     ],
     inclusion: [
@@ -137,13 +140,14 @@ const tourData = [
     title: "Beng Mealea Tour",
     url: "beng-mealea-tour",
     tagline: "Explore the Unexplored",
-    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
-    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
-    featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
+    image: require("./components/assets/beng-mealea-tour/beng-mealea-tour.jpg"),
+    featured: require("./components/assets/beng-mealea-tour/beng-mealea-featured.jpg"),
+    featuredALt: "hidden beng mealea temple",
     highlights: [
       {
         title: "Beng Mealea Temple",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/beng-mealea-tour/beng-mealea-highlight.jpg"),
+        alt: "group guide through beng mealea temple",
       },
     ],
     inclusion: [

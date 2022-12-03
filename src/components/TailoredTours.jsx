@@ -67,7 +67,7 @@ export default function Experiences() {
         <img
           className="image"
           src={img1}
-          alt="Man riding motorbike in front of independence monument"
+          alt="Cambodia jungle trek tailored tour"
         />
       </div>
       <div className={`trigger ${styles.col1}`}>
