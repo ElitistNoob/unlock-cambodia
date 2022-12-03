@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
           </div>
           <div className={styles.col2}>
-            <Link className="footer-nav__link" to="/Unlock-Cambodia">
+            <Link className="footer-nav__link" to="/">
               Home
             </Link>
             <Link className="footer-nav__link" to="/tours">
