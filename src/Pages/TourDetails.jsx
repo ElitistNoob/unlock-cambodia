@@ -1,6 +1,6 @@
 // Hooks
 import { useParams } from "react-router-dom";
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef, useEffect } from "react";
 // Data
 import toursData from "../toursData";
 // styles
@@ -16,6 +16,10 @@ export default function TourDetails(props) {
   const { tourTitle } = useParams();
   const ref = useRef(null);
   const thisTour = toursData.find(tour => tour.url === tourTitle);
+
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

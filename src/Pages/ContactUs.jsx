@@ -13,15 +13,11 @@ export default function ContactUs() {
     comment: "",
   });
 
-  const currentLocation = useLocation().pathname;
-
-  const [currentPage, setCurrentPage] = useState(currentLocation);
+  const [currentPage] = useState(useLocation().pathname);
 
   useEffect(() => {
-    setCurrentPage(currentLocation);
     sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
-    console.log(currentPage);
-  }, [currentLocation]);
+  }, [currentPage]);
 
   const ref = useRef(null);
 

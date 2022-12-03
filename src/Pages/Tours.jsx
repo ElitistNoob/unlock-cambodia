@@ -1,5 +1,5 @@
 // Hooks
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 // Styles
 import styles from "../components/styles/Tours.module.scss";
@@ -10,6 +10,10 @@ import { gsap } from "gsap";
 
 export default function Tours(props) {
   const ref = useRef(null);
+
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

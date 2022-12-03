@@ -1,5 +1,5 @@
 //  Hooks
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 // Styles
 import styles from "../components/styles/AboutUs.module.scss";
 // Assets
@@ -9,6 +9,10 @@ import { gsap } from "gsap";
 
 export default function AboutUs() {
   const ref = useRef(null);
+
+  useEffect(() => {
+    sessionStorage.clear();
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
