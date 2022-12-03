@@ -132,7 +132,8 @@ export default function BookingForm({ thisTour, closeModal }) {
         <input
           type="hidden"
           name="_next"
-          value={`${window.location.origin}/form-submit`}
+          value={`http://localhost:3000/form-submit`}
+          // value={`${window.location.origin}/form-submit`}
         ></input>
         {/* Sends an automated response to sender*/}
         <input
