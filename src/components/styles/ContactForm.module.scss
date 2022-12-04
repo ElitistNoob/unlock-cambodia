@@ -6,14 +6,10 @@
   max-width: 1220px;
   width: 100%;
   margin: 6em auto;
+  padding: 0;
 
   @media (min-width: 720px) {
     margin: 11em auto;
-    padding: 0 3em;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0;
   }
 
   h1 {
@@ -42,6 +38,11 @@
 
   .flexContainer {
     @media (min-width: 720px) {
+      display: flex;
+      grid-gap: 0 2.25em;
+    }
+
+    @media (min-width: 1440px) {
       display: flex;
       grid-gap: 0 6.25em;
     }

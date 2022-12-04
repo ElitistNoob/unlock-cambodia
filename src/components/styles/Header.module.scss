@@ -15,8 +15,11 @@ header {
     padding: 0;
     transform: translateY(-80px);
 
+    @media (min-width: 720px) {
+      padding: 1em 2em;
+    }
+
     @media (min-width: 820px) {
-      padding: 1em 2rem;
       justify-content: space-between;
     }
 

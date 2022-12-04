@@ -3,14 +3,7 @@
   max-width: 1220px;
   width: 100%;
   margin: 0 auto 2em;
-
-  @media (min-width: 720px) {
-    padding: 0 3em;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0;
-  }
+  padding: 0;
 
   .formContainer {
     background-color: #1b1e1f;
@@ -138,6 +131,10 @@
 // Copyright
 
 .copyright {
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -40px;
   background: var(--gradient);
   width: 100%;
 }

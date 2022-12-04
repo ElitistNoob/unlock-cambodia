@@ -10,14 +10,10 @@
   max-width: 1220px;
   width: 100%;
   margin: 6em auto;
+  padding: 0;
 
   @media (min-width: 720px) {
     margin: 12em auto 0;
-    padding: 0 3em;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0;
   }
 
   .titleContainer {

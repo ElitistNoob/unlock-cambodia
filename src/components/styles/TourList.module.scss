@@ -10,14 +10,10 @@
   max-width: 1220px;
   width: 100%;
   margin: 0 auto 6em;
+  padding: 0;
 
   @media (min-width: 720px) {
     margin-bottom: 12em;
-    padding: 0 3em;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0;
   }
 }
 

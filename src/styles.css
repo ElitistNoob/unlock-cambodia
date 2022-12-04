@@ -19,7 +19,19 @@ body {
   color: var(--clr-primary-light);
   background-color: var(--clr-primary-dark);
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
+}
+
+@media (min-width: 720px) {
+  body {
+    padding: 0 3em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 0;
+  }
 }
 
 :root {
