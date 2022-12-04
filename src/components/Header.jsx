@@ -110,7 +110,7 @@ export default function Header() {
       <div className={`container ${styles.container}`}>
         <Link to="/">
           <img
-            style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
+            // style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
             src={logoWhite}
             alt="logo"
           />
