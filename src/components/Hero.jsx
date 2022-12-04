@@ -8,7 +8,6 @@ import styles from "./styles/Hero.module.scss";
 import { gsap } from "gsap";
 
 export default function Hero() {
-
   const heroSection = useRef(null);
 
   useLayoutEffect(() => {
