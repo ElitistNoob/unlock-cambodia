@@ -129,7 +129,7 @@ export default function Header() {
                 id="home"
               >
                 Home
-                {isHovered.home && winWidth > 720 ? selectionSvg() : " "}
+                {isHovered.home && winWidth > 820 ? selectionSvg() : " "}
               </Link>
             </li>
             <li onClick={() => setIsOpen(false)}>
@@ -144,7 +144,7 @@ export default function Header() {
                 to="/tours"
               >
                 Tours
-                {isHovered.tours && winWidth > 720 ? selectionSvg() : " "}
+                {isHovered.tours && winWidth > 820 ? selectionSvg() : " "}
               </Link>
             </li>
             <li onClick={() => setIsOpen(false)}>
@@ -159,7 +159,7 @@ export default function Header() {
                 to="/about-us"
               >
                 About Us
-                {winWidth > 720 && isHovered.about ? selectionSvg() : " "}
+                {winWidth > 820 && isHovered.about ? selectionSvg() : " "}
               </Link>
             </li>
             <li onClick={() => setIsOpen(false)}>
@@ -174,7 +174,7 @@ export default function Header() {
                 to="/contact-us"
               >
                 Contact Us
-                {isHovered.contact && winWidth > 720 ? selectionSvg() : " "}
+                {isHovered.contact && winWidth > 820 ? selectionSvg() : " "}
               </Link>
             </li>
           </ul>
