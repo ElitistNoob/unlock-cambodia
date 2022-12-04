@@ -1,24 +1,24 @@
 .section {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 1220px;
-  width: calc(100% - 2rem);
   z-index: -2;
   border-radius: 6px;
-  margin: 0 auto 6em;
+  margin-bottom: 6em;
 
   @media (min-width: 680px) {
     margin-bottom: 12em;
   }
 
-  @media (min-width: 1180px) {
+  @media (min-width: 780px) {
     flex-direction: row;
     justify-content: space-between;
+    margin-inline: auto;
     align-items: center;
     text-align: left;
+    gap: 4em;
   }
 
   .col1 {
@@ -42,10 +42,12 @@
     background-position: center;
     margin-bottom: 2em;
 
-    @media (min-width: 1190px) {
+    @media (min-width: 780px) {
       grid-template-columns: repeat(16, 1fr);
       grid-template-rows: repeat(16, 1fr);
       margin-bottom: 0;
+      gap: 1em;
+      margin-inline: auto 0;
     }
 
     :nth-child(-n + 2) {
@@ -58,11 +60,15 @@
       height: 100%;
       opacity: 1;
 
+      @media (min-width: 780px) {
+        max-width: 250px;
+      }
+
       &:nth-of-type(1) {
         grid-column: 4 / -1;
         grid-row: 1 / 5;
 
-        @media (min-width: 1190px) {
+        @media (min-width: 780px) {
           grid-column: -1 / 8;
           grid-row: 1 / 10;
         }
@@ -72,7 +78,7 @@
         grid-column: 1/ 5;
         grid-row: 4/ 8;
 
-        @media (min-width: 1190px) {
+        @media (min-width: 780px) {
           grid-column: 1/ 10;
           grid-row: -1 / 8;
         }
@@ -80,28 +86,38 @@
 
       &:nth-of-type(3) {
         width: 80px;
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        margin-inline: auto;
+        grid-column: 1 / 4;
+        grid-row: 1 / 4;
         opacity: 0;
 
+        @media (min-width: 780px) {
+          width: 50px;
+          grid-column: 1 / 8;
+          grid-row: 1 / 8;
+        }
+
         @media (min-width: 1190px) {
-          grid-column: 2 / 6;
-          grid-row: 3 / 6;
-          transform: translateX(40%);
+          width: 80px;
         }
       }
 
       &:nth-of-type(4) {
         width: 80px;
+        margin-inline: auto;
         transform: rotate(190deg);
-        grid-column: 6 / 7;
-        grid-row: 6 / 7;
+        grid-column: 5 / 8;
+        grid-row: 5 / 8;
         opacity: 0;
 
+        @media (min-width: 780px) {
+          width: 50px;
+          grid-column: 9 / 17;
+          grid-row: 9 / 17;
+        }
+
         @media (min-width: 1190px) {
-          transform: rotate(190deg) translateX(-20%);
-          grid-column: -2 / -6;
-          grid-row: -3 / -6;
+          width: 80px;
         }
       }
     }

@@ -1,24 +1,24 @@
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 1220px;
-  width: calc(100% - 2rem);
   z-index: -2;
   border-radius: 6px;
-  margin: 0 auto 6em;
+  margin-bottom: 6em;
 
   @media (min-width: 680px) {
     margin-bottom: 12em;
   }
 
-  @media (min-width: 1180px) {
+  @media (min-width: 780px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
+    text-align: right;
+    gap: 4em;
+    margin-inline: auto;
   }
 
   .col1 {
@@ -58,7 +58,7 @@
       z-index: -1;
     }
 
-    @media (min-width: 1190px) {
+    @media (min-width: 780px) {
       margin-bottom: 0;
     }
 
@@ -66,9 +66,13 @@
       position: relative;
       border-radius: 6px;
       width: 100%;
-      height: 100%;
+      height: auto;
       opacity: 1;
       object-fit: cover;
+
+      @media (min-width: 780px) {
+        max-width: 250px;
+      }
 
       &:nth-last-of-type(1) {
         grid-row: 1 / 3;
