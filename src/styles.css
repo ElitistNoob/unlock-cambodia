@@ -8,11 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 body {
   position: relative;
   font-family: "Poppins", sans-serif;

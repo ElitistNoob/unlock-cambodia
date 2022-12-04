@@ -4,24 +4,27 @@
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
-  margin: 40px auto 6em;
+  margin: 0 auto 6em;
   display: flex;
   text-align: center;
   padding: 0;
 
   @media (min-width: 780px) {
-    margin-block: 10em 12em;
     text-align: left;
   }
 
   .content {
-    margin-top: 100px;
+    padding-top: 100px;
     display: grid;
     grid-template-areas:
       "title"
       "imgGrid "
       "body"
       "btn";
+
+    @media (min-width: 780px) {
+      margin-block: 10em 12em;
+    }
 
     @media (min-width: 980px) {
       grid-template-areas:
