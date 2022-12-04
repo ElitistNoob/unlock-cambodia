@@ -4,7 +4,11 @@
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding-block: 10em;
+  padding-block: 6.25em;
+
+  @media (min-width: 720px) {
+    padding-block: 10em;
+  }
 
   .aboutUs {
     display: grid;
@@ -24,6 +28,7 @@
 
     h1 {
       grid-area: title;
+      margin-top: 0;
 
       span {
         color: var(--clr-accent);
