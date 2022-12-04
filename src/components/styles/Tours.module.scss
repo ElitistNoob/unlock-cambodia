@@ -12,28 +12,29 @@
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
-  margin: 6em auto;
+  margin: 0 auto;
   padding: 0;
-
-  @media (min-width: 720px) {
-    margin: 11em auto;
-  }
 
   span {
     color: var(--clr-accent);
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
   }
-}
-.toursContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 
-  ::-webkit-scrollbar {
-    display: none;
+  h1 {
+    padding-top: 6.25rem;
+  }
+
+  .toursContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

@@ -9,15 +9,15 @@
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
-  margin: 6em auto;
+  margin: 0 auto;
   padding: 0;
 
-  @media (min-width: 720px) {
-    margin: 12em auto 0;
-  }
-
   .titleContainer {
-    margin-bottom: 2em;
+    padding-block: 8rem 2rem;
+
+    @media (min-width: 780px) {
+      padding-block: 12rem 0;
+    }
 
     & > * {
       margin: 0;

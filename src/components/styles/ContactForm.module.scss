@@ -5,16 +5,17 @@
   padding: 0 1em;
   max-width: 1220px;
   width: 100%;
-  margin: 6em auto;
+  margin: 0 auto;
   padding: 0;
-
-  @media (min-width: 720px) {
-    margin: 11em auto;
-  }
 
   h1 {
     max-width: 850px;
     margin-top: 0;
+    padding-top: 8rem;
+
+    @media (min-width: 780px) {
+      padding-top: 11rem;
+    }
 
     span {
       color: var(--clr-accent);

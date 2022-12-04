@@ -3,12 +3,7 @@
 .main {
   max-width: 1220px;
   width: 100%;
-  margin: 6em auto;
-  padding: 0;
-
-  @media (min-width: 720px) {
-    margin: 11em auto;
-  }
+  margin-inline: auto;
 
   .aboutUs {
     display: grid;
@@ -17,7 +12,7 @@
       "img"
       "body";
     position: relative;
-    padding: 0 1em;
+    padding: 6.25em 0;
 
     @media (min-width: 780px) {
       grid-template-columns: 3fr 2fr;
@@ -25,7 +20,7 @@
         "title img"
         "body img";
       gap: 0 4em;
-      padding: unset;
+      padding-block: 11em;
     }
 
     h1 {
