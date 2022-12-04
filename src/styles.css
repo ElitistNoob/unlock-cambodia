@@ -65,8 +65,8 @@ body {
 @media (min-width: 720px) {
   :root {
     --fs-h1: 3.625rem;
-    --fs-h2: 2rem;
-    --fs-body: 1.125rem;
+    --fs-h2: 1.5rem;
+    --fs-body: 1rem;
     --fs-btn: 1.25rem;
   }
 }
