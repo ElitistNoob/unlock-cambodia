@@ -63,12 +63,13 @@
     img {
       border-radius: 6px;
       width: 100%;
+      max-width: 532px;
       height: 100%;
       opacity: 1;
 
       &:nth-of-type(1) {
         grid-column: 2 / 5;
-        grid-row: 1 / -2;
+        grid-row: 1;
         @media (min-width: 540px) {
           grid-column: 2 / 4;
           grid-row: 1 / 5;
