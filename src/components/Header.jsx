@@ -34,7 +34,7 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(prevState => !prevState);
 
   const changeNavBar = () =>
-    window.scrollY >= 70 ? setIsScroll(true) : setIsScroll(false);
+    window.scrollY > 0 ? setIsScroll(true) : setIsScroll(false);
 
   useEffect(() => {
     window.addEventListener("scroll", changeNavBar);
@@ -109,11 +109,7 @@ export default function Header() {
     <header ref={element} style={headerStyle()}>
       <div className={`container ${styles.container}`}>
         <Link to="/">
-          <img
-            // style={{ marginLeft: winWidth >= 1230 ? "0" : "1em" }}
-            src={logoWhite}
-            alt="logo"
-          />
+          <img src={logoWhite} alt="logo" />
         </Link>
         <nav style={{ transform: `translateY(${isOpen ? 80 : -200}px)` }}>
           <ul>
