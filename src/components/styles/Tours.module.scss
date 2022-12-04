@@ -9,11 +9,14 @@
 
 .tourSection {
   position: relative;
-  padding: 0 1em;
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 6.25em 0;
+
+  @media (min-width: 720px) {
+    padding: 10em 0;
+  }
 
   span {
     color: var(--clr-accent);
@@ -21,7 +24,7 @@
   }
 
   h1 {
-    padding-top: 6.25rem;
+    margin-top: 0;
   }
 
   .toursContainer {

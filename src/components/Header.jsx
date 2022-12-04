@@ -78,7 +78,7 @@ export default function Header() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.to(".container", {
+      tl.to(".navbarAnim", {
         y: 0,
         duration: 1,
       });
@@ -107,7 +107,7 @@ export default function Header() {
 
   return (
     <header ref={element} style={headerStyle()}>
-      <div className={`container ${styles.container}`}>
+      <div className={`navbarAnim ${styles.container}`}>
         <Link to="/">
           <img src={logoWhite} alt="logo" />
         </Link>

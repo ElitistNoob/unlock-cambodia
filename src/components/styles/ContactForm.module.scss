@@ -2,20 +2,18 @@
 
 .container {
   position: relative;
-  padding: 0 1em;
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  padding: 6.25em 0;
+
+  @media (min-width: 720px) {
+    padding: 10em 0;
+  }
 
   h1 {
     max-width: 850px;
     margin-top: 0;
-    padding-top: 8rem;
-
-    @media (min-width: 780px) {
-      padding-top: 11rem;
-    }
 
     span {
       color: var(--clr-accent);
