@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   position: fixed;
@@ -30,8 +30,8 @@
     gap: 0 1em;
     grid-template-rows: repeat(8, min-content);
     height: 100%;
-    padding-top: 4em;
     box-shadow: 0 0 100px rgba(0 0 0 / 0.2);
+    overflow-y: auto;
 
     @media (max-width: 405px) {
       grid-template-areas:
