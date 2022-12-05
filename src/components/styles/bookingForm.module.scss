@@ -31,7 +31,8 @@
     grid-template-rows: repeat(8, min-content);
     height: 100%;
     box-shadow: 0 0 100px rgba(0 0 0 / 0.2);
-    overflow-y: auto;
+    padding-top: 3em;
+    overflow-y: scroll;
 
     @media (max-width: 405px) {
       grid-template-areas:
@@ -44,10 +45,6 @@
         "total total"
         "notice notice"
         "btn btn";
-    }
-
-    @media (min-width: 405px) {
-      padding-top: 3em;
     }
 
     @media (min-width: 520px) {
