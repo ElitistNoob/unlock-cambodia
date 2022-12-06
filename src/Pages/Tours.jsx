@@ -44,15 +44,17 @@ export default function Tours(props) {
     <div key={tour.id} className={`card-${tour.id} ${styles.tourCard}`}>
       <img src={tour.featured} alt={tour.featuredAlt} />
       <div>
-        <p>{tour.minimumPax}</p>
-        <p>{tour.length}</p>
-        <p>${tour.price}</p>
+        <h3>{tour.title}</h3>
+        <div className={styles.info}>
+          <p>{tour.minimumPax}</p>
+          <p>{tour.length}</p>
+          <p>${tour.price}</p>
+        </div>
+        <p className={styles.desc}>{tour.fullDesc}</p>
+        <Link className="btn primary-btn" to={`/tours/${tour.url}`}>
+          View Tour
+        </Link>
       </div>
-      <h3>{tour.title}</h3>
-      <p>{tour.fullDesc}</p>
-      <Link className="btn primary-btn" to={`/tours/${tour.url}`}>
-        View Tour
-      </Link>
     </div>
   ));
   return (
