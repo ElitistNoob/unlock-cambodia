@@ -42,10 +42,7 @@ body {
 
   --fw-light: 300;
   --fw-normal: 400;
-  --fw-medium: 500;
-  --fw-semi: 600;
   --fw-bold: 700;
-  --fw-extra: 800;
   --fw-black: 900;
 
   /* Colors */
@@ -97,13 +94,13 @@ h1 {
 
 h2 {
   font-size: var(--fs-h2);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-bold);
 }
 
 h3,
 h4 {
   font-size: var(--fs-h4);
-  font-weight: var(--fw-semi);
+  font-weight: var(--fw-bold);
 }
 
 p {
@@ -123,6 +120,7 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--clr-primary-light);
 }
 
 .title-highlight {
@@ -136,6 +134,8 @@ a {
   border-radius: 4px;
   height: fit-content;
   cursor: pointer;
+  font-weight: var(--fw-medium);
+  font-size: 1rem;
 }
 
 .btn:hover {
@@ -147,8 +147,6 @@ a {
   position: relative;
   color: var(--clr-primary-light);
   background-image: var(--gradient);
-  font-size: 1rem;
-  font-weight: var(--fw-semi);
   box-shadow: 8px 8px 13px rgba(0, 0, 0, 0.2);
 }
 

@@ -53,6 +53,12 @@
 
       p {
         max-width: 814px;
+
+        @media (min-width: 780px) {
+          &:nth-of-type(1) {
+            margin-top: 0;
+          }
+        }
       }
     }
   }

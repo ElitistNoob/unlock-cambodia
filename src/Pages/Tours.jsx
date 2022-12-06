@@ -20,7 +20,7 @@ export default function Tours(props) {
       gsap.from(".title", {
         opacity: 0,
         duration: 1,
-        y: "1em",
+        y: "0.25em",
         ease: "power",
       });
       gsap.to(".span", {

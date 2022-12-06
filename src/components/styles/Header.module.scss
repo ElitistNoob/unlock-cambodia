@@ -91,11 +91,9 @@ header {
           a {
             position: relative;
             display: block;
-            font-size: 1rem;
             padding: 0.5em 1em;
             margin-left: -1em;
             width: calc(100% + 1.75em);
-            color: var(--clr-primary-light);
 
             @media (min-width: 820px) {
               width: unset;
@@ -106,7 +104,6 @@ header {
               overflow: visible;
               padding: 0.5em;
               font-size: 1.25rem;
-              font-weight: 500;
             }
           }
         }
