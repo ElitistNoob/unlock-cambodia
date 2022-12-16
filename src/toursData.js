@@ -209,17 +209,17 @@ const tourData = [
     title: "Romantic Sunset Drinks",
     url: "romantic-sunset-drinks",
     tagline: "Experience this tradional Khmer ceremony",
-    image: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour.jpg"),
-    featured: require("./components/assets/Angkor-Temple-Tour/angkor-temple-tour-featured.jpg"),
+    image: require("./components/assets/sunset-drinks/sunset-drinks-tour.jpg"),
+    featured: require("./components/assets/sunset-drinks/sunset-drinks-featured.jpg"),
     featuredALt: "Angkor Wat Temple Tour with Unlock Cambodia",
     highlights: [
       {
         title: "Romantic Sunset spot",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        img: require("./components/assets/sunset-drinks/sunset-drinks-highlight.jpg"),
       },
       {
-        title: "1 Bottle of chilled wine per couple",
-        img: require("./components/assets/angkor-tour-3.jpg"),
+        title: "Chilled wine bottle per couple",
+        img: require("./components/assets/sunset-drinks/sunset-drinks-highlight.jpg"),
       },
     ],
     inclusion: [
