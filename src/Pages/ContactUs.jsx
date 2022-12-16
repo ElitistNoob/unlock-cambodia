@@ -77,8 +77,7 @@ export default function ContactUs() {
               <input
                 type="hidden"
                 name="_next"
-                value={`http://localhost:3000/form-submit`}
-                // value={`${window.location.origin}/form-submit`}
+                value="http://unlockcambodia.com/form-submit"
               ></input>
               <div>
                 <label htmlFor="lastName">Last</label>
