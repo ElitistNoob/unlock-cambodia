@@ -221,10 +221,6 @@ const tourData = [
         title: "1 Bottle of chilled wine per couple",
         img: require("./components/assets/angkor-tour-3.jpg"),
       },
-      {
-        title: "1 Bottle of chilled wine per couple",
-        img: require("./components/assets/angkor-tour-3.jpg"),
-      },
     ],
     inclusion: [
       "1 Bottle of chilled wine per couple",
