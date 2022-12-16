@@ -89,15 +89,16 @@ export default function TourDetails(props) {
             <p>{thisTour.length}</p>
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
+            <p>{`$${thisTour.price}`}</p>
             <button className="btn primary-btn" onClick={clickHandler}>
               Book Now
             </button>
             <p>{thisTour.fullDesc}</p>
           </div>
           <div className={`content ${styles.inclusions}`}>
-            <h3>Inclusion</h3>
+            <h3>What's Included</h3>
             <div>{inclusions()}</div>
-            <h3>Exclusion</h3>
+            <h3>What's Not</h3>
             <div>{exclusions()}</div>
           </div>
         </div>

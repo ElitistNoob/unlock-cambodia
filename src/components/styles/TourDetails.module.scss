@@ -57,7 +57,7 @@
       flex-wrap: wrap;
       gap: 0 1rem;
 
-      p:not(:nth-of-type(4)) {
+      p:not(:nth-of-type(5)) {
         margin: 1em 0 0 0;
         border-radius: 6px;
         font-size: 1rem;
@@ -65,15 +65,22 @@
         background-color: #1b1e1f;
         color: var(--clr-primary-light);
 
-        &:nth-last-of-type(4) {
-          @include svgIcon("../assets/clock.svg");
+        &:nth-last-of-type(2) {
+          grid-area: price;
+          background-color: var(--clr-primary-light);
+          color: var(--clr-primary-dark);
+          font-weight: var(--fw-bold);
         }
 
         &:nth-last-of-type(3) {
+          @include svgIcon("../assets/clock.svg");
+        }
+
+        &:nth-last-of-type(4) {
           @include svgIcon("../assets/group.svg");
         }
 
-        &:nth-last-of-type(2) {
+        &:nth-last-of-type(5) {
           @include svgIcon("../assets/schedule.svg");
         }
       }
