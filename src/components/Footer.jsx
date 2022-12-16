@@ -7,7 +7,6 @@ import styles from "./styles/Footer.module.scss";
 import logo from "./assets/logo-light.png";
 import facebook from "./assets/Facebook-icon.svg";
 import instagram from "./assets/Instagram-icon.svg";
-import twitter from "./assets/Twitter-icon.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -70,9 +69,6 @@ export default function Footer() {
               </Link>
               <Link className="social-media__icons" to="/">
                 <img src={instagram} alt="" />
-              </Link>
-              <Link className="social-media__icons instagram" to="/">
-                <img src={twitter} alt="" />
               </Link>
             </div>
           </div>
