@@ -66,7 +66,7 @@ const tourData = [
         alt: "Floating villages market",
       },
       {
-        title: "boat ride through floating forest",
+        title: "Floating forest boat ride",
         img: require("./components/assets/Floating-Village/flooded-forest-highlight1.jpg"),
         alt: "Flooded forest boat ride",
       },
