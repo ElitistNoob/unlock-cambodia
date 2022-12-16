@@ -77,6 +77,10 @@ export default function TourDetails(props) {
     setIsModalOpen(false);
   };
 
+  const btnStyleConditional = (value1, value2) => {
+    return thisTour.title === "Romantic Sunset Drinks" ? value1 : value2;
+  };
+
   return (
     <main ref={ref} className={styles.tour}>
       <div className={`content ${styles.titleContainer}`}>
@@ -90,7 +94,17 @@ export default function TourDetails(props) {
             <p>{thisTour.minimumPax} Minimum</p>
             <p>{thisTour.schedule}</p>
             <p>{`$${thisTour.price}`}</p>
-            <button className="btn primary-btn" onClick={clickHandler}>
+            <button
+              className="btn primary-btn"
+              onClick={clickHandler}
+              disabled={
+                thisTour.title === "Romantic Sunset Drinks" ? "disabled" : ""
+              }
+              style={{
+                opacity: btnStyleConditional(0.8, 1),
+                backgroundBlendMode: btnStyleConditional("luminosity"),
+              }}
+            >
               Book Now
             </button>
             <p>{thisTour.fullDesc}</p>
