@@ -74,6 +74,7 @@
 // Cards Style
 
 .tourCard {
+  position: relative;
   border-radius: 6px;
   margin-bottom: 2em;
 
@@ -82,6 +83,19 @@
     height: 264px;
     width: 100%;
     object-fit: cover;
+  }
+
+  .comingSoon {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    color: var(--clr-primary-dark);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background-color: #ffffff80;
+    font-weight: bold;
+    padding: 0.25em 1em;
+    border-radius: 6px;
   }
 
   div {
@@ -108,25 +122,25 @@
         padding: 0.25em 0.75em;
         margin-block: 0;
 
-        &:nth-last-of-type(2),
-        &:nth-last-of-type(3) {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
           background-color: #1b1e1f;
           color: var(--clr-primary-light);
         }
 
-        &:nth-last-of-type(1) {
+        &:nth-of-type(3) {
           grid-area: price;
           background-color: var(--clr-primary-light);
           color: var(--clr-primary-dark);
           font-weight: var(--fw-bold);
         }
 
-        &:nth-last-of-type(2) {
+        &:nth-of-type(2) {
           grid-area: length;
           @include svgIcon("../assets/clock.svg");
         }
 
-        &:nth-last-of-type(3) {
+        &:nth-of-type(1) {
           grid-area: pax;
           @include svgIcon("../assets/group.svg");
         }

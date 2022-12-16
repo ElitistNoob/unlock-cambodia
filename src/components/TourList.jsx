@@ -62,6 +62,9 @@ export default function TourList({ thisTour }) {
       <SwiperSlide key={tour.id}>
         <div className={`card-${tour.id} ${styles.tourCard}`}>
           <img src={tour.featured} alt={tour.featuredAlt} />
+          {tour.title === "Romantic Sunset Drinks" && (
+            <span className={styles.comingSoon}>Coming Soon</span>
+          )}
           <div>
             <h3>{tour.title}</h3>
             <div className={styles.info}>

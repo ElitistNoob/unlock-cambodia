@@ -43,6 +43,9 @@ export default function Tours(props) {
   const renderTourCards = tourData.map(tour => (
     <div key={tour.id} className={`card-${tour.id} ${styles.tourCard}`}>
       <img src={tour.featured} alt={tour.featuredAlt} />
+      {tour.title === "Romantic Sunset Drinks" && (
+        <span className={styles.comingSoon}>Coming Soon</span>
+      )}
       <div>
         <h3>{tour.title}</h3>
         <div className={styles.info}>
@@ -61,7 +64,7 @@ export default function Tours(props) {
     <section ref={ref}>
       <div className={styles.tourSection}>
         <h1 className="title">
-          All <span className="span">Tours</span>
+          All <span className={`span ${styles.span}`}>Tours</span>
         </h1>
         <div className={styles.toursContainer}>{renderTourCards}</div>
       </div>
