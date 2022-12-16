@@ -92,7 +92,7 @@
         background: var(--clr-accent);
       }
 
-      &:nth-last-of-type(1) {
+      &:nth-of-type(1) {
         grid-area: divider1;
       }
 
