@@ -64,11 +64,15 @@ export default function Footer() {
               info@UnlockCambodia.com
             </p>
             <div className={styles.media}>
-              <Link className="social-media__icons" to="/">
-                <img src={facebook} alt="" />
+              <Link
+                className="social-media__icons"
+                to="https://www.facebook.com/UnlockCambodia"
+                target="_blank"
+              >
+                <img src={facebook} alt="Facebook Icon" />
               </Link>
-              <Link className="social-media__icons" to="/">
-                <img src={instagram} alt="" />
+              <Link className="social-media__icons" to="/" target="_blank">
+                <img src={instagram} alt="Instagram icon" />
               </Link>
             </div>
           </div>
