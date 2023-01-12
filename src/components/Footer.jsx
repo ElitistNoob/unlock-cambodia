@@ -6,7 +6,7 @@ import styles from "./styles/Footer.module.scss";
 // Assets
 import logo from "./assets/logo-light.png";
 import facebook from "./assets/Facebook-icon.svg";
-import instagram from "./assets/Instagram-icon.svg";
+// import instagram from "./assets/Instagram-icon.svg";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
           </div>
           <form
-            action="https://formsubmit.co/6923cca6c2285b24310ce0a6f63bad0a"
+            action="https://formsubmit.co/a7f728ae1baaf38e76a31e0014183edb"
             method="POST"
           >
             {/* formsubmit.co */}
@@ -49,6 +49,12 @@ export default function Footer() {
                 type={"email"}
                 placeholder={"Enter your email"}
               />
+              {/* Redirect to custom page */}
+              <input
+                type="hidden"
+                name="_next"
+                value="https://unlockcambodia.com/form-submit"
+              ></input>
               <button className="btn primary-btn">Subscribe</button>
             </div>
           </form>
@@ -64,16 +70,16 @@ export default function Footer() {
               info@UnlockCambodia.com
             </p>
             <div className={styles.media}>
-              <Link
-                className="social-media__icons"
-                to="https://www.facebook.com/UnlockCambodia"
+              <a
+                href="https://www.facebook.com/UnlockCambodia"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img src={facebook} alt="Facebook Icon" />
-              </Link>
-              <Link className="social-media__icons" to="/" target="_blank">
+              </a>
+              {/* <a href="/" className="social-media__icons"  target="_blank">
                 <img src={instagram} alt="Instagram icon" />
-              </Link>
+              </a> */}
             </div>
           </div>
           <div className={styles.col2}>

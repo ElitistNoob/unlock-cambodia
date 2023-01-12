@@ -59,7 +59,7 @@ export default function ContactUs() {
         <div className={styles.flexContainer}>
           <div className={styles.col1}>
             <form
-              action="https://formsubmit.co/sales@seeasiadifferently.com"
+              action="https://formsubmit.co/a7f728ae1baaf38e76a31e0014183edb"
               method="POST"
             >
               <div>
@@ -77,7 +77,7 @@ export default function ContactUs() {
               <input
                 type="hidden"
                 name="_next"
-                value="http://unlockcambodia.com/form-submit"
+                value="https://unlockcambodia.com/form-submit"
               ></input>
               <div>
                 <label htmlFor="lastName">Last</label>

@@ -1,5 +1,6 @@
 // Hooks
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 // Components
 import Hero from "../components/Hero";
 import Experiences from "../components/Experiences";
@@ -9,9 +10,11 @@ import Tailored from "../components/TailoredTours";
 import TourList from "../components/TourList";
 
 export default function Home() {
+  const [currentPage] = useState(useLocation().pathname);
+
   useEffect(() => {
-    sessionStorage.clear();
-  }, []);
+    sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
+  }, [currentPage]);
 
   return (
     <main>

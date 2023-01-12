@@ -35,7 +35,7 @@ export default function BookingForm({ thisTour, closeModal }) {
     <div id="formModal" className={styles.formModal}>
       <form
         className={styles.bookingForm}
-        action="https://formsubmit.co/6923cca6c2285b24310ce0a6f63bad0a"
+        action="https://formsubmit.co/a7f728ae1baaf38e76a31e0014183edb"
         method="POST"
       >
         <button className={styles.clodeModalBtn} onClick={closeModal}></button>
@@ -132,7 +132,7 @@ export default function BookingForm({ thisTour, closeModal }) {
         <input
           type="hidden"
           name="_next"
-          value="http://unlockcambodia.com/form-submit"
+          value="https://unlockcambodia.com/form-submit"
         ></input>
         {/* Sends an automated response to sender*/}
         <input

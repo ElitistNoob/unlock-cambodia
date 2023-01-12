@@ -1,6 +1,7 @@
 // Hooks
 import { useParams } from "react-router-dom";
 import { useState, useLayoutEffect, useRef, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 // Data
 import toursData from "../toursData";
 // styles
@@ -13,13 +14,14 @@ import { gsap } from "gsap";
 
 export default function TourDetails(props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPage] = useState(useLocation().pathname);
   const { tourTitle } = useParams();
   const ref = useRef(null);
   const thisTour = toursData.find(tour => tour.url === tourTitle);
 
   useEffect(() => {
-    sessionStorage.clear();
-  }, []);
+    sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
+  }, [currentPage]);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
