@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0b2d246d.css",
-    "main.js": "/static/js/main.af439bbe.js",
+    "main.js": "/static/js/main.9f707dcb.js",
     "static/js/787.b3a72a8c.chunk.js": "/static/js/787.b3a72a8c.chunk.js",
     "static/media/beng-mealea-tour.jpg": "/static/media/beng-mealea-tour.9d514990da81d406f8fe.jpg",
     "static/media/wildlife-gibbon-tour.jpg": "/static/media/wildlife-gibbon-tour.7f672001062184e274bb.jpg",
@@ -42,7 +42,6 @@
     "static/media/donna-photo.jpg": "/static/media/donna-photo.bdbb819049b4b484a31d.jpg",
     "static/media/liam-photo.jpg": "/static/media/liam-photo.748f8245e5da484c210a.jpg",
     "static/media/dot-grid-vertical.svg": "/static/media/dot-grid-vertical.dde3aa1da6bc44b7ad9d.svg",
-    "static/media/Instagram-icon.svg": "/static/media/Instagram-icon.7d27f21d7bf64f4b47103e2f637eced4.svg",
     "static/media/group.svg": "/static/media/group.18c24c35cf0fb2cebc8f.svg",
     "static/media/select-icon.svg": "/static/media/select-icon.a6d82d2f50fdf45cae1f9538e857b37b.svg",
     "static/media/clock.svg": "/static/media/clock.a89769acad366650795c.svg",
@@ -56,11 +55,11 @@
     "static/media/selection.svg": "/static/media/selection.b65e9634d80e54ee6986.svg",
     "static/media/close-modal.svg": "/static/media/close-modal.be90126df1466b6072fd.svg",
     "main.0b2d246d.css.map": "/static/css/main.0b2d246d.css.map",
-    "main.af439bbe.js.map": "/static/js/main.af439bbe.js.map",
+    "main.9f707dcb.js.map": "/static/js/main.9f707dcb.js.map",
     "787.b3a72a8c.chunk.js.map": "/static/js/787.b3a72a8c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b2d246d.css",
-    "static/js/main.af439bbe.js"
+    "static/js/main.9f707dcb.js"
   ]
 }
