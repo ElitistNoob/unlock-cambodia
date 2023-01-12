@@ -1,6 +1,5 @@
 // Hooks
 import { Link } from "react-router-dom";
-// import { Context } from "./Context/winWidth";
 import { useLayoutEffect, useRef } from "react";
 // Styles
 import styles from "./styles/Hero.module.scss";
