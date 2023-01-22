@@ -1,6 +1,8 @@
 // Hooks
 import { useState, useLayoutEffect, useRef, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useTitle } from "../components/Hooks/useTitle";
+// GSAP
 import { gsap } from "gsap";
 
 import styles from "../components/styles/ContactForm.module.scss";
@@ -18,6 +20,8 @@ export default function ContactUs() {
   useEffect(() => {
     sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
   }, [currentPage]);
+
+  useTitle("Contact Us | Unlock Cambodia");
 
   const ref = useRef(null);
 

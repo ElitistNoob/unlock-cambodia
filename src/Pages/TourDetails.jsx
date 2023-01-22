@@ -6,13 +6,15 @@ import { useLocation } from "react-router-dom";
 import toursData from "../toursData";
 // styles
 import styles from "../components/styles/TourDetails.module.scss";
+// Hooks
+import { useTitle } from "../components/Hooks/useTitle";
 // components
 import BookingForm from "../components/BookingForm";
 import TourList from "../components/TourList";
 // Gsap
 import { gsap } from "gsap";
 
-export default function TourDetails(props) {
+export default function TourDetails() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentPage] = useState(useLocation().pathname);
   const { tourTitle } = useParams();
@@ -22,6 +24,8 @@ export default function TourDetails(props) {
   useEffect(() => {
     sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
   }, [currentPage]);
+
+  useTitle(`${thisTour.title} | Unlock Cambodia`);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -71,14 +75,6 @@ export default function TourDetails(props) {
     })
     .splice(0, 4);
 
-  const clickHandler = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
   const btnStyleConditional = (value1, value2) => {
     return thisTour.title === "Romantic Sunset Drinks" ? value1 : value2;
   };
@@ -98,7 +94,7 @@ export default function TourDetails(props) {
             <p>{`$${thisTour.price}`}</p>
             <button
               className="btn primary-btn"
-              onClick={clickHandler}
+              onClick={() => setIsModalOpen(true)}
               disabled={
                 thisTour.title === "Romantic Sunset Drinks" ? "disabled" : ""
               }
@@ -119,7 +115,10 @@ export default function TourDetails(props) {
           </div>
         </div>
         {isModalOpen && (
-          <BookingForm thisTour={thisTour} closeModal={closeModal} />
+          <BookingForm
+            thisTour={thisTour}
+            closeModal={() => setIsModalOpen(false)}
+          />
         )}
       </section>
       <section className={`trigger highlights ${styles.tourHighlights}`}>

@@ -1,6 +1,8 @@
 // Hooks
 import { useLayoutEffect, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTitle } from "../components/Hooks/useTitle";
+
 // Styles
 import styles from "../components/styles/Tours.module.scss";
 // Data
@@ -14,6 +16,8 @@ export default function Tours(props) {
   useEffect(() => {
     sessionStorage.clear();
   }, []);
+
+  useTitle("Our Tours | Unlock Cambodia");
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {

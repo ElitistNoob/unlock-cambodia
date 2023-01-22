@@ -1,6 +1,7 @@
 // Hooks
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useTitle } from "../components/Hooks/useTitle";
 // Components
 import Hero from "../components/Hero";
 import Experiences from "../components/Experiences";
@@ -15,6 +16,8 @@ export default function Home() {
   useEffect(() => {
     sessionStorage.setItem("lastUrl", JSON.stringify(currentPage));
   }, [currentPage]);
+
+  useTitle("Unlock Cambodia");
 
   return (
     <main>

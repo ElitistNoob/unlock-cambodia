@@ -1,5 +1,6 @@
 //  Hooks
 import { useLayoutEffect, useRef, useEffect } from "react";
+import { useTitle } from "../components/Hooks/useTitle";
 // Styles
 import styles from "../components/styles/AboutUs.module.scss";
 // Assets
@@ -13,6 +14,8 @@ export default function AboutUs() {
   useEffect(() => {
     sessionStorage.clear();
   }, []);
+
+  useTitle("About Us | Unlock Cambodia");
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
