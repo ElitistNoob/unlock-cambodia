@@ -148,6 +148,10 @@
     padding-inline: 0;
   }
 
+  @media (min-width: 1440px) {
+    width: calc(100% + 3em);
+  }
+
   .container2 {
     max-width: 1220px;
     width: 100%;
